@@ -1,0 +1,85 @@
+This is BibTeX, Version 0.99d (TeX Live 2019)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: buch1-blx.aux
+The style file: biblatex.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: buch-blx.bib
+Database file #2: chapters/references.bib
+Warning--I'm ignoring buch:lissajous's extra "year" field
+--line 73 of file chapters/references.bib
+Database file #3: papers/000template/references.bib
+Database file #4: papers/vanderpol/references.bib
+Database file #5: papers/logistic/references.bib
+Database file #6: papers/kettenbruch/references.bib
+Database file #7: papers/taylor/references.bib
+Database file #8: papers/fem/references.bib
+Database file #9: papers/burgers/references.bib
+Database file #10: papers/pade/references.bib
+Database file #11: papers/qr/references.bib
+Database file #12: papers/laplace/references.bib
+Database file #13: papers/perturbation/references.bib
+Database file #14: papers/quadratur/references.bib
+Database file #15: papers/steps/references.bib
+Database file #16: papers/francis/references.bib
+Database file #17: papers/legendre/references.bib
+Database file #18: papers/cg/references.bib
+Database file #19: papers/ew/references.bib
+Database file #20: papers/ableitung/references.bib
+Biblatex version: 3.11
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+You've used 5 entries,
+            6304 wiz_defined-function locations,
+            1223 strings with 9644 characters,
+and the built_in function-call counts, 17769 in all, are:
+= -- 831
+> -- 860
+< -- 145
++ -- 704
+- -- 572
+* -- 951
+:= -- 1860
+add.period$ -- 0
+call.type$ -- 5
+change.case$ -- 51
+chr.to.int$ -- 86
+cite$ -- 8
+duplicate$ -- 1676
+empty$ -- 1680
+format.name$ -- 141
+if$ -- 3448
+int.to.chr$ -- 0
+int.to.str$ -- 8
+missing$ -- 0
+newline$ -- 101
+num.names$ -- 145
+pop$ -- 1356
+preamble$ -- 1
+purify$ -- 56
+quote$ -- 0
+skip$ -- 665
+stack$ -- 0
+substring$ -- 1307
+swap$ -- 507
+text.length$ -- 128
+text.prefix$ -- 4
+top$ -- 1
+type$ -- 158
+warning$ -- 0
+while$ -- 217
+width$ -- 0
+write$ -- 97
+(There was 1 warning)

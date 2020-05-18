@@ -1,0 +1,295 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {ngerman}{}
+\contentsline {part}{I\hspace {1em}Grundlagen}{3}{part.1}% 
+\contentsline {chapter}{Einleitung}{5}{chapter*.3}% 
+\contentsline {chapter}{\numberline {1}Berechnung }{7}{chapter.1}% 
+\contentsline {section}{\numberline {1.1}Zahlensysteme }{8}{section.1.1}% 
+\contentsline {subsection}{\numberline {1.1.1}Zahlendarstellung bez\IeC {\"u}glich verschiedener Basen }{8}{subsection.1.1.1}% 
+\contentsline {subsection}{\numberline {1.1.2}Festkommazahlen }{9}{subsection.1.1.2}% 
+\contentsline {subsubsection}{Addition}{10}{section*.4}% 
+\contentsline {subsubsection}{Vorzeichen}{10}{section*.5}% 
+\contentsline {subsubsection}{Multiplikation und Division}{11}{section*.6}% 
+\contentsline {subsubsection}{Nachkommateil}{11}{section*.7}% 
+\contentsline {subsubsection}{Vor- und Nachteile}{12}{section*.8}% 
+\contentsline {subsection}{\numberline {1.1.3}Gleitkommazahlen }{12}{subsection.1.1.3}% 
+\contentsline {subsubsection}{Gebr\IeC {\"a}uchliche Formate}{13}{section*.11}% 
+\contentsline {subsubsection}{Rundung}{14}{section*.12}% 
+\contentsline {subsubsection}{Die Null}{14}{section*.13}% 
+\contentsline {subsubsection}{Unendlich grosse Werte}{14}{section*.14}% 
+\contentsline {subsubsection}{Denormalizierung}{15}{section*.15}% 
+\contentsline {subsubsection}{Vor- und Nachteile}{15}{section*.16}% 
+\contentsline {subsection}{\numberline {1.1.4}Hochpr\IeC {\"a}zisionsbibliotheken }{15}{subsection.1.1.4}% 
+\contentsline {section}{\numberline {1.2}Numerische Effekte }{15}{section.1.2}% 
+\contentsline {subsection}{\numberline {1.2.1}Ausl\IeC {\"o}schnung}{15}{subsection.1.2.1}% 
+\contentsline {subsection}{\numberline {1.2.2}Verschmierung }{18}{subsection.1.2.2}% 
+\contentsline {subsubsection}{Beispiel: Exponentialreihe $e^x$}{18}{section*.18}% 
+\contentsline {subsubsection}{Summationsreihenfolge}{19}{section*.21}% 
+\contentsline {subsubsection}{Kahan-Summationsalgorithmus}{20}{section*.22}% 
+\contentsline {section}{\numberline {1.3}Iteration }{21}{section.1.3}% 
+\contentsline {subsection}{\numberline {1.3.1}Beispiele}{21}{subsection.1.3.1}% 
+\contentsline {subsection}{\numberline {1.3.2}Graphische Analyse }{27}{subsection.1.3.2}% 
+\contentsline {subsection}{\numberline {1.3.3}Konvergenzbedingung }{27}{subsection.1.3.3}% 
+\contentsline {subsection}{\numberline {1.3.4}Die logistische Gleichung }{28}{subsection.1.3.4}% 
+\contentsline {subsection}{\numberline {1.3.5}Dritte Ableitung im Fixpunkt }{30}{subsection.1.3.5}% 
+\contentsline {section}{\numberline {1.4}Konvergenzgeschwindigkeit }{31}{section.1.4}% 
+\contentsline {subsection}{\numberline {1.4.1}Lineare und quadratische Konvergenz }{31}{subsection.1.4.1}% 
+\contentsline {subsubsection}{Lineare Konvergenz}{32}{section*.33}% 
+\contentsline {subsubsection}{Quadratische Konvergenz}{32}{section*.34}% 
+\contentsline {subsubsection}{Konvergenzgeschwindigkeit von Iterationsfolgen}{33}{section*.35}% 
+\contentsline {subsection}{\numberline {1.4.2}Konvergenzbeschleunigung }{33}{subsection.1.4.2}% 
+\contentsline {section}{\numberline {1.5}Numerische Instabilit\IeC {\"a}t }{36}{section.1.5}% 
+\contentsline {subsection}{\numberline {1.5.1}Eine instabile Quadratwurzel }{36}{subsection.1.5.1}% 
+\contentsline {subsection}{\numberline {1.5.2}Numerische Instabilit\IeC {\"a}t }{36}{subsection.1.5.2}% 
+\contentsline {section}{\numberline {1.6}Kondition }{39}{section.1.6}% 
+\contentsline {chapter}{\numberline {2}Gleichungen l\IeC {\"o}sen}{43}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}Nullstellen von Funktionen }{44}{section.2.1}% 
+\contentsline {subsection}{\numberline {2.1.1}Intervallhalbierung }{44}{subsection.2.1.1}% 
+\contentsline {subsection}{\numberline {2.1.2}Sekanten-Verfahren }{47}{subsection.2.1.2}% 
+\contentsline {section}{\numberline {2.2}Newton-Verfahren }{49}{section.2.2}% 
+\contentsline {subsection}{\numberline {2.2.1}Analytischer Ansatz f\IeC {\"u}r ein quadratisch konvergentes Verfahren }{49}{subsection.2.2.1}% 
+\contentsline {subsection}{\numberline {2.2.2}Geometrische Interpretation des Newton-Verfahrens}{50}{subsection.2.2.2}% 
+\contentsline {subsection}{\numberline {2.2.3}Wurzeln}{51}{subsection.2.2.3}% 
+\contentsline {subsection}{\numberline {2.2.4}Newton-Verfahren in $\mathbb R^n$}{52}{subsection.2.2.4}% 
+\contentsline {subsection}{\numberline {2.2.5}Der Fall $f'(x^*)=0$ }{53}{subsection.2.2.5}% 
+\contentsline {subsection}{\numberline {2.2.6}Vergleich mit dem Sekanten-Verfahren }{54}{subsection.2.2.6}% 
+\contentsline {subsection}{\numberline {2.2.7}Nullstellen von Polynomen }{54}{subsection.2.2.7}% 
+\contentsline {subsubsection}{Berechnung von Funktionswerten}{54}{section*.50}% 
+\contentsline {subsubsection}{Deflation}{55}{section*.52}% 
+\contentsline {subsubsection}{Berechnung der Ableitung}{57}{section*.53}% 
+\contentsline {subsubsection}{Newton-Verfahren f\IeC {\"u}r Nullstellen von Polynomen}{58}{section*.54}% 
+\contentsline {subsection}{\numberline {2.2.8}Inverse der Normalverteilungsfunktion }{58}{subsection.2.2.8}% 
+\contentsline {subsubsection}{Sekantenverfahren}{59}{section*.56}% 
+\contentsline {subsubsection}{Newton-Verfahren}{59}{section*.57}% 
+\contentsline {section}{\numberline {2.3}Homotopie-Verfahren }{59}{section.2.3}% 
+\contentsline {chapter}{\numberline {3}Interpolation}{63}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Lineare Interpolation und Polygonz\IeC {\"u}ge }{63}{section.3.1}% 
+\contentsline {subsection}{\numberline {3.1.1}Lineare Interpolation }{63}{subsection.3.1.1}% 
+\contentsline {subsection}{\numberline {3.1.2}Polygonz\IeC {\"u}ge }{64}{subsection.3.1.2}% 
+\contentsline {section}{\numberline {3.2}Interpolationspolynom }{66}{section.3.2}% 
+\contentsline {subsection}{\numberline {3.2.1}Bestimmung des Interpolationspolynoms }{66}{subsection.3.2.1}% 
+\contentsline {subsection}{\numberline {3.2.2}Fehler von Approximationspolynomen }{69}{subsection.3.2.2}% 
+\contentsline {subsubsection}{Der Zwischenwertsatz}{69}{section*.63}% 
+\contentsline {subsubsection}{Der Satz von Rolle}{69}{section*.64}% 
+\contentsline {subsubsection}{Nullstellen und der Satz von Rolle}{70}{section*.66}% 
+\contentsline {subsubsection}{Der Mittelwertsatz der Differentialrechnung}{72}{section*.69}% 
+\contentsline {subsubsection}{Taylorreihe mit Restformel}{72}{section*.70}% 
+\contentsline {subsubsection}{Fehler des Lagrange-Interpolationspolynoms}{72}{section*.71}% 
+\contentsline {subsection}{\numberline {3.2.3}Wahl der St\IeC {\"u}tzstellen und Tschebyscheff-Interpolationspolynom }{75}{subsection.3.2.3}% 
+\contentsline {section}{\numberline {3.3}Hermite-Interpolation }{80}{section.3.3}% 
+\contentsline {subsection}{\numberline {3.3.1}Aufgabenstellung }{80}{subsection.3.3.1}% 
+\contentsline {subsection}{\numberline {3.3.2}Bestimmung des Hermite-Interpolationspolynom }{80}{subsection.3.3.2}% 
+\contentsline {subsection}{\numberline {3.3.3}Zwei St\IeC {\"u}tzstellen }{82}{subsection.3.3.3}% 
+\contentsline {subsubsection}{Der Spezialfall $x_0=0$}{82}{section*.77}% 
+\contentsline {subsubsection}{Der Spezialfall $x_0=0$, $x_1=1$}{82}{section*.78}% 
+\contentsline {subsubsection}{Zweite Ableitungen}{84}{section*.80}% 
+\contentsline {section}{\numberline {3.4}Baryzentrische Formeln f\IeC {\"u}r Interpolationspolynome }{84}{section.3.4}% 
+\contentsline {section}{\numberline {3.5}Spline-Interpolation }{86}{section.3.5}% 
+\contentsline {subsection}{\numberline {3.5.1}Anforderungen and die interpolierende Funktion }{86}{subsection.3.5.1}% 
+\contentsline {subsection}{\numberline {3.5.2}Das Optimierungsproblem }{87}{subsection.3.5.2}% 
+\contentsline {subsection}{\numberline {3.5.3}L\IeC {\"o}sung des Optimierungsproblems }{89}{subsection.3.5.3}% 
+\contentsline {subsubsection}{Bedingungen im Inneren der Teilintervalle}{89}{section*.81}% 
+\contentsline {subsubsection}{Bedingungen an den St\IeC {\"u}tzstellen}{89}{section*.82}% 
+\contentsline {subsubsection}{Ein Gleichungssystem f\IeC {\"u}r die Steigungen}{90}{section*.83}% 
+\contentsline {subsection}{\numberline {3.5.4}B\IeC {\'e}zier-Kurven und Splines in der Ebene }{91}{subsection.3.5.4}% 
+\contentsline {chapter}{\numberline {4}Integration}{95}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Riemann-Integral und Trapezregel }{95}{section.4.1}% 
+\contentsline {subsection}{\numberline {4.1.1}Das Riemann-Integral }{96}{subsection.4.1.1}% 
+\contentsline {subsection}{\numberline {4.1.2}Mittelpunktsregel }{97}{subsection.4.1.2}% 
+\contentsline {subsection}{\numberline {4.1.3}Trapezregel }{98}{subsection.4.1.3}% 
+\contentsline {subsubsection}{Verfeinerung}{99}{section*.90}% 
+\contentsline {subsection}{\numberline {4.1.4}Fehler von Trapez- und Mittelpunktsregel }{101}{subsection.4.1.4}% 
+\contentsline {subsubsection}{Partielle Integration}{101}{section*.92}% 
+\contentsline {subsubsection}{Die Polynome $p_k(t)$}{102}{section*.93}% 
+\contentsline {subsubsection}{Eigenschaften der Polynome $p_k(t)$}{103}{section*.94}% 
+\contentsline {subsubsection}{Euler-Maclaurin Summenformel}{104}{section*.95}% 
+\contentsline {subsubsection}{Fehler der Trapezformel}{105}{section*.96}% 
+\contentsline {subsubsection}{Wie muss $h$ gew\IeC {\"a}hlt werden?}{107}{section*.97}% 
+\contentsline {section}{\numberline {4.2}Romberg-Algorithmus }{108}{section.4.2}% 
+\contentsline {subsubsection}{Elmination des Fehlers}{108}{section*.98}% 
+\contentsline {subsubsection}{Ein Beispiel}{109}{section*.99}% 
+\contentsline {subsubsection}{Allgemeine Form des Romberg-Verfahrens}{110}{section*.101}% 
+\contentsline {subsubsection}{Wieviele Stellen Genauigkeit lassen sich erreichen?}{110}{section*.102}% 
+\contentsline {chapter}{\numberline {5}Gew\IeC {\"o}hnliche Differentialgleichungen}{111}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}Problemstellung }{111}{section.5.1}% 
+\contentsline {subsection}{\numberline {5.1.1}Reduktion der Ordnung}{112}{subsection.5.1.1}% 
+\contentsline {subsection}{\numberline {5.1.2}Anfangswertprobleme}{113}{subsection.5.1.2}% 
+\contentsline {subsubsection}{Existenz und Eindeutigkeit von L\IeC {\"o}sungen}{113}{section*.104}% 
+\contentsline {subsection}{\numberline {5.1.3}Randwertprobleme}{114}{subsection.5.1.3}% 
+\contentsline {subsection}{\numberline {5.1.4}H\IeC {\"o}here Ableitungen}{114}{subsection.5.1.4}% 
+\contentsline {subsection}{\numberline {5.1.5}Ableitung nach der Anfangsbedingung}{115}{subsection.5.1.5}% 
+\contentsline {subsection}{\numberline {5.1.6}Abh\IeC {\"a}ngigkeit von Parametern}{118}{subsection.5.1.6}% 
+\contentsline {section}{\numberline {5.2}Grundprinzip numerischer L\IeC {\"o}sungsverfahren}{119}{section.5.2}% 
+\contentsline {section}{\numberline {5.3}Fehler-Entwicklung numerischer L\IeC {\"o}sungen}{121}{section.5.3}% 
+\contentsline {section}{\numberline {5.4}Einschritt-Verfahren}{122}{section.5.4}% 
+\contentsline {subsection}{\numberline {5.4.1}Quadratische Verfahren}{124}{subsection.5.4.1}% 
+\contentsline {subsection}{\numberline {5.4.2}Runge-Kutta-Verfahren}{125}{subsection.5.4.2}% 
+\contentsline {section}{\numberline {5.5}Mehrschritt-Verfahren}{127}{section.5.5}% 
+\contentsline {section}{\numberline {5.6}Software}{130}{section.5.6}% 
+\contentsline {subsection}{\numberline {5.6.1}Octave}{130}{subsection.5.6.1}% 
+\contentsline {subsection}{\numberline {5.6.2}GNU Scientific Library}{132}{subsection.5.6.2}% 
+\contentsline {section}{\numberline {5.7}Randwertprobleme}{133}{section.5.7}% 
+\contentsline {subsection}{\numberline {5.7.1}Einf\IeC {\"u}hrende Beispiele}{133}{subsection.5.7.1}% 
+\contentsline {subsection}{\numberline {5.7.2}Schiess-Verfahren}{140}{subsection.5.7.2}% 
+\contentsline {chapter}{\numberline {6}Lineare Gleichungssysteme}{143}{chapter.6}% 
+\contentsline {section}{\numberline {6.1}Iterative Gleichungsl\IeC {\"o}sung nach Gauss-Seidel }{144}{section.6.1}% 
+\contentsline {subsection}{\numberline {6.1.1}Iterative L\IeC {\"o}sung nach Gauss-Seidel }{144}{subsection.6.1.1}% 
+\contentsline {subsection}{\numberline {6.1.2}Matrixformulierung }{145}{subsection.6.1.2}% 
+\contentsline {subsection}{\numberline {6.1.3}Konvergenzbedingung }{145}{subsection.6.1.3}% 
+\contentsline {section}{\numberline {6.2}QR-Zerlegung mit Spiegelungen }{147}{section.6.2}% 
+\contentsline {subsection}{\numberline {6.2.1}Gram-Schmidt-Orthonormalisierung }{147}{subsection.6.2.1}% 
+\contentsline {subsection}{\numberline {6.2.2}Spiegelungen }{147}{subsection.6.2.2}% 
+\contentsline {subsection}{\numberline {6.2.3}QR-Zerlegung mit Spiegelungen }{148}{subsection.6.2.3}% 
+\contentsline {section}{\numberline {6.3}Diagonalisierung mit dem Jacobi-Verfahren }{150}{section.6.3}% 
+\contentsline {subsection}{\numberline {6.3.1}Jacobi-Verfahren in zwei Dimensionen}{150}{subsection.6.3.1}% 
+\contentsline {subsection}{\numberline {6.3.2}Beliebige Dimension}{151}{subsection.6.3.2}% 
+\contentsline {chapter}{\numberline {7}Partielle Differentialgleichungen}{153}{chapter.7}% 
+\contentsline {chapter}{\numberline {8}Periodische Funktionen}{155}{chapter.8}% 
+\contentsline {part}{II\hspace {1em}Anwendungen und weiterf\IeC {\"u}hrende Themen}{159}{part.2}% 
+\contentsline {chapter}{\numberline {9}Thema}{163}{chapter.9}% 
+\contentsline {section}{\numberline {9.1}Einleitung}{163}{section.9.1}% 
+\contentsline {section}{\numberline {9.2}Problemstellung }{163}{section.9.2}% 
+\contentsline {subsection}{\numberline {9.2.1}De finibus bonorum et malorum }{164}{subsection.9.2.1}% 
+\contentsline {section}{\numberline {9.3}L\IeC {\"o}sung }{164}{section.9.3}% 
+\contentsline {subsection}{\numberline {9.3.1}De finibus bonorum et malorum }{164}{subsection.9.3.1}% 
+\contentsline {section}{\numberline {9.4}Folgerungen }{165}{section.9.4}% 
+\contentsline {subsection}{\numberline {9.4.1}De finibus bonorum et malorum }{165}{subsection.9.4.1}% 
+\contentsline {chapter}{\numberline {10}Van der Pol-Differentialgleichung}{167}{chapter.10}% 
+\contentsline {section}{\numberline {10.1}Einleitung}{167}{section.10.1}% 
+\contentsline {section}{\numberline {10.2}Problemstellung }{167}{section.10.2}% 
+\contentsline {subsection}{\numberline {10.2.1}De finibus bonorum et malorum }{168}{subsection.10.2.1}% 
+\contentsline {section}{\numberline {10.3}L\IeC {\"o}sung }{168}{section.10.3}% 
+\contentsline {subsection}{\numberline {10.3.1}De finibus bonorum et malorum }{168}{subsection.10.3.1}% 
+\contentsline {section}{\numberline {10.4}Folgerungen }{169}{section.10.4}% 
+\contentsline {subsection}{\numberline {10.4.1}De finibus bonorum et malorum }{169}{subsection.10.4.1}% 
+\contentsline {chapter}{\numberline {11}Iteration der logistischen Gleichung}{171}{chapter.11}% 
+\contentsline {section}{\numberline {11.1}Einleitung}{171}{section.11.1}% 
+\contentsline {section}{\numberline {11.2}Problemstellung }{171}{section.11.2}% 
+\contentsline {subsection}{\numberline {11.2.1}De finibus bonorum et malorum }{172}{subsection.11.2.1}% 
+\contentsline {section}{\numberline {11.3}L\IeC {\"o}sung }{172}{section.11.3}% 
+\contentsline {subsection}{\numberline {11.3.1}De finibus bonorum et malorum }{172}{subsection.11.3.1}% 
+\contentsline {section}{\numberline {11.4}Folgerungen }{173}{section.11.4}% 
+\contentsline {subsection}{\numberline {11.4.1}De finibus bonorum et malorum }{173}{subsection.11.4.1}% 
+\contentsline {chapter}{\numberline {12}Kettenbr\IeC {\"u}che}{175}{chapter.12}% 
+\contentsline {section}{\numberline {12.1}Einleitung}{175}{section.12.1}% 
+\contentsline {section}{\numberline {12.2}Problemstellung }{175}{section.12.2}% 
+\contentsline {subsection}{\numberline {12.2.1}De finibus bonorum et malorum }{176}{subsection.12.2.1}% 
+\contentsline {section}{\numberline {12.3}L\IeC {\"o}sung }{176}{section.12.3}% 
+\contentsline {subsection}{\numberline {12.3.1}De finibus bonorum et malorum }{176}{subsection.12.3.1}% 
+\contentsline {section}{\numberline {12.4}Folgerungen }{177}{section.12.4}% 
+\contentsline {subsection}{\numberline {12.4.1}De finibus bonorum et malorum }{177}{subsection.12.4.1}% 
+\contentsline {chapter}{\numberline {13}Taylor-Reihe und Differentialgleichungen}{179}{chapter.13}% 
+\contentsline {section}{\numberline {13.1}Einleitung}{179}{section.13.1}% 
+\contentsline {section}{\numberline {13.2}Problemstellung }{180}{section.13.2}% 
+\contentsline {subsection}{\numberline {13.2.1}De finibus bonorum et malorum }{180}{subsection.13.2.1}% 
+\contentsline {section}{\numberline {13.3}L\IeC {\"o}sung }{180}{section.13.3}% 
+\contentsline {subsection}{\numberline {13.3.1}De finibus bonorum et malorum }{180}{subsection.13.3.1}% 
+\contentsline {section}{\numberline {13.4}Folgerungen }{181}{section.13.4}% 
+\contentsline {subsection}{\numberline {13.4.1}De finibus bonorum et malorum }{181}{subsection.13.4.1}% 
+\contentsline {chapter}{\numberline {14}Finite Elemente in der Ebene}{183}{chapter.14}% 
+\contentsline {section}{\numberline {14.1}Einleitung}{183}{section.14.1}% 
+\contentsline {section}{\numberline {14.2}Problemstellung }{184}{section.14.2}% 
+\contentsline {subsection}{\numberline {14.2.1}De finibus bonorum et malorum }{184}{subsection.14.2.1}% 
+\contentsline {section}{\numberline {14.3}L\IeC {\"o}sung }{185}{section.14.3}% 
+\contentsline {subsection}{\numberline {14.3.1}linearer Ansatzfunktion }{185}{subsection.14.3.1}% 
+\contentsline {subsection}{\numberline {14.3.2}Quadratischer Ansatz }{185}{subsection.14.3.2}% 
+\contentsline {section}{\numberline {14.4}Folgerungen }{185}{section.14.4}% 
+\contentsline {subsection}{\numberline {14.4.1}De finibus bonorum et malorum }{185}{subsection.14.4.1}% 
+\contentsline {chapter}{\numberline {15}Die Gleichung von Burgers}{187}{chapter.15}% 
+\contentsline {section}{\numberline {15.1}Einleitung}{187}{section.15.1}% 
+\contentsline {section}{\numberline {15.2}Problemstellung }{187}{section.15.2}% 
+\contentsline {subsection}{\numberline {15.2.1}De finibus bonorum et malorum }{188}{subsection.15.2.1}% 
+\contentsline {section}{\numberline {15.3}L\IeC {\"o}sung }{188}{section.15.3}% 
+\contentsline {subsection}{\numberline {15.3.1}De finibus bonorum et malorum }{188}{subsection.15.3.1}% 
+\contentsline {section}{\numberline {15.4}Folgerungen }{189}{section.15.4}% 
+\contentsline {subsection}{\numberline {15.4.1}De finibus bonorum et malorum }{189}{subsection.15.4.1}% 
+\contentsline {chapter}{\numberline {16}Pad\IeC {\'e}-Approximation}{191}{chapter.16}% 
+\contentsline {section}{\numberline {16.1}Einleitung}{191}{section.16.1}% 
+\contentsline {section}{\numberline {16.2}Problemstellung }{191}{section.16.2}% 
+\contentsline {subsection}{\numberline {16.2.1}De finibus bonorum et malorum }{192}{subsection.16.2.1}% 
+\contentsline {section}{\numberline {16.3}L\IeC {\"o}sung }{192}{section.16.3}% 
+\contentsline {subsection}{\numberline {16.3.1}De finibus bonorum et malorum }{192}{subsection.16.3.1}% 
+\contentsline {section}{\numberline {16.4}Folgerungen }{193}{section.16.4}% 
+\contentsline {subsection}{\numberline {16.4.1}De finibus bonorum et malorum }{193}{subsection.16.4.1}% 
+\contentsline {chapter}{\numberline {17}QR-Zerlegung mit Givens-Rotationen}{195}{chapter.17}% 
+\contentsline {section}{\numberline {17.1}Einleitung}{195}{section.17.1}% 
+\contentsline {subsection}{\numberline {17.1.1}Anwedungsbeispiel Least-Squares}{196}{subsection.17.1.1}% 
+\contentsline {section}{\numberline {17.2}Problemstellung }{196}{section.17.2}% 
+\contentsline {section}{\numberline {17.3}L\IeC {\"o}sung }{198}{section.17.3}% 
+\contentsline {section}{\numberline {17.4}Folgerungen }{198}{section.17.4}% 
+\contentsline {chapter}{\numberline {18}Numerische Laplace-Inversion}{199}{chapter.18}% 
+\contentsline {section}{\numberline {18.1}Einleitung}{199}{section.18.1}% 
+\contentsline {section}{\numberline {18.2}Problemstellung }{199}{section.18.2}% 
+\contentsline {subsection}{\numberline {18.2.1}De finibus bonorum et malorum }{200}{subsection.18.2.1}% 
+\contentsline {section}{\numberline {18.3}L\IeC {\"o}sung }{200}{section.18.3}% 
+\contentsline {subsection}{\numberline {18.3.1}De finibus bonorum et malorum }{200}{subsection.18.3.1}% 
+\contentsline {section}{\numberline {18.4}Folgerungen }{201}{section.18.4}% 
+\contentsline {subsection}{\numberline {18.4.1}De finibus bonorum et malorum }{201}{subsection.18.4.1}% 
+\contentsline {chapter}{\numberline {19}St\IeC {\"o}rungstheorie}{203}{chapter.19}% 
+\contentsline {section}{\numberline {19.1}Einleitung}{203}{section.19.1}% 
+\contentsline {section}{\numberline {19.2}Problemstellung }{203}{section.19.2}% 
+\contentsline {subsection}{\numberline {19.2.1}De finibus bonorum et malorum }{204}{subsection.19.2.1}% 
+\contentsline {section}{\numberline {19.3}L\IeC {\"o}sung }{204}{section.19.3}% 
+\contentsline {subsection}{\numberline {19.3.1}De finibus bonorum et malorum }{204}{subsection.19.3.1}% 
+\contentsline {section}{\numberline {19.4}Folgerungen }{205}{section.19.4}% 
+\contentsline {subsection}{\numberline {19.4.1}De finibus bonorum et malorum }{205}{subsection.19.4.1}% 
+\contentsline {chapter}{\numberline {20}Gauss-Quadratur}{207}{chapter.20}% 
+\contentsline {section}{\numberline {20.1}Einleitung}{207}{section.20.1}% 
+\contentsline {section}{\numberline {20.2}Problemstellung }{207}{section.20.2}% 
+\contentsline {subsection}{\numberline {20.2.1}De finibus bonorum et malorum }{208}{subsection.20.2.1}% 
+\contentsline {section}{\numberline {20.3}L\IeC {\"o}sung }{208}{section.20.3}% 
+\contentsline {subsection}{\numberline {20.3.1}De finibus bonorum et malorum }{208}{subsection.20.3.1}% 
+\contentsline {section}{\numberline {20.4}Folgerungen }{209}{section.20.4}% 
+\contentsline {subsection}{\numberline {20.4.1}De finibus bonorum et malorum }{209}{subsection.20.4.1}% 
+\contentsline {chapter}{\numberline {21}Schrittl\IeC {\"a}ngensteuerung}{211}{chapter.21}% 
+\contentsline {section}{\numberline {21.1}Einleitung}{211}{section.21.1}% 
+\contentsline {section}{\numberline {21.2}Problemstellung }{211}{section.21.2}% 
+\contentsline {subsection}{\numberline {21.2.1}De finibus bonorum et malorum }{212}{subsection.21.2.1}% 
+\contentsline {section}{\numberline {21.3}L\IeC {\"o}sung }{212}{section.21.3}% 
+\contentsline {subsection}{\numberline {21.3.1}De finibus bonorum et malorum }{212}{subsection.21.3.1}% 
+\contentsline {section}{\numberline {21.4}Folgerungen }{213}{section.21.4}% 
+\contentsline {subsection}{\numberline {21.4.1}De finibus bonorum et malorum }{213}{subsection.21.4.1}% 
+\contentsline {chapter}{\numberline {22}Francis-Algorithmus}{215}{chapter.22}% 
+\contentsline {section}{\numberline {22.1}Einleitung}{215}{section.22.1}% 
+\contentsline {section}{\numberline {22.2}Problemstellung }{215}{section.22.2}% 
+\contentsline {subsection}{\numberline {22.2.1}De finibus bonorum et malorum }{216}{subsection.22.2.1}% 
+\contentsline {section}{\numberline {22.3}L\IeC {\"o}sung }{216}{section.22.3}% 
+\contentsline {subsection}{\numberline {22.3.1}De finibus bonorum et malorum }{216}{subsection.22.3.1}% 
+\contentsline {section}{\numberline {22.4}Folgerungen }{217}{section.22.4}% 
+\contentsline {subsection}{\numberline {22.4.1}De finibus bonorum et malorum }{217}{subsection.22.4.1}% 
+\contentsline {chapter}{\numberline {23}Stabile Berechnung von Legendre Polynomen}{219}{chapter.23}% 
+\contentsline {section}{\numberline {23.1}Einleitung}{219}{section.23.1}% 
+\contentsline {section}{\numberline {23.2}Problemstellung }{220}{section.23.2}% 
+\contentsline {subsection}{\numberline {23.2.1}De finibus bonorum et malorum }{220}{subsection.23.2.1}% 
+\contentsline {section}{\numberline {23.3}L\IeC {\"o}sung }{220}{section.23.3}% 
+\contentsline {subsection}{\numberline {23.3.1}De finibus bonorum et malorum }{220}{subsection.23.3.1}% 
+\contentsline {section}{\numberline {23.4}Folgerungen }{221}{section.23.4}% 
+\contentsline {subsection}{\numberline {23.4.1}De finibus bonorum et malorum }{221}{subsection.23.4.1}% 
+\contentsline {chapter}{\numberline {24}Die Methode der konjugierten Gradienten}{223}{chapter.24}% 
+\contentsline {section}{\numberline {24.1}Herleitung des Algorithmus}{223}{section.24.1}% 
+\contentsline {subsection}{\numberline {24.1.1}Minimierungsproblem }{224}{subsection.24.1.1}% 
+\contentsline {subsection}{\numberline {24.1.2}Optimale Schrittweite }{224}{subsection.24.1.2}% 
+\contentsline {subsection}{\numberline {24.1.3}Optimale Suchrichtung }{225}{subsection.24.1.3}% 
+\contentsline {section}{\numberline {24.2}Einleitung}{225}{section.24.2}% 
+\contentsline {section}{\numberline {24.3}Problemstellung }{225}{section.24.3}% 
+\contentsline {subsection}{\numberline {24.3.1}De finibus bonorum et malorum }{226}{subsection.24.3.1}% 
+\contentsline {section}{\numberline {24.4}L\IeC {\"o}sung }{226}{section.24.4}% 
+\contentsline {subsection}{\numberline {24.4.1}De finibus bonorum et malorum }{226}{subsection.24.4.1}% 
+\contentsline {section}{\numberline {24.5}Folgerungen }{227}{section.24.5}% 
+\contentsline {subsection}{\numberline {24.5.1}De finibus bonorum et malorum }{227}{subsection.24.5.1}% 
+\contentsline {chapter}{\numberline {25}St\IeC {\"o}rungstheorie f\IeC {\"u}r das Eigenwertproblem}{229}{chapter.25}% 
+\contentsline {section}{\numberline {25.1}Einleitung}{229}{section.25.1}% 
+\contentsline {section}{\numberline {25.2}Problemstellung }{230}{section.25.2}% 
+\contentsline {subsection}{\numberline {25.2.1}De finibus bonorum et malorum }{230}{subsection.25.2.1}% 
+\contentsline {section}{\numberline {25.3}L\IeC {\"o}sung }{230}{section.25.3}% 
+\contentsline {subsection}{\numberline {25.3.1}De finibus bonorum et malorum }{230}{subsection.25.3.1}% 
+\contentsline {section}{\numberline {25.4}Folgerungen }{231}{section.25.4}% 
+\contentsline {subsection}{\numberline {25.4.1}De finibus bonorum et malorum }{231}{subsection.25.4.1}% 
+\contentsline {chapter}{\numberline {26}Numerische Ableitung}{233}{chapter.26}% 
+\contentsline {section}{\numberline {26.1}Einleitung}{233}{section.26.1}% 
+\contentsline {section}{\numberline {26.2}Problemstellung }{233}{section.26.2}% 
+\contentsline {subsection}{\numberline {26.2.1}De finibus bonorum et malorum }{234}{subsection.26.2.1}% 
+\contentsline {section}{\numberline {26.3}L\IeC {\"o}sung }{234}{section.26.3}% 
+\contentsline {subsection}{\numberline {26.3.1}De finibus bonorum et malorum }{234}{subsection.26.3.1}% 
+\contentsline {section}{\numberline {26.4}Folgerungen }{235}{section.26.4}% 
+\contentsline {subsection}{\numberline {26.4.1}De finibus bonorum et malorum }{235}{subsection.26.4.1}% 
+\contentsline {chapter}{Index}{237}{section*.139}% 

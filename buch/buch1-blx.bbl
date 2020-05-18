@@ -1,0 +1,101 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.0 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nty/global//global/global}
+  \entry{buch:lissajous}{online}{}
+    \name{author}{1}{}{%
+      {{hash=C}{%
+         family={CloudyPadmal},
+         familyi={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{C1}
+    \strng{fullhash}{C1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{title}{Makeing Shapes with PSLab Oscilloscope}
+    \verb{url}
+    \verb https://blog.fossasia.org/making-shapes-with-pslab-oscilloscope/
+    \endverb
+    \field{month}{03}
+    \field{year}{2018}
+  \endentry
+
+  \entry{buch:kahan-summation}{online}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{title}{Kahan summation algorithm}
+    \verb{url}
+    \verb https://en.wikipedia.org/wiki/Kahan_summation_algorithm
+    \endverb
+    \field{day}{29}
+    \field{month}{02}
+    \field{year}{2020}
+    \warn{\item Can't use 'date' + 'month' \item Can't use 'date' + 'year'}
+  \endentry
+
+  \entry{buch:repo}{online}{}
+    \name{author}{1}{}{%
+      {{hash=MA}{%
+         family={Müller},
+         familyi={M\bibinitperiod},
+         given={Andreas},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MA1}
+    \strng{fullhash}{MA1}
+    \field{labelnamesource}{author}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{subtitle}{Source Code Repository}
+    \verb{url}
+    \verb https://github.com/AndreasFMueller/SeminarNumerik.git
+    \endverb
+    \field{year}{2020}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{buch:watkins}{book}{}
+    \name{author}{1}{}{%
+      {{hash=WDS}{%
+         family={Watkins},
+         familyi={W\bibinitperiod},
+         given={David\bibnamedelima S.},
+         giveni={D\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{2}{%
+      {John Wiley}%
+      {Sons, Inc.}%
+    }
+    \strng{namehash}{WDS1}
+    \strng{fullhash}{WDS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{edition}{3}
+    \field{title}{Fundamentals of Matrix Computations}
+    \field{year}{2010}
+  \endentry
+\enddatalist
+\endinput
