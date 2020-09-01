@@ -6,23 +6,16 @@
 \section{Lösung
 \label{ableitung:section:loesung}}
 \rhead{Lösung}
-Um nun ein neueronales Netzwerk ohne den Backpropagation Algorithmus zu optimieren, muss eine Methode gefunden werden, welche den Gradienten berechnen kann. Die Weitergabe des Gradienten an eine beliebige Implementation des Gradientenabstiegs ist somit durch das Framework gewährleistet.
+Um nun ein neueronales Netzwerk ohne den Backpropagation Algorithmus zu optimieren, muss eine Methode gefunden werden, welche den Gradienten berechnen kann. Die Weitergabe des Gradienten an eine beliebige Implementation des Gradientenabstiegs ist somit durch das Framework gewährleistet. Zu einem spätern Punkt kann man die hier vorgestellte Methode mit dem Backpropagation Algorithmus vergleichen und Schlüsse ziehen.
 \subsection{Finite Differenzen Methode}
-Wir wissen, dass jede Ableitung einer beliebigen Funktion der Tangente an diesem Punkt entspricht. Diese Tangente wird als Sekante zweier Punkte der Funktion berechnet, wobei beide Punkte einen Abstand von $\Delta h \rightarrow 0$ annehmen. Dieses Konzept wird im Differentialquotienten in Gleichung
+Die Finite Differenzen Methode ist motiviert durch die klassische Ableitung. Die Ableitung (Tangente) wird als Sekante zweier Punkte der Funktion berechnet, wobei beide Punkte einen Abstand von $\Delta h \rightarrow 0$ annehmen.
+Dieses Konzept ist als Differentialquotient
 \begin{equation}
 f'(x_0) = \lim_{{\Delta h} \rightarrow 0} \frac{f(x_0+\Delta h) - f(x_0)}{\Delta h}
 \label{ableitung:equations:differentialquotient}
 \end{equation}
-dargestellt.
-In der Numerik existiert die Möglichkeit von $\Delta h \rightarrow 0$ nicht, da die Datenpunkte diskretisiert sind. Aus diesem Grund kann man die numerische Ableitung (Differenzenquotient), angelehnt an den Differentialquotienten analog zu \ref{ableitung:equations:differenzenquotient} schreiben.
-
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=12cm]{papers/ableitung/images/sekante_bsp.jpg}
-		\caption{Testic}
-		\label{ableitung:fig:ableitung_bsp}
-	\end{center}
-\end{figure}
+bekannt. 
+In der Numerik existiert die Möglichkeit von $\Delta h \rightarrow 0$ nicht, da die Datenpunkte diskretisiert sind. Aus diesem Grund kann das Kriterium $\Delta h \rightarrow 0$ nicht erfüllt werden. Die numerische Ableitung (Differenzenquotient)
 
 \begin{equation}
 \begin{split}
@@ -32,6 +25,17 @@ f'(x_0) &= \frac{f(x_0 + h) - f(x_0 - h)}{2h} \\
 \end{split}
 \label{ableitung:equations:differenzenquotient}
 \end{equation}
+
+ist Konzeptionel an die klassische Ableitung angelehnt, wobei $h$ hier den Abstand zweier benachbarter Datenpunkte annimmt. Dies stellt auch eine Limitierung der Methode da und zwar auf zwei Stützstellen in einem vorgegebenen Abstand $h$.
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=12cm]{papers/ableitung/images/sekante_bsp.jpg}
+		\caption{Testic}
+		\label{ableitung:fig:ableitung_bsp}
+	\end{center}
+\end{figure}
+
 
 
 % Sekante und Tangente erklären / SIN verwenden
@@ -45,11 +49,11 @@ f'(x_0) &= \frac{f(x_0 + h) - f(x_0 - h)}{2h} \\
 %\end{axis}
 %\end{tikzpicture}
 
-Diese Methode ist limitiert auf die erste Ableitung und zwei Stützstellen, jeweils im Abstand von $h$.
-
 \subsection{Taylor Methode}
 
-Mithilfe der Taylor Reihe lässt sich jede beliebige Funktion $f(x)$ approxmieren. Dies machen wir uns für die Herleitung zu Nutze.
+Mithilfe der Taylor Reihe lässt sich jede beliebige Funktion $f(x)$ approxmieren. 
+
+Dies machen wir uns für die Herleitung zu Nutze.
 
 \begin{equation}
 f(x) = f(a)+{\frac {f'(a)}{1!}}(x-a)+{\frac {f''(a)}{2!}}(x-a)^{2}+{\frac {f'''(a)}{3!}}(x-a)^{3}+\cdots
