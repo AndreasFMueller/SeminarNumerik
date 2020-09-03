@@ -3,32 +3,30 @@ Wie bereits erwähnt, ist durch die extrem hohe Anzahl an Parametern ein Durchpr
 Es würde kein Resultat in nützlicher Frist gefunden werden können.
 Aus diesem Grund werden andere Verfahren verwendet, um das neuronale Netzwerk zu optimieren.
 Alle diese Verfahren basieren auf dem Gradientenabstieg und werden in der Literatur oft auch 'Optimizer' genannt. Näheres zum Gradientenabstieg kann in Kapitel \textbf{xyz} gefunden werden.
-Ein einfacher Algorithmus, welcher zur Optimierung neuronaler Netzwerke verwendet wird, ist der sogenante stochastische gradienten Abstieg.
-Der Algorithmus multipliziert die aktuellen Gewichte mit dem Gradienten und einer bestimmten Schrittweite $\nu$. 
-Der Parameter $\nu$ wird oft auch als 'learning rate' bezeichnet.
-Der Algorithmus bricht erst ab, wenn ein Minima erreicht ist oder die Anzahl an Iterationen ausgeschöpft ist.
-Das Anpassen der inneren Parameter $p$ 
+Ein einfacher Algorithmus ist der stochastische Gradientenabstieg.
+Der Abstiegsschritt 
 \begin{equation}
-p:=p-\eta \nabla \Lb_{i}(p)
+p_{new}:=p-\eta \nabla \Lb_{i}(p)
 \end{equation}
-lässt sich für alle Gewichte $w$ und Bias-Parameter $b$ festhalten.
-Die Fehlerfunktion $Lb$
+findet Parameterwerte $p_{new}$, für die der Fehler kleiner ist. Die Parameter $p$ stehen für sämtliche inneren Gewichte $w$ und Offsetwerte $b$. Die Schrittweite $\eta$ muss experimentel ermittelt und wird oft auch als \textit{learning rate} bezeichnet. Die Kunst liegt darin $\eta$ so zu wählen, dass lokale Minimas und Rauschen die Konvergenz nicht behindern. Der Algorithmus bricht erst ab, wenn ein Minima erreicht ist oder die Anzahl an Iterationen ausgeschöpft ist.
+Die Fehlerfunktion
 \begin{equation}
-\Lb(p)=\sum_{i=1}^{n}\Lb_{i}(p)=\sum_{i=1}^{n}\Lb(\hat{y_i}-y_i)^2
+\Lb(w_1 \cdots w_n, b_1 \cdots b_n) = \Lb(p)=\sum_{i=1}^{n}\Lb_{i}(p)=\sum_{i=1}^{n}\Lb(\hat{y_i}-y_i)^2
 \end{equation}
-berechnet den Fehler zwischen dem Output $y$ und dem erwarteten Output $\hat{y}$. Aus Gründen der Einfachheit wird hier das vollständiges Einsetzten des Ausdrücks für das neuronale Netzwerk aus \eqref{ableitung:eqn:full_net} weggelassen.
-
-Als nächstes wird ein einfaches neuronales Netz benötigt, welche aus einem Input $x$ einem erwarteten Output $y$ und den inneren Parametern $w$ und $b$ besteht.
+berechnet den Fehler, welcher durch die $w$ und $b$ beeinflusst wird. Aus Gründen der Einfachheit wird hier das vollständiges Einsetzten des Ausdrücks für das neuronale Netzwerk aus \eqref{ableitung:eqn:full_net} weggelassen.
+Um das Beispiel zu veranschaulichen, wird ein einfaches neuronales Netzwerk mit zwei Parametern  gewählt. Das Netwerk
 \begin{equation}
 	\hat{y} = \sigma \left( w_1 \cdot x + b_1 \right)
 \end{equation}
-Dieser Ausdruck kann eingesetzt werden in die Fehlerfunktion $\Lb$. Die anschliessende Differentiation nach den inneren Parametern $w$ und $b$ führt zum Gradiente der beiden Parametern. Dieser Ausdruck kann nun verwendet um die zwei Parameter nach der Iteration anzupassen. Ausgeschrieben sieht man nun
+mit den Parametern $w_1$ und $b_1$ soll hier als einfaches Beispiel dienen.
+
+Dieses Netzwerk kann eingesetzt werden in die Fehlerfunktion $\Lb$. Die anschliessende Differentiation nach den inneren Parametern $w$ und $b$ führt zum Gradienten der beiden Parametern. Die neuen Parameter 
 \begin{equation}
-\begin{bmatrix}w_{1}\\b_{1}\end{bmatrix}:={\begin{bmatrix}w_{1}\\b_{1}\end{bmatrix}}-\eta {\begin{bmatrix}
+\begin{bmatrix}w_{1}\\b_{1}\end{bmatrix}_{new}:={\begin{bmatrix}w_{1}\\b_{1}\end{bmatrix}}-\eta {\begin{bmatrix}
 {\frac {\partial }{\partial w_{1}}}(\sigma(w_{1}x_{i}+b_{1})-y_{i})^{2}\\
 {\frac {\partial }{\partial b_{1}}}(\sigma(w_{1}x_{i}+b_{1})-y_{i})^{2}\end{bmatrix}}=
 {\begin{bmatrix}w_{1}\\b_{1}\end{bmatrix}}-\eta {\begin{bmatrix}2((\sigma(w_{1}x_{i}+b_{1}) - y_i) \cdot \sigma(w_{1}x_{i}+b_{1} \cdot (w_{1}x_{i}+b_{1}) x_{i} \\2((\sigma(w_{1}x_{i}+b_{1}) - y_i) \cdot \sigma(w_{1}x_{i}+b_{1} \cdot (w_{1}x_{i}+b_{1}) \end{bmatrix}}
 \end{equation}
-als Ausdruck des Updates der inneren Parametern in jeder Iteration des Lernprozesses.
+werden nach vollziehen des Gradientenabstiegs in jeder Iteration aktualisiert.
 
 Es ist unschwer zu erkennen, dass mit steigender Netzkomplexität die Terme noch viel grösser werden. Dies ist auf die Kettenregel $u'(v(x)) = u'(v(x)) \cdot (v'(x))$ zurückzuführen. Mit diesem Verfahren ist der Gradientenabstieg zwar möglich, jedoch sehr rechenintensiv. Aus diesem Grunde verwenden die meisten Frameworks den Backpropagation Algorithmus, welcher etwas effizienter ist.

@@ -3,12 +3,13 @@ Der Backpropagation Algorithmus kann als einfache Matrixmultiplikation
 \begin{equation}
 \Lb(y_{i}, \sigma^{l}(W^{l}\sigma^{l-1}(W^{l-1}\cdots \sigma^{1}(W^{1}x+b^{1}) + b^{l-1} \cdots ) )
 \end{equation}
-verstanden werden. Sofern die Verlustfunktion $\Lb$ einen Skalar als Resultat liefert und die einzelnen Schichten $l$ des Netzwerks jeweils nur mit ihrer nachfolgenden Schicht $l+1$ verbunden sind.
+verstanden werden. Sofern die Fehlerfunktion $\Lb$ einen Skalar als Resultat liefert und die einzelnen Schichten $l$ des Netzwerks jeweils nur mit ihrer nachfolgenden Schicht $l+1$ verbunden sind.
 
-Daraus resultiert, dass die partiellen Ableitungen  $\partial \Lb / \partial w^l_{jk}$ und $\partial \Lb / \partial b^l_j$ berechnet werden müssen. Das Interesse dieser partiellen Ableitung liegt eigentlich auf der Fehleränderung $\delta$ in jedem Neuron. $\delta^{l}_{j}$ ist somit die Änderung des Fehlers im Neuron $j$ in der Schicht $l$. Somit ist Backpropagation ein Algorithmus um $\delta^{l}_{j}$ zu berechnen.  welchen wir auf $\partial \Lb / \partial w^l_{jk}$ und $\partial \Lb / \partial b^l_j$ zurück führen können. Für die letzte Schicht
+Daraus resultiert, dass die partiellen Ableitungen  $\partial \Lb / \partial w^l_{jk}$ und $\partial \Lb / \partial b^l_j$ berechnet werden müssen. Das Interesse dieser partiellen Ableitung liegt eigentlich auf der Fehleränderung $\delta$ in jedem Neuron. $\delta^{l}_{j}$ ist somit die Änderung des Fehlers im Neuron $j$ in der Schicht $l$. Somit ist Backpropagation ein Algorithmus um $\delta^{l}_{j}$ zu berechnen. In der letzten Schicht
 \begin{equation}
 \delta^{L}_{j} = \frac{\partial \Lb}{\partial a^{L}_{j}} \sigma'(z^L_j)
 \end{equation}
+kann die Änderung des Fehlers 
 gilt (Index $l=\textbf{last}$). Analog dazu in Matrixschreibweise
 \begin{equation}
 \delta^{L} = \nabla_a \Lb \odot \sigma'(z^L)
