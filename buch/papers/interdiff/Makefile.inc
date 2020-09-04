@@ -9,5 +9,6 @@ dependencies-interdiff =						\
 	papers/interdiff/problem.tex					\
 	papers/interdiff/interpolation.tex				\
 	papers/interdiff/ableitung.tex					\
+	papers/interdiff/experimente.tex				\
 	papers/interdiff/references.bib
 

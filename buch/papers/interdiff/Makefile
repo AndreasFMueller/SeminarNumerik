@@ -4,6 +4,12 @@
 # (c) 2020 Prof Dr Andreas Mueller
 #
 
-images:	
+images:	experiment.pdf
+
+experiment.pdf:	experiment.tex spectra.tex
+	pdflatex experiment.tex
+
+spectra.tex:	abl.m
+	octave abl.m
 
 
