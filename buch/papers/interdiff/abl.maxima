@@ -1,0 +1,80 @@
+/*                                                                            */
+/* abl.maxima                                                                 */
+/*                                                                            */
+/* (c) Andreas Müller                                                         */
+/*                                                                            */
+
+lodd(xi,x,n) := product( (xi - (x - i*h)), i, -n, n);
+expand(lodd(xi,x,1));
+
+ljodd(xi,x,n,j) :=
+	product( (xi - (x-i*h)), i, -n, j-1) *
+	product( (xi - (x-i*h)), i, j+1, n);
+ljodd(xi,x,2,1);
+
+ljoddn(xi,x,n,j) := ljodd(xi,x,n,j) / ljodd(x - j*h,x,n,j);
+ljoddn(xi,x,2,1);
+
+/*
+subst(x, xi, diff(ljoddn(xi, x, 1,  1), xi));
+subst(x, xi, diff(ljoddn(xi, x, 1,  0), xi));
+subst(x, xi, diff(ljoddn(xi, x, 1, -1), xi));
+
+subst(x, xi, diff(ljoddn(xi, x, 2,  2), xi));
+subst(x, xi, diff(ljoddn(xi, x, 2,  1), xi));
+subst(x, xi, diff(ljoddn(xi, x, 2,  0), xi));
+subst(x, xi, diff(ljoddn(xi, x, 2, -1), xi));
+subst(x, xi, diff(ljoddn(xi, x, 2, -2), xi));
+
+subst(x, xi, diff(ljoddn(xi, x, 3,  3), xi));
+subst(x, xi, diff(ljoddn(xi, x, 3,  2), xi));
+subst(x, xi, diff(ljoddn(xi, x, 3,  1), xi));
+subst(x, xi, diff(ljoddn(xi, x, 3,  0), xi));
+subst(x, xi, diff(ljoddn(xi, x, 3, -1), xi));
+subst(x, xi, diff(ljoddn(xi, x, 3, -2), xi));
+subst(x, xi, diff(ljoddn(xi, x, 3, -3), xi));
+
+subst(x, xi, diff(ljoddn(xi, x, 4,  4), xi));
+subst(x, xi, diff(ljoddn(xi, x, 4,  3), xi));
+subst(x, xi, diff(ljoddn(xi, x, 4,  2), xi));
+subst(x, xi, diff(ljoddn(xi, x, 4,  1), xi));
+subst(x, xi, diff(ljoddn(xi, x, 4,  0), xi));
+subst(x, xi, diff(ljoddn(xi, x, 4, -1), xi));
+subst(x, xi, diff(ljoddn(xi, x, 4, -2), xi));
+subst(x, xi, diff(ljoddn(xi, x, 4, -3), xi));
+subst(x, xi, diff(ljoddn(xi, x, 4, -4), xi));
+*/
+
+leven(xi,x,n) := product (xi - (x - (2*i-1) * h / 2), i, 1, n)
+		* product (xi - (x + (2*i-1) * h / 2), i, 1, n);
+
+ljevenp(xi,x,n,j) := product (xi - (x - (2*i-1) * h / 2), i, 1, n)
+		* product (xi - (x + (2*i-1) * h / 2), i, 1, j-1)
+		* product (xi - (x + (2*i-1) * h / 2), i, j+1, n);
+
+ljevenpn(xi,x,n,j) := ljevenp(xi,x,n,j) / ljevenp(x+(2*j-1)*h/2,x,n,j);
+
+subst(x, xi, diff(ljevenpn(xi,x,1,1), xi));
+
+subst(x, xi, diff(ljevenpn(xi,x,2,2), xi));
+subst(x, xi, diff(ljevenpn(xi,x,2,1), xi));
+
+subst(x, xi, diff(ljevenpn(xi,x,3,3), xi));
+subst(x, xi, diff(ljevenpn(xi,x,3,2), xi));
+subst(x, xi, diff(ljevenpn(xi,x,3,1), xi));
+
+subst(x, xi, diff(ljevenpn(xi,x,4,4), xi));
+subst(x, xi, diff(ljevenpn(xi,x,4,3), xi));
+subst(x, xi, diff(ljevenpn(xi,x,4,2), xi));
+ratsimp(subst(x, xi, diff(ljevenpn(xi,x,4,1), xi)));
+
+/*
+subst(x, xi, diff(ljevenpn(xi,x,5,5), xi));
+subst(x, xi, diff(ljevenpn(xi,x,5,4), xi));
+subst(x, xi, diff(ljevenpn(xi,x,5,3), xi));
+subst(x, xi, diff(ljevenpn(xi,x,5,2), xi));
+subst(x, xi, diff(ljevenpn(xi,x,5,1), xi));
+
+subst(x, xi, diff(ljevenpn(xi, x, 1, 1), xi));
+*/
+
