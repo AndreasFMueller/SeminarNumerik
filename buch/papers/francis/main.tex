@@ -3,7 +3,7 @@
 \definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
 \definecolor{mylilas}{RGB}{170,55,241}
 
-\chapter{Francis Algorithmus\label{chapter:francis}}
+\chapter{Francis-Algorithmus\label{chapter:francis}}
 \lhead{Francis-Algorithmus}
 \chapterauthor{Tobias Grab}
 
@@ -24,7 +24,8 @@ Zum einen war die zur Verfügung stehende Hardware langsam und unzuverlässig, a
 Dies änderte sich im Jahre 1959 als John Francis den implizit geshifteten QR-Algorithmus, heute auch bekannt unter dem Namen \emph{Francis-Algorithmus}, entwickelt und verifiziert hat.
 \index{Francis, John}%
 \index{QR-Algorithmus!implizit geshifteter}%
-Der Algorithmus bzw. verschiedene Versionen davon werden bis heute von diversen Bibliotheken benutzt. \cite{francis:watkins_paper}
+Der Algorithmus bzw.~verschiedene Versionen davon werden bis heute
+von diversen Bibliotheken benutzt \cite{francis:watkins_paper}.
 
 \begin{figure}[h]
 	\begin{center}
@@ -39,7 +40,7 @@ Wieso wird zur Berechnung der Eigenvektoren ein numerisches Verfahren benötigt?
 Zur Berechnung der Eigenwerte einer $3 \times 3$ Matrix kann man das charakteristische Polynom bilden und dessen Nullstellen finden, diese entsprechen den Eigenwerten der Matrix.
 \index{charakteristisches Polynome}%
 Das grundlegende Problem ist also die Suche nach den Nullstellen eines Polynoms.
-Anfangs des 19.~Jahrhunderts wurde von Niels Henrik Abel bewiesen, dass es keine Formel zur Berechnung der Nullstellen eines Polynoms der 5. Ordnung gibt.
+Anfangs des 19.~Jahrhunderts wurde von Niels Henrik Abel bewiesen, dass es keine Formel zur Berechnung der Nullstellen eines Polynoms der fünften Ordnung gibt.
 \index{Abel, Niels Henrik}%
 Folglich ist auch eine direkte Berechnung der Eigenwerte einer Matrix nicht möglich und die numerische Berechnung mit einem iterativen Verfahren der einzige Weg.
 Der Algorithmus fokussiert sich auf die Berechnung der Eigenwerte.

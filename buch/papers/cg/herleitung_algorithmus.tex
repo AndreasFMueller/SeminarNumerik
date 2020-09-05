@@ -3,7 +3,7 @@
 \rhead{Herleitung des Algorithmus}
 
 \subsection{Intuition}
-Die Idee des CG-Algorithmus ist es, die Schwächen von Gradient Descent auszubessern.
+Die Idee des CG-Algorithmus ist, die Schwächen von Gradient Descent auszubessern.
 Dies geschieht, indem pro Dimension des Minimierungsproblems nur ein Schritt benötigt wird.
 Intuitiv kann man sich dies als Abstieg entlang der Koordinatenachsen vorstellen, wie in Abbildung \ref{cg:abb:koordabstieg} gezeigt.
 Ein solches Verfahren findet immer in $N$ Schritten die exakte Lösung.
@@ -11,8 +11,9 @@ Ein solches Verfahren findet immer in $N$ Schritten die exakte Lösung.
 \begin{figure}	
 	\centering
 	\includegraphics{papers/cg/images/descent-2}
-	\caption{2D Abstieg entlang der Koordinatenachsen, 2 Schritte genügen um die exakte Lösung zu finden. 
-		Abbildung aus dem Seminar Buch von 2014 \cite{cg:book:hpc}.}
+	\caption{Zweidimensionaler Abstieg entlang der Koordinatenachsen,
+		zwei Schritte genügen um die exakte Lösung zu finden. 
+		Abbildung aus dem Seminarbuch von 2014 \cite{cg:book:hpc}.}
 	\label{cg:abb:koordabstieg}
 \end{figure}
 
@@ -31,7 +32,7 @@ Dies wird mit dem CG-Algorithmus erreicht.
 	\centering
 	\includegraphics[width=0.8\hsize]{papers/cg/images/descent3d.jpg}
 	\caption{3D Abstieg entlang der Koordinatenachsen, 3 Schritte genügen um die exakte Lösung zu finden. 
-		Abbildung aus dem Seminar Buch von 2014 \cite{cg:book:hpc}.}
+		Abbildung aus dem Seminarbuch von 2014 \cite{cg:book:hpc}.}
 	\label{cg:abb:koordabstieg2}
 \end{figure}
 
@@ -39,7 +40,7 @@ Dies wird mit dem CG-Algorithmus erreicht.
 
 Wie in \ref{cg:subsec:aortho} anhand eines Beispiels gezeigt wurde, ist es sinnvoll dazu jeweils $A$-orthogonalisierte Richtungen verwendet werden.
 Kombiniert mit der optimalen Abstiegslänge aus \ref{cg:subsection:schrittweite} führt dies dazu, dass genau $N$ Schritte zur exakten Lösung führen.
-Wie beim Abstieg entlang der Koordinatenachsen werden also nur neue Richtungen $d_{k+1}$ verwendet, welche $A$-orthogonal auf allen bisherigen Richtungen stehen
+Wie beim Abstieg entlang der Koordinatenachsen werden also nur neue Richtungen $d_{k+1}$ verwendet, welche $A$-orthogonal auf allen bisherigen Richtungen stehen:
 \begin{equation}
 	d_{k+1}  \perp_A  d_k  \perp_A  d_{k-1}  \dots \perp_A  d_0.
 \end{equation}
@@ -48,7 +49,8 @@ Es bietet sich wiederum der negative Gradient $r_{k+1} = b - Ax_{k+1}$ (Residuum
 Der negative Gradient entspricht per Definition der lokal optimalen Richtung um schnell abzusteigen und ist somit die beste Wahl.
 
 Wir verwenden das Gram-Schmidt-Orthogonalisierungsverfahren um den Gradienten auf den bisherigen Richtungen zu $A$-orthogonalisieren.
-Dabei wollen wir orthogonal in Bezug auf $A$ sein, weshalb das verallgemeinerte Skalarprodukt $\langle \dots \rangle_A$ verwendet wird 
+\index{Gram-Schmidt-Orthonormalisierung}%
+Dabei wollen wir orthogonal in Bezug auf $A$ sein, weshalb das verallgemeinerte Skalarprodukt $\langle\; ,\; \rangle_A$ verwendet wird 
 \begin{equation}\label{cg:eq:gram}
 	d_{k+1} 
 	= 
@@ -57,28 +59,30 @@ Dabei wollen wir orthogonal in Bezug auf $A$ sein, weshalb das verallgemeinerte 
 Diese vielen $A$-Skalarprodukte sind rechenintensiv und würden die Performance des CG-Algorithmus beeinträchtigen.
 Im nächsten Abschnitt wird gezeigt, dass es genügt das Orthogonalisierungsverfahren auf der letzten Abstiegsrichtung durchzuführen.
 Die neue Richtung ist dann automatisch auch auf allen vorherigen Richtungen orthogonal.
-In der Summe von \ref{cg:eq:gram} wird daher nur der letzte Term benötigt.
+In der Summe von \eqref{cg:eq:gram} wird daher nur der letzte Term benötigt.
 Dies führt zur folgenden, vereinfachten Berechnung
 \begin{equation} 
 	d_{k+1}
 	= 
 	r_{k+1} - \frac{\langle d_k , r_{k+1} \rangle_A}{\langle d_k , d_k \rangle_A} d_k.
 \end{equation}
-Abbildung \ref{cg:abb:cg1} zeigt wie in einem zweidimensionalen Problem in 2 Schritten die exakte Lösung gefunden wird und schon nach Schritt 1 eine möglichst gute Approximation erreicht wird.
-Die $A$-orthogonalisierungen sind besser im dreidimensionalen Beispiel von Abbildung \ref{cg:abb:cg2} zu sehen.
+Abbildung \ref{cg:abb:cg1} zeigt, wie in einem zweidimensionalen Problem in zwei Schritten die exakte Lösung gefunden wird und schon nach Schritt 1 eine möglichst gute Approximation erreicht wird.
+Die $A$-Orthogonalisierungen sind besser im dreidimensionalen Beispiel von Abbildung \ref{cg:abb:cg2} zu sehen.
 \begin{figure}	
 	\centering
 	\includegraphics{papers/cg/images/descent-3}
-	\caption{2D Abstieg mit dem CG-Algorithmus, 2 Schritte genügen um die exakte Lösung zu finden. 
-		Abbildung aus dem Seminar Buch von 2014 \cite{cg:book:hpc}.}
+	\caption{Zweidimensionaler Abstieg mit dem CG-Algorithmus,
+		zwei Schritte genügen
+		um die exakte Lösung zu finden. 
+		Abbildung aus dem Seminarbuch von 2014 \cite{cg:book:hpc}.}
 	\label{cg:abb:cg1}
 \end{figure}
 
 \begin{figure}	
 	\centering
 	\includegraphics[width=0.8\hsize]{papers/cg/images/cg3d-large.jpg}
-	\caption{3D Abstieg mit dem CG-Algorithmus, 3 Schritte genügen um die exakte Lösung zu finden. 
-		Abbildung aus dem Seminar Buch von 2014 \cite{cg:book:hpc}.}
+	\caption{Dreidimensionaler Abstieg mit dem CG-Algorithmus, drei Schritte genügen um die exakte Lösung zu finden. 
+		Abbildung aus dem Seminarbuch von 2014 \cite{cg:book:hpc}.}
 	\label{cg:abb:cg2}
 \end{figure}
 
@@ -104,7 +108,7 @@ Mit dieser Eigenschaft lässt sich die Gleichung \eqref{cg:eq:ortho1} umstellen 
 \begin{align}\label{cg:eq:ortho3}
 	r_{k+1} 	&\perp_A \langle r_1, \dots ,r_{k-1} \rangle \nonumber \\
 	0 			&= \langle r_{k+1}, r_i \rangle_A \quad \forall i < k-1 \nonumber\\
-				&= \langle r_{k+1}, Ar_i \rangle \quad \forall i < k-1 
+				&= \langle r_{k+1}, Ar_i \rangle \quad \forall i < k-1.
 \end{align} 
 Wir nehmen ausserdem an, dass sich die Residuen als Linearkombinationen von $r_1$ und $A$ ausdrücken lassen
 \begin{equation}
@@ -135,7 +139,7 @@ In diesem Beweis haben zwei Teile gefehlt, welche nun noch nachträglich bewiese
 Das erste wäre die Annahme, dass die Residuen und die Richtungen den selben Raum aufspannen $\langle r_1, \dots ,r_{k-1} \rangle = \langle d_1, \dots ,d_{k-1} \rangle$.
 
 \begin{proof}[Beweis]
-Wir beginnen damit den Algorithmus für die Berechnungen von $d_k$ aufzuschreiben (vgl. Gleichung \eqref{cg:eq:gram})und erhalten
+Wir beginnen damit den Algorithmus für die Berechnungen von $d_k$ aufzuschreiben (vgl. Gleichung \eqref{cg:eq:gram}) und erhalten
 \begin{align}
 	d_1 &= r_1 \nonumber\\
 	d_2	&= r_2 - a_2 d_1\nonumber\\

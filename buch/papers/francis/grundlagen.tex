@@ -30,7 +30,7 @@ Zueinander ähnliche Matrizen haben:
 
 Eigenwerte und Eigenvektoren können gefunden werden, indem man eine Matrix durch Ähnlichkeitstransformation auf Diagonalform bringt.
 \index{Diagonalform}%
-Der Francis-Algorithmus tut dies Schrittweise unter Verwendung sehr spezieller Matrizen $C$.
+Der Francis-Algorithmus tut dies schrittweise unter Verwendung sehr spezieller Matrizen $C$.
 
 \subsection{Spezielle Matrizen\label{francis:section:grundlagen:spezielle_matrizen}}
 Im Folgenden werden wir immer wieder über einige spezielle Matrixformen sprechen.
@@ -88,8 +88,7 @@ Die Eigenwerte einer kleinen Matrix
 	0 & 0 & 3
 	\end{bmatrix}
 	\end{equation}
-können wie folgt berechnet werden.
-	
+können wie folgt berechnet werden:
 	\begin{equation}
 	\det(A-\lambda I)= \det
 	\begin{pmatrix}
@@ -99,9 +98,9 @@ können wie folgt berechnet werden.
 	0 & 0 & 3-\lambda
 	\end{bmatrix}
 	\end{pmatrix}
-	= 0
-	\end{equation}	
-daraus folgt:
+	= 0.
+	\end{equation}
+Daraus folgt:
 	
 	\begin{equation} 
 	(1-\lambda)(2-\lambda)(3-\lambda)=0
@@ -110,7 +109,8 @@ und die Eigenwerte sind mit $\lambda_{1}=1$, $\lambda_{2}=2$ und $\lambda_{3}=3$
 \end{beispiel}
 
 Wie im Beispiel ersichtlich, sind die Eigenwerte einer Matrix in Dreiecks- oder Diagonalform durch die Diagonalelemente gegeben.
-Da bei Bestimmung der Determinante (bei 3. Ordnung z. B. mit der Regel von Sarrus) alles andere verschwindet.
+Da bei Bestimmung der Determinante (bei dritten Ordnung z.~B.~mit der Regel
+von Sarrus) alles andere verschwindet.
 \index{Sarrus, Regel von}%
 \index{Regel von Sarrus}%
 
@@ -160,7 +160,8 @@ Gegeben sei die Multiplikation einer Rotationsmatrix mit einem beliebigen Vektor
 	\end{equation}	
 Wie dabei zu sehen ist, werden dabei nur die 2. und 5. Spalte des Vektors verändert.
 Eine Anwendung einer solchen Rotationsmatrix entspricht also einer Rotation in jener Ebene im 6-dimensionalen Raum, welche von Achse 2 und 5 aufgespannt wird.
-Durch eine geeignete Wahl des Rotationswinkels und ein systematisches Anwenden diverser Rotationsmatrizen kann man so einen Eintrag nach dem Andern auf Null setzen und beispielsweise eine QR-Zerlegung durchführen. \cite{francis:QR_Zerlegung} 
+Durch eine geeignete Wahl des Rotationswinkels und ein systematisches Anwenden diverser Rotationsmatrizen kann man so einen Eintrag nach dem Andern auf Null setzen und beispielsweise eine QR-Zerlegung durchführen
+\cite{francis:QR_Zerlegung}.
 Weiteres dazu ist in den Kapiteln \ref{buch:section:qr} und \ref{chapter:qr} zu finden.
 \end{beispiel}
 
@@ -192,7 +193,7 @@ Mit dem Reflektor
 \end{equation}
 können also alle Elemente eines Vektors bis auf ein Element auf null gesetzt werden.
 Das Ganze ist in Abbildung \ref{francis:abb:householder_transform} in zwei Dimensionen dargestellt.
-\begin{figure}[h]
+\begin{figure}
 	\begin{center}
 		\includegraphics[scale=0.1]{papers/francis/images/Householdertransformation.png}
 		\caption{Illustration der Householder-Transformation in zwei Dimensionen, Abbildung von \cite{francis:householder}}
