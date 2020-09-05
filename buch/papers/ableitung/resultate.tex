@@ -3,27 +3,24 @@
 \rhead{Resultate}
 Dei Resultate dieser Arbeit sollen hauptäschlich zeigen, ob die Finite Differenzen Methode als Option zur Optimierung neuronaler Netzwerke geeignet ist. Es ist klar, dass implementationsbedingt die Trainingsgeschwindigkeit nicht dem Backpropagation Algorithmus das Wasser reichen kann. Viel wichtiger ist eine qualitative Aussage treffen zu können, ob die Methode eine interessante Variante darstellt und ob das Gedankenexperiment funktioniert.
 
-Um dies an einem einfachen Beispiel zu verdeutlichen, wird versucht eine logische XOR Verknüpfung zu trainieren. Ein XOR-Gate ist ein elektronisches Bauteil, welches im Prinzip eine 'Entweder-Oder' Logik abbildet. Im gewählten Fall hat das Bauteil 2 digitale Eingänge und sollte entweder der Erste oder der Zweite aktiv sein, so ist der Ausgang ebenfalls aktiv. Sollte keiner der beiden Ausänge oder beide Ausgänge aktiv sein, so ist der Ausgang inaktiv. Dies kann man der Logiktabelle in Abbildung \ref{ableitung:fig:xor-gate-logic} entnehmen. \textit{Anmerkung: Wie zum Teufel wird das GATE gefixed, Linien nicht parallel!}
-
+Um dies an einem einfachen Beispiel zu verdeutlichen, wird versucht eine logische XOR Verknüpfung zu trainieren. Ein XOR-Gate ist ein elektronisches Bauteil, welches im Prinzip eine 'Entweder-Oder' Logik abbildet. Im gewählten Fall hat das Bauteil 2 digitale Eingänge und sollte entweder der Erste oder der Zweite aktiv sein, so ist der Ausgang ebenfalls aktiv. Sollte keiner der beiden Ausänge oder beide Ausgänge aktiv sein, so ist der Ausgang inaktiv. Dies kann man der Logiktabelle in Abbildung \ref{ableitung:fig:xor-gate-logic} entnehmen.
 \begin{figure}[h]
 	 \centering
-\begin{tabular}{cc}
 	\begin{tikzpicture}
 	
-	\node (x1) at (0, 0.95) {$x_1$};
-	\node (x2) at (0, 1.05) {$x_2$};
 	\node (y) at (3, 1) {$y$};
 	
-	\node[xor gate US, draw, logic gate inputs=nn] at (1.5, 1) (notx) {};
+	\node[american xor port, draw, number inputs=2] at (1.5, 1) (notx) {};
 	
-	\draw (x1) -- (notx);
-	\draw (x2) -- (notx);
+	\draw (notx.in 1 -| -1,0) -- (notx.in 1);
+	\draw (notx.in 2 -| -1,0) -- (notx.in 2);
 
-	\draw (notx.output) -- (y);
+	\node at (notx.in 1 -| -1,0) [left] {$x_1$};
+	\node at (notx.in 2 -| -1,0) [left] {$x_2$};
+
+	\draw (notx.out) -- (y);
 	
-	
-	\end{tikzpicture}	
-	&
+	\node at (7,1) {
 	\begin{tabular}{cc|c}
 		\hline
 		$x_1$ & $x_2$ & $y$ \\
@@ -33,8 +30,8 @@ Um dies an einem einfachen Beispiel zu verdeutlichen, wird versucht eine logisch
 		1 & 0 & 1 \\ 
 		1 & 1 & 0 \\
 		\hline						
-	\end{tabular}
-\end{tabular}
+	\end{tabular}};
+	\end{tikzpicture}	
 	\caption{Das XOR-Gate und die dazugehörige Logiktabelle}
 	\label{ableitung:fig:xor-gate-logic}
 \end{figure}
