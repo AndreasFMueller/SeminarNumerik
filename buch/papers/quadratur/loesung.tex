@@ -380,7 +380,7 @@ Eigenschaften beschrieben.
         Name & \text{Symbol} & a & b & w(x) \\
         \hline
         Legendre & p_{n(x)} & -1 & 1 & 1 \\
-        Chebyshev & T_{n}(x) & -1 & 1 & (1-x^{2})^-1/2 \\
+        Chebyshev & T_{n}(x) & -1 & 1 & (1-x^{2})^{-1/2} \\
         Laguerre & L_{n}(x) & \phantom{-}0 & \infty & e^{-x} \\
         Hermite & H_{n}(x) & -\infty & \infty & e^{-x^{2}} \\
         \hline
@@ -616,14 +616,15 @@ Für verschiedene Folgen von Orthogonalpolynomen gibt es eine dazugehörige
 Form der Gauss-Quadratur mit eigenen Grenzwerten und Berechnungsformeln.
 Die vier häufigsten Formen sind in der Tabelle~\ref{buch:table:gaussformen} zusammengestellt.
 \begin{table}
+\renewcommand\arraystretch{2}
     \begin{tabular}{|l|>{$}c<{$}|>{$}c<{$}|>{$}l<{$}|}
         \hline
         \text{Name} &  \text{Untere Grenze} & \text{Obere Grenze} & \text{Formel} \\
         \hline  
-        \text{Legendre} & -1 & 1 & p_{n}(x) = \int_{-1}^{1} f(x)\,dx \approx \sum_{i=0}^{n} A_{i} f(x_{i}) \\
-        \text{Chebyshev} &  -1 & 1 & T_{n}(x) = \int_{-1}^{1} (1-x^{2})^{-1/2} f(x)\,dy \approx \frac{\pi}{n+1} \sum_{i=0}^{n} f(x_{i}) \\
-        \text{Laguerre} &  0 & \infty & L_{n}(x) = \int_{0}^{\infty} e^{-x} f(x)\,dx \approx \sum_{i=0}^{n} A_{i} f(x_{i}) \\
-        \text{Hermite} & -\infty & \infty & H_{n}(x) = \int_{-\infty}^{\infty} f(x)\,dx \approx \sum_{i=0}^{n} A_{i} f(x_{i})\\
+        \text{Legendre} & -1 & 1 & p_{n}(x) = \displaystyle\int_{-1}^{1} f(x)\,dx \approx \sum_{i=0}^{n} A_{i} f(x_{i}) \\
+        \text{Chebyshev} &  -1 & 1 & T_{n}(x) = \displaystyle\int_{-1}^{1} (1-x^{2})^{-1/2} f(x)\,dy \approx \frac{\pi}{n+1} \sum_{i=0}^{n} f(x_{i}) \\
+        \text{Laguerre} &  0 & \infty & L_{n}(x) = \displaystyle\int_{0}^{\infty} e^{-x} f(x)\,dx \approx \sum_{i=0}^{n} A_{i} f(x_{i}) \\
+        \text{Hermite} & -\infty & \infty & H_{n}(x) = \displaystyle\int_{-\infty}^{\infty} f(x)\,dx \approx \sum_{i=0}^{n} A_{i} f(x_{i})\\
         \hline
     \end{tabular}
     \caption{Formen der Gauss-Quadratur
@@ -721,7 +722,7 @@ approximiert werden. Für $n = 4$ wird die Fehlerrechnung
     &=
     A_{1}^{5}f(x_{1}^{5})+A_{2}^{5}f(x_{2}^{5})+A_{3}^{5}f(x_{3}^{5})+A_{4}^{5}f(x_{4}^{5})+A_{5}^{5}f(x_{5}^{5}) 
     \\
-    &-\;
+    &\qquad\mathstrut-
     A_{1}^{4}f(x_{1}^{4})+A_{2}^{4}f(x_{2}^{4})+A_{3}^{4}f(x_{3}^{4})+A_{4}^{4}f(x_{4}^{4})
 \end{align}
 
@@ -772,6 +773,7 @@ man berechnet dasjenige $c$ im Intervall $[a, b]$ welches den höchsten Wert fü
 
 \begin{table}
     \centering
+\renewcommand\arraystretch{2}
     \begin{tabular}{|l|>{$}c<{$}|>{$}c<{$}|}
         \hline
         \text{Name} &  \text{Fehlerformel} & \text{Intervall für }c  \\

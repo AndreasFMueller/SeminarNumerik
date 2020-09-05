@@ -99,7 +99,7 @@ Runge-Kutta Schritte geschätzt. Durch geschickte Kombination dieser beiden Schr
 lässt sich der Mehrrechenaufwand dazu aber merklich reduzieren, was in der Literatur als \textit{einbetten} bezeichnet wird.
 \index{einbetten}%
 \index{Einbettung}
-Damit diese Einbettung möglich wird, sind die einzelnen Stufen etwas anders verteilt und gewichtet als wie im Abschnitt
+Damit diese Einbettung möglich wird, sind die einzelnen Stufen etwas anders verteilt und gewichtet als im Abschnitt
 \ref{subsection:buch:ode:runge-kutta}.
 Wie solche Parameter für die einzelnen Stufen bestimmt werden können, wurde im Abschnitt
 \ref{buch:subsection:quadratischeverfahren}
@@ -118,7 +118,7 @@ Dabei werden zuerst alle Koeffizienten berechnet, welche für den Schritt 4. Ord
   k_4 & =f\left(x_j + \frac{3}{4}h, u_j+\frac{69}{128}hk_1-\frac{243}{128}hk_2+\frac{135}{64}hk_3\right),  \\
   k_5 & =f\left(x_j + h, u_j-\frac{17}{12}hk_1+\frac{27}{4}hk_2-\frac{27}{5}hk_3+\frac{16}{15}hk_4\right).
 \end{align*}
-Daraus kann nun eine erste Schätzung für den Punkt am Schrittende gemacht werden:
+Daraus kann eine erste Schätzung für den Punkt am Schrittende gemacht werden:
 \[
   u_{j+1} =u_j +h\cdot\left(\frac{1}{9}k_1+\frac{9}{20}k_3+\frac{16}{45}k_4+\frac{1}{12}k_5\right).
 \]
