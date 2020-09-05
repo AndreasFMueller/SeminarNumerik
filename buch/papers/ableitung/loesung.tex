@@ -187,20 +187,33 @@ f'(x)  \approx \frac{1f(x-2h) - 8f(x-h) + 8f(x-h) - 1f(x+2h)}{12h}
 angenähert durch 5 Stützstellen.
 Analog kann dies natürlich für höhere Ableitungen oder non-uniforme Stützstellen gemacht werden.
 \subsubsection{Fehlerabschätzung}
-Die Herleitung der finite Differenzen Methode geschieht über die Taylorreihe gemäss Gleichung \ref{ableitung:eqn:taylorseries}. Um die Approximation mit fünf Stützstellen zu erhalten wurden die Taylorpolynome bis und mit dem fünften Grad evaluiert, folglich kann man für Gleichung \ref{ableitung:eqn:aprox_5} den Fehler analog zu \ref{ableitung:eqn:error}
+Zur Berechnung der ersten Ableitung mit 5 Stützstellen werden die ersten 5 Terme der Taylorreihe verwendet. Die Ungenauigkeit dieser Methode ist somit abhängig durch die Rest Terme
 \begin{align}
-\frac{f(x-2h) - 8f(x-h) + 8f(x-h) - f(x+2h)}{12h} = f'(x) - \frac{1}{30} f^{(5)} (x)h^{4}+R_n(x)
+\frac{f(x-2h) - 8f(x-h) + 8f(x-h) - f(x+2h)}{12h} = f'(x) - \frac{1}{30} f^{(5)} (x)h^{4}+R_n(x) \text{.}
 \label{ableitung:eqn:error}
 \end{align}
-Funktionen lassen sich somit mit mehr Stützstellen genauer approximieren, da der Rest $R$ mit steigender Taylor-Ordnung kleiner wird. Wenn aber die Terme höherer Ordnung schneller anwachsen als die Fakultät, so ist die Approximation nicht genau.
-\subsection{Beispiele}
-Es wurden wurden zwei Beispiele gesucht, welche spezielle Eigenschaften haben um zu verdeutlichen wie eine Approximation gut funktioniert und wie sie weniger gut funktioniert. Es existieren somit 2 Arten von Funktionen:
-% TBD
-%\begin{itemize}
-%	\item {Funktionen mit verschwindendem Rest: \\
-%		$\sin{x}$}
-%	\item{Funktionen mit wachsendem Rest: \\
-%		$\sqrt{(1-x^2)}}$}
-%\end{itemize}
-\label{ableitung:subsection:bonorum}
+Der Restterm $R_{n}$ ist abhängig von der Taylorreihe der zu ableitenden Funktion. Funktionen lassen sich somit mit mehr Stützstellen genauer approximieren, da der Rest $R_n$ mit steigender Taylor-Ordnung kleiner wird. Wenn aber die Terme höherer Ordnung schneller anwachsen als die Fakultät
+\begin{align}
+	f^{(n)} > n!
+	\label{eqn:fakult}
+\end{align}
+so ist die Approximation nicht genau.
+Aus der Fehlerabschätzung ergeben sich grundsätzlich zwei Typen an Problemen, die interessant sind zu untersuchen.
+Die Terme des ersten Types werden mit zunehmender Ordnung kleiner, während bei dem zweiten Typ die Terme immer grösser werden.
+Gleichzeitig muss aber ein guter Kompromiss gefunden werden, welcher den Abstand $h$ nicht zu klein werden lässt. Ein sehr kleines $h$ führt zu mehr Rauschanfälligkeit, da bei Benachbartenpunkten ein Rauschen von $\pm \epsilon$ höher ins Gewicht fällt.
 
+Als Beispiel für eine Funktion, bei welcher die Terme kleiner werden, können die trigonometrischen Funktionen verwendet werden. Im speziellen hat der Sinus
+\begin{equation}
+	\sin = \sum _{n=0}^{\infty }{\frac {(-1)^{n}}{(2n+1)!}}x^{2n+1} \left(x\right)\approx x-{\frac {x^{3}}{3!}}+{\frac {x^{5}}{5!}}-{\frac {x^{7}}{7!}}+{\frac{x^9}{9!}}+R_n
+\end{equation}
+eine Taylorreihe welche immer alternierend ist. Der Fehler
+\begin{equation}
+R_n < \mid {\frac{x^{11}}{11!} \mid}
+\end{equation}
+kann somit auf einem Interval von $-1<x<1$ nicht grösser werden als $\approx 2.5 \cdot 10^{-8}$.
+Auf der anderen Seite erweist sich die die geometrische Reihe
+\begin{equation}
+	\frac{1}{1-x} = \sum _{n=0}^{\infty} 1 + x + x^2 + x^3 + x^4 + R_n
+\end{equation}
+als sehr schwer zu aproxmieren. Der Fehler $R_n$ läuft ab $x>1$ nach $\infty$.
+Für die Experimente werden aus diesem Grund verschiedene Abstände $h$ verwendet und eine unterschiedliche Anzahl Stützstellen, um aufzuzeigen, wie sich das Resultat verändern kann.
