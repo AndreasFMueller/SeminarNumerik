@@ -1,0 +1,57 @@
+\subsection{Was ist Lernen?}
+Anders als das menschliche Lernen lernt das neuronale Netzwerk durch den Vergleich einer errechneten Ausgabe mit der erwarteten Ausgabe.
+Neuronale Netzwerke sind in der Regel 'supervised learning'-Algorithmen, diese Gruppe von Algorithmen benötigen einen Datensatz, welcher aus einem Input $x$ und einem erwarteten Output $y$ bestehet.
+Das neuronale Netzwerk als Blackbox versucht aus dem Input $x$ einen brauchbaren Output $\hat{y}$ zu erzeugen, welcher dann mittels einer Fehlerfunktion $\Lb$ zum bestehnden Output $y$ verglichen wird. Der Lernprozess kann der Abbildung \ref{ableitung:img:nn_concept} entnommen werden. Nach jeder Trainingsiteration werden die innerne Parameter des neuronalen Netzwerks $N(x)$ optimiert um das bestmögliche Resultat für die gegebenen Datenpaare $(x,y)$ zu errechnen.
+Die Bewertung des aktuellen Lernstands ist mittels der Fehlerfunktion
+\begin{equation}
+	\Lb(y_{i},\hat{y_i})
+\end{equation}
+gegeben. Dabei gilt, dass 
+\begin{equation}
+\hat{y} = N(x)
+\end{equation}
+dem berechneten Output des neuronalen Netzwerks $N(x)$ entspricht. Dies lässt sich in die Fehlerfunktion
+\begin{equation}
+\Lb(y,N(x))
+\end{equation}
+einsetzten.
+Die Fehlerfunktion $\Lb$ wird in der Literatur auch oft \textit{Loss}-Funktion genannt. Das Resultat ist eine qualitative Aussage über den Fehler, auch \textit{loss} genannt. Als einfaches Beispiel für eine solche Fehlerfunktion $\Lb$ kann die mittlere quadratische Abweichung 
+\begin{equation}
+\Lb (y, \hat{y}) = \frac{1}{2} \sum_i \left( \hat{y} - y \right)^2
+\label{ableitung:eqn:loss}
+\end{equation}
+(MSE) verwendet werden. Diese hat die Eigenschaft, dass sie Vorzeichen unabhänig ist und bei grösserer Distanz zwischen $y$ und $\hat{y}$ der Fehler auch dementsprechend grösser wird.
+Die Aufgabe des Lernprozesses ist es nun die bestmögliche Lösung für den Fehler zu finden. Entsprechen gilt es für
+\begin{equation}
+	\min \left( \Lb(y,\hat{y}) \right) 
+	\label{ableitung:eqn:min_loss}
+\end{equation}
+eine optimale Lösung zu finden. Da $x$ und $y$ durch den Datensatz gegeben sind, muss nun auf den inneren Parameterraum des neuronalen Netzwerks eingegangen werden.
+
+\begin{figure}
+	\begin{center}
+		\begin{tikzpicture}[auto, node distance=2cm,>=latex']
+		% We start by placing the blocks
+		\node [input, name=input] {};
+		\node [block, right of=input] (neuronalnet) {$N(x)$};
+		\node [block, right of=neuronalnet,
+		node distance=3cm] (loss) {$\Lb$};
+		% We draw an edge between the controller and system block to 
+		% calculate the coordinate u. We need it to place the measurement block. 
+		\draw [->] (neuronalnet) -> node[name=u] {$\hat{y}$} (loss);
+		\node [output, right of=loss] (output) {};
+		\node [block, below of=u] (measurements) {update};
+		
+		% Once the nodes are placed, connecting them is easy. 
+		\draw [draw,->] (input) -- node {$x$} (neuronalnet);
+		\draw [draw,<-] (loss) -- node {$y$} (output);
+		%\draw [->] (system) -- node [name=y] {$y$}(output);
+		%\draw [->] (y) |- (measurements);
+		%\draw [->] (measurements) -| node[pos=0.99] {$-$} 
+		\end{tikzpicture}
+		
+	\end{center}
+	\label{ableitung:img:nn_concept}
+	\caption{Trainieren eines neuronalen Netzwerks}\label{fig}
+\end{figure}
+
