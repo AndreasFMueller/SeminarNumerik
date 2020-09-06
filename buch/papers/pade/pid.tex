@@ -1,0 +1,31 @@
+%
+% pid.tex -- pid schaltung
+%
+% (c) 2020 Prof Dr Andreas Müller, Hochschule Rapperswil
+%
+\documentclass[tikz]{standalone}
+\usepackage{amsmath}
+\usepackage{times}
+\usepackage{txfonts}
+\usepackage{pgfplots}
+\usepackage{csvsimple}
+\usepackage[european]{circuitikz}
+\usetikzlibrary{arrows,intersections,math}
+\begin{document}
+\def\skala{1}
+\begin{tikzpicture}[>=latex,thick,scale=\skala]
+
+\draw (0,0) node[op amp] (opamp) {};
+\draw (opamp.-) |- ++(0,1.5) to[C,l=$C_2$] ++(2.0,0) to[R,l=$R_2$]
+	++(2.0,0) to[short,-*] ++(0,-1.99) |- (opamp.out) ;
+\draw (opamp.out) to[short,-o] ++(2.3,0) coordinate (Output);
+\node at (Output) [right] {Output};
+\draw (opamp.-) to[short,*-] ++(-1,0) to[short,*-] ++(0,0.5) to[R,a=$R_1$] ++ (-2,0) to[short,-*] ++(0,-0.5);
+\draw (opamp.-)    ++(-1,0) to ++(0,-0.5) to[C,l=$C_1$] ++ (-2,0) to ++(0,0.5) to[short,-o] ++(-1,0) coordinate(Input);
+\draw (opamp.+) -| ++(0,-1) node[ground] {} ;
+
+\node at (Input) [left] {Input};
+
+\end{tikzpicture}
+\end{document}
+

@@ -4,6 +4,7 @@
 # (c) 2020 Prof Dr Andreas Mueller
 #
 
-images:
-	@echo "no images to be created in pade"
+images:	pid.pdf
 
+pid.pdf:	pid.tex
+	pdflatex pid.tex
