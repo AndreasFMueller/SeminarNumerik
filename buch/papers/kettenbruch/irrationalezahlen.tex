@@ -7,16 +7,16 @@
 \label{kettenbruch:section:Irrationale Zahlen}}
 \rhead{Irrationale Zahlen}
 \subsection{Definition}
-Die Menge aller reellen Zahlen bezeichnet man mit $\mathbb{R}$.
+%Die Menge aller reellen Zahlen bezeichnet man mit $\mathbb{R}$.
 Irrationale Zahlen bilden unendliche Kettenbrüche, d.~h.~sind durch
 eine periodische oder nicht periodische Kettenbruchentwicklung
 ausgezeichnet.
 Ein unendlicher regelmässiger Kettenbruch wird in folgender Form dargestellt
 \begin{equation}
-a_0 + \cfrac{1}{a_1+\cfrac{1}{a_1+\cfrac{1}{a_3+\cfrac{1}{\dots}}}}
+a_0 + \cfrac{1}{a_1+\cfrac{1}{a_1+\cfrac{1}{a_3+\cfrac{1}{\dots}}}},
 \end{equation}
-wobei $a_0,a_1,a_2,\dots$ eine unendliche Folge von positiven
-ganzen Zahlen bilden. Sie sind auch wie beim endlichen Kettenbruch
+wobei $a_0,a_1,a_2,\dots$ eine unendliche Folge von ganzen Zahlen bilden. 
+Sie sind auch wie beim endlichen Kettenbruch
 alle bis auf möglicherweise $a_0$ positiv.
 
 
@@ -28,16 +28,21 @@ In diesem Abschnitt wollen wir nun auf eine spezielle Form eingehen
 und zwar auf unendliche regelmässige Kettebrüche, die ein bemerkenswertes
 Bildungsgesetz befolgen. Das besondere an diesen Kettenbrüchen ist,
 dass gleiche Teilnenner wiederholt auftreten.
-Für den Kettenbruch $[3;1,2,1,6,1,2,1,6,\dots]$ heisst das: den
-Kettenbruch die Periode 1,2,1,6 mit der Periodenlänge $n=4$ beträgt
-und wird in der Form $[3;\overline{1,2,1,6}]$ geschrieben.
+Für den Kettenbruch
+\[
+[3;1,2,1,6,1,2,1,6,\dots]
+\]
+heisst das: der
+Kettenbruch mit der Periode 1,2,1,6 hat die Periodenlänge $n=4$, er
+wird in der Form $[3;\overline{1,2,1,6}]$ geschrieben.
 
 \begin{beispiel}
-Betrachten wir den periodischen einfachen Kettenbruch $[3;\bar{6}] = (3,6,6,6,\dots)$.
+Betrachten wir den periodischen einfachen Kettenbruch
+$[3;\bar{6}] = [3;6,6,6,\dots]$.
 \begin{equation}
 [3;\bar{6}]
 =
-3 + \cfrac{1}{6+\cfrac{1}{6+\cfrac{1}{6+\cfrac{1}{6+\dots}}}}
+3 + \cfrac{1}{6+\cfrac{1}{6+\cfrac{1}{6+\cfrac{1}{6+\cfrac{1}{\dots}}}}}
 =
 x
 \end{equation}
@@ -47,9 +52,9 @@ berechnen.
 Um diesen Kettenbruch vollständig darzustellen müssen wir ein Muster
 erzeugen. Daher werden nur die ersten Brüche (Zahlen) betrachtet.
 
-\begin{equation}
+\begin{align*}
 [3;6,6,6]
-=
+&=
 3 + \cfrac{1}{6+\cfrac{1}{6+\cfrac{1}{6}}}
 =
 3 + \cfrac{1}{6+\cfrac{1}{\frac{37}{6}}}
@@ -63,17 +68,18 @@ erzeugen. Daher werden nur die ersten Brüche (Zahlen) betrachtet.
 \frac{684+37}{228}
 =
 \frac{721}{228}
-\approx
+\\
+&\approx
 3.162280702
-\end{equation}
+\end{align*}
 Wenn wir den periodischen Kettenbruch so verändern das die Kettenbruchentwicklung 
-immer mit 6 vortläuft dann können wir unser Kettenbruch als $x$ bezeichnen 
+immer mit 6 fortläuft, dann können wir unser Kettenbruch als $x$ bezeichnen 
 und darauf 3 addieren. Anders formuliert ist wie in einem periodischen Kettenbruch 
-ein {\color{red}Teil oder inneren kettenbruch} der ähnlich ist wie der ganze Kettenbruch. Dies ergibt 
-folgendes Muster das wir infolge quadratische
-Gleichungen lösen können:
+ein {\color{red}Teil oder inneren Kettenbruch}, der ähnlich ist wie der ganze Kettenbruch. Dies ergibt 
+folgendes Muster, das wir mit Hilfe einer quadratischen
+Gleichung lösen können:
 \begin{align*}
-y = x+3 &= 6 + \cfrac{1}{\color{red}6+\cfrac{1}{6+\dots}} = [6;\bar{6}]
+y = x+3 &= 6 + \cfrac{1}{\color{red}6+\cfrac{1}{6+\cfrac{1}{\dots}}} = [6;\bar{6}]
 \\
 \Rightarrow y &= 6 + \frac{1}{{\color{red}y}}	&&\vert\;\cdot y
 \\
@@ -82,11 +88,15 @@ y = x+3 &= 6 + \cfrac{1}{\color{red}6+\cfrac{1}{6+\dots}} = [6;\bar{6}]
 \Rightarrow y &= 3\pm \sqrt{9+1} = 3 \pm \sqrt{10}\qquad\Rightarrow\qquad x = \sqrt{10}
 \approx
 3.16227766
+\qedhere
 \end{align*}
 \end{beispiel}
 
-Mit dieser Gleichung haben wir die Menge der Zahlen mit periodischer 
-Kettenbruchentwicklung bestimmt. 
+%Mit dieser Gleichung haben wir die Menge der Zahlen mit periodischer 
+%Kettenbruchentwicklung bestimmt. 
+Das Beispiel zeigt, wie man den Wert eines periodischen Kettenbruchs
+bestimmt.
+Man kann die Idee auch für längere Periode verwenden.
 
 \begin{beispiel}
 Betrachten wir einen neuen Kettenbruch, $[\overline{2,3}] =  [2;3,2,3,\dots]$.
@@ -95,23 +105,24 @@ wie folgt berechnen. Setzen wir $x:=(\overline{2,3})$, dann gilt
 \begin{equation}
 x
 =
-2 + \cfrac{1}{3+\cfrac{1}{\color{red}2+\cfrac{1}{3+\dots}}}
+2 + \cfrac{1}{3+\cfrac{1}{\color{red}2+\cfrac{1}{3+\cfrac{1}{\dots}}}}
 =
 2 + \cfrac{1}{3+\frac{1}{\color{red}x}}.
 \end{equation}
 Dies führt auf die quadratische Gleichung 
 \begin{align*}
-x &= 2 + \cfrac{1}{3+\frac{1}{{\color{red}x}}}
+x &= 2 + \cfrac{1}{3+\cfrac{1}{{\color{red}x}}}
 \\
-x - 2 &= \cfrac{1}{3+\frac{1}{x}}
+x - 2 &= \cfrac{1}{3+\cfrac{1}{x}}
 \\
 (x - 2)\biggl(3 + \frac{1}{x}\biggr) &= 1
 \\
-3x - 6 - \frac{2}{x} &= 0 &&\vert \times\frac{x}{3}
+3x - 6 - \frac{2}{x} &= 0 &&\vert \qquad\times\frac{x}{3}
 \\
 x^2 - 2x - \frac{2}{3} &= 0
 \end{align*}
-was die positive Lösung $x = \frac{3+\sqrt{15}}{3}$ liefert.
+was die positive Lösung $x = \displaystyle \frac{3+\sqrt{15}}{3}$ liefert.
+\end{beispiel}
 Der oben aufgeführte Kettenbruch $x$ ist ein Beispiel für periodische
 einfache Kettenbrüche, die Nullstelle eines quadratischen Polynoms
 mit rationalen Koeffizienten ist. Anders gesagt ist die reelle
@@ -122,25 +133,25 @@ ax^2 + bx + c = 0
 dann ist die Kettenbruchentwicklung von $x$ periodisch, das bedeutet
 die Existenz einer Schranke $n_0$ und einer Periode $k \in \mathbb{N}$
 mit $x_n+k = x_n$ für alle $n\ge n_0$.
-\end{beispiel}
+%\end{beispiel}
 
-
-
-\subsubsection{Satz von Euler-Lagrange}
+\begin{satz}[Euler-Lagrange]
 Jeder periodische regulärer Kettenbruch ist eine quadratische
 Irrationalzahl und umgekehrt. $x \in \mathbb{R}$ hat genau dann eine 
 Darstellung als unendlicher, periodischer Kettenbruch, wenn $x$ eine
 reell-quadratische Irrationalzahl ist (d.h. $x \notin \mathbb{Q}$ ist Lösung
 einer quadratischen Gleichung $aX^2 + bX + c = 0, a \neq 0$ mit rationalen 
 Koeffizienten $a,b,c$) \cite{kettenbruch:perron}.
+\end{satz}
 
-\subsection{Nicht periodische Kettenbrüche}
+\subsection{Nicht periodische Kettenbrüche
+\label{kettenbruch:nichtperiodisch}}
 Es stellen sich dieselben Fragen wie im vorangegangenen Abschnitt.
 Neu hinzu kommt das Problem, ob bzw. wann die Kettenbruchentwicklung
 überhaupt konvergiert.
 Für eine unendliche Folge $x_0,x_1,\dots$ ist der Kettenbruch
-$[x_0;x_1,\dots]$ nur dann definiert wenn die Folge der Näherungsbrüche
-$(\frac{p_n}{q_n})$ konvergiert. In diesem Fall hat der unendliche
+$[x_0;x_1,\dots]$ nur dann definiert, wenn die Folge der Näherungsbrüche
+$p_n/q_n$ konvergiert. In diesem Fall hat der unendliche
 Kettenbruch $[x_0;x_1,\dots]$ den Wert
 \begin{equation}
 \lim_{n\to\infty} [x_0;x_1,\dots,x_n]
@@ -149,44 +160,49 @@ oder anders dargestellt
 \begin{equation}
 \omega
 =
-x_0 + \cfrac{1}{x_1+\cfrac{1}{x_2+\frac{1}{x_n+\dots}}}
+x_0 + \cfrac{1}{x_1+\cfrac{1}{x_2+\cfrac{1}{x_n+\dots}}}
 \end{equation}
-Folgt $\omega > 0$ durch einen unendliche Kettenbruch darstellbar
-ist, wenn die endlichen Kettenbrüche $n$-ter Ordnung
+Man sagt,
+$\omega > 0$ sei durch einen unendliche Kettenbruch darstellbar,
+wenn die endlichen Kettenbrüche $n$-ter Ordnung
 $[x_0;x_1,x_2,\dots,x_n]$ gegen $\omega$ konvergieren.
 
-\subsubsection{Beispiel}
 \begin{beispiel}
 Betrachten wir folgenden Kettenbruch
 \begin{align*}
 \frac{1351}{3625} &= [0;2,1,2,6,2,1,1,2,1,3] = 0.372689655172
-\\
+\intertext{und berechnen wir die Näherungsbrüche:}
 	K_0 &= [0] = 0
 \\
 	K_1 &= [0;2] = 0 + \frac{1}{2} = \frac{1}{2} = 0.5
 \\
-	K_2 &= [0;2,1] = 0 + \cfrac{1}{2+\frac{1}{1}} = \frac{1}{3} = 0.\bar{3}
+	K_2 &= [0;2,1] = 0 + \cfrac{1}{2+\cfrac{1}{1}} = \frac{1}{3} = 0.\bar{3}
 \\
-	K_3 &= [0;2,1,2] = 0 + \cfrac{1}{2+\cfrac{1}{1+\frac{1}{2}}} = \frac{3}{8} = 0.375
+	K_3 &= [0;2,1,2] = 0 + \cfrac{1}{2+\cfrac{1}{1+\cfrac{1}{2}}} = \frac{3}{8} = 0.375
 \\
-	K_4 &= [0;2,1,2,6] = 0 + \cfrac{1}{2+\cfrac{1}{1+\cfrac{1}{2+\frac{1}{6}}}} = \frac{19}{51} =0.37254
+	K_4 &= [0;2,1,2,6] = 0 + \cfrac{1}{2+\cfrac{1}{1+\cfrac{1}{2+\cfrac{1}{6}}}} = \frac{19}{51} =0.37254
 \\
-	K_5 &= [0;2,1,2,6,2] = 0 + \cfrac{1}{2+\cfrac{1}{1+\cfrac{1}{2+\cfrac{1}{6+\frac{1}{2}}}}} = \frac{41}{110} = 0.37\bar{27}
+	K_5 &= [0;2,1,2,6,2] = 0 + \cfrac{1}{2+\cfrac{1}{1+\cfrac{1}{2+\cfrac{1}{6+\cfrac{1}{2}}}}} = \frac{41}{110} = 0.37\bar{27}
 \\
-	K_6 &= [0;2,1,2,6,2,1] = 0 + \cfrac{1}{2+\cfrac{1}{1+\cfrac{1}{2+\cfrac{1}{6+\cfrac{1}{2+\frac{1}{1}}}}}} = \frac{60}{161} = 0.37267
+	K_6 &= [0;2,1,2,6,2,1] = 0 + \cfrac{1}{2+\cfrac{1}{1+\cfrac{1}{2+\cfrac{1}{6+\cfrac{1}{2+\cfrac{1}{1}}}}}} = \frac{60}{161} = 0.37267
 \\
-	K_7 &= [0;2,1,2,6,2,1,1] = 0 + \cfrac{1}{2+\cfrac{1}{1+\cfrac{1}{2+\cfrac{1}{6+\cfrac{1}{2+\cfrac{1}{1+\frac{1}{1}}}}}}} = \frac{101}{271} = 0.37269
+	K_7 &= [0;2,1,2,6,2,1,1] = 0 + \cfrac{1}{2+\cfrac{1}{1+\cfrac{1}{2+\cfrac{1}{6+\cfrac{1}{2+\cfrac{1}{1+\cfrac{1}{1}}}}}}} = \frac{101}{271} = 0.37269
 \\
-	K_8 &= [0;2,1,2,6,2,1,1,2] = 0 + \cfrac{1}{2+\cfrac{1}{1+\cfrac{1}{2+\cfrac{1}{6+\cfrac{1}{2+\cfrac{1}{1+\cfrac{1}{1+\frac{1}{2}}}}}}}} = \frac{262}{703} = 0.372688
+	K_8 &= [0;2,1,2,6,2,1,1,2] = 0 + \cfrac{1}{2+\cfrac{1}{1+\cfrac{1}{2+\cfrac{1}{6+\cfrac{1}{2+\cfrac{1}{1+\cfrac{1}{1+\cfrac{1}{2}}}}}}}} = \frac{262}{703} = 0.372688
 \\
-	K_9 &= [0;2,1,2,6,2,1,1,2,1] = 0 + \cfrac{1}{2+\cfrac{1}{1+\cfrac{1}{2+\cfrac{1}{6+\cfrac{1}{2+\cfrac{1}{1+\cfrac{1}{1+\cfrac{1}{2+\frac{1}{1}}}}}}}}} = \frac{363}{974} = 0.3726899
+	K_9 &= [0;2,1,2,6,2,1,1,2,1] = 0 + \cfrac{1}{2+\cfrac{1}{1+\cfrac{1}{2+\cfrac{1}{6+\cfrac{1}{2+\cfrac{1}{1+\cfrac{1}{1+\cfrac{1}{2+\cfrac{1}{1}}}}}}}}} = \frac{363}{974} = 0.3726899
 \\
-	K_10 &= [0;2,1,2,6,2,1,1,2,1,3] = 0 + \cfrac{1}{2+\cfrac{1}{1+\cfrac{1}{2+\cfrac{1}{6+\cfrac{1}{2+\cfrac{1}{1+\cfrac{1}{1+\cfrac{1}{2+\cfrac{1}{1+\frac{1}{3}}}}}}}}}} = \frac{1351}{3625} = 0.372689655172
+	K_10 &= [0;2,1,2,6,2,1,1,2,1,3] = 0 + \cfrac{1}{2+\cfrac{1}{1+\cfrac{1}{2+\cfrac{1}{6+\cfrac{1}{2+\cfrac{1}{1+\cfrac{1}{1+\cfrac{1}{2+\cfrac{1}{1+\cfrac{1}{3}}}}}}}}}} = \frac{1351}{3625}\\
+& = 0.372689655172.
 \end{align*}
-Mit diesem Beispiel werden die Teilkettenbrüche und Näherung zum Endresultat ersichtlich.
-Folge der Näherungsbrüche mit geradem (bzw. ungeradem) Index
-ist streng monoton steigend (bzw. fallend) und jeder Näherungsbruch
-mit geradem Index ist kleiner als jeder Näherungsbruch mit ungeradem Index\cite{kettenbruch:proseminar}.
+\end{beispiel}
+
+Mit diesem Beispiel werden die Teilkettenbrüche und Näherung zum Endresultat
+ersichtlich.
+Die Näherungsbrüche mit geradem (bzw.~ungeradem) Index
+ist streng monoton steigend (bzw.~fallend) und jeder Näherungsbruch
+mit geradem Index ist kleiner als jeder Näherungsbruch mit ungeradem
+Index \cite{kettenbruch:proseminar}:
 \begin{enumerate}
 \item
 $K_0 < K_2 < K_4 < \cdots$
@@ -201,18 +217,20 @@ $K_0 < K_2 < K_4 < \cdots < K_{2n} < \cdots < K_{2n+1} < \cdots < K_5
 < K_3 < K_1$
 und $\frac{1351}{3625}$ wird von jeweils zwei aufeinanderfolgenden
 Näherungsbrüchen eingeschlossen.
-\end{beispiel}
 
 Die Folge der Näherungsbrüche des unendlichen Kettenbruchs
 $[a_0;a_1,a_2,\dots]$ mit $a_0 \in \mathbb{Z}$ konvergiert 
 von unten gegen einen Grenzwert, den wir als $\alpha$
-bezeichnen. Anderseits sind die Näherungsbrüche mit ungeradem
-Index nach unten begrenzt. Somit sind beide Folgen monoton und beschränkt 
-und konvergieren in $\alpha$. Den erwähnten Ansatz gilt nur für reguläre Kettenbrüche, es 
-wäre zum Beispiel nicht der Fall, wenn als Teilnenner beliebige positive reelle Zahlen 
-zugelassen wären. Der Kettenbruch $[b_0;b_1,\dots]$ konvergiert genau dann, wenn die Summe
-$\sum\limits_{i=0}^\infty b_i $ divergiert.\\
-Hiermit haben wir beobachtet wie die $k_i$ den Grenzwert von oben und unten her approximieren.
+bezeichnen.
+Anderseits sind die Näherungsbrüche mit ungeradem
+Index nach unten begrenzt.
+Somit sind beide Folgen monoton und beschränkt 
+und konvergieren in $\alpha$.
+Der erwähnte Ansatz gilt nur für reguläre Kettenbrüche, es 
+wäre zum Beispiel nicht der Fall, wenn als Teilnenner beliebige positive
+reelle Zahlen zugelassen wären. 
+Hiermit haben wir beobachtet wie die $K_i$ den Grenzwert von oben und
+unten her approximieren.
 
 Es gibt auch Zahlen, deren Kettenbruchdarstellung gewisse
 Regelmässigkeiten aufweisen, ohne periodisch zu sein. Zum Beispiel

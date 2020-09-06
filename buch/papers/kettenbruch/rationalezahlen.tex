@@ -7,13 +7,11 @@
 \section{Rationale Zahlen
 \label{kettenbruch:section:Zahlen}}
 \rhead{Rationale Zahlen}
-\subsection{endliche Kettenbrüche}
-Die Kettenbruchentwicklung von $x \in \mathbb{R}$ bricht genau dann nach endlich
-vielen Schritten ab, wenn $x$ rational ist.
+\subsection{Endliche Kettenbrüche}
 Die Menge aller rationalen Zahlen wird mit $\mathbb{Q}$ bezeichnet.
 Ein endlicher Kettenbruch ist ein Bruch der Form
 \begin{equation}
-a_0 + \cfrac{b_1}{a_1+\cfrac{b_2}{a_2+\cfrac{\cdots}{\cdots+\cfrac{b_n}{a_{n-1} + \cfrac{1}{a_n}}}}}
+a_0 + \cfrac{b_1}{a_1+\cfrac{b_2}{a_2+\cfrac{\cdots}{\cdots+\cfrac{b_{n-1}}{a_{n-1} + \cfrac{b_n}{a_n}}}}}
 \end{equation}
 in welchem $a_0, a_1,\dots,a_n$ und $b_1,b_2,\dots,b_n$ ganze Zahlen
 darstellen, die mit Ausnahme möglicherweise von $a_0$ alle positiv sind.
@@ -24,23 +22,23 @@ rationale Zahlen endliche Kettenbrüche.
 \subsection{Euklidischer Algorithmus}
 Die Umwandlung einer rationalen Zahl in einen Kettenbruch erfolgt
 mit Hilfe des euklidischen Algorithmus.
-Als Beispiel rechnen wir für $\frac{17}{10} = [1;1,2,3]$.
 Jede rationale Zahl $x$ lässt sich auf eindeutige Weise in einen
 endlichen Kettenbruch entwicklen, dessen letzer Teilnenner grösser
 oder gleich 2 ist.
 \begin{beispiel}
+Als Beispiel bestimmen wir den Kettenbruch von $\frac{17}{10} = [1;1,2,3]$:
 \begin{equation}
 \frac{17}{10}
 =
 1 + \frac{7}{10}
 =
-1 + \cfrac{1}{\frac{10}{7}}
+1 + \cfrac{1}{\cfrac{10}{7}}
 =
-1 + \cfrac{1}{1+\frac{3}{7}}
+1 + \cfrac{1}{1+\cfrac{3}{7}}
 =
-1 + \cfrac{1}{1+\cfrac{1}{1+\cfrac{1}{\frac{7}{3}}}}
+1 + \cfrac{1}{1+\cfrac{1}{1+\cfrac{1}{\cfrac{7}{3}}}}
 =
-1 + \cfrac{1}{1+\cfrac{1}{2+\frac{1}{3}}}
+1 + \cfrac{1}{1+\cfrac{1}{2+\cfrac{1}{3}}}
 \end{equation}
 \begin{align*}
 17 &= 1\cdot 10 + 7 \\
@@ -50,12 +48,13 @@ oder gleich 2 ist.
 \end{align*}
 Diese Methode kann auch umgekehrt angewendet werden.
 Berechnen wir nun den Kettenbruch in einem Bruch zurück.
-\begin{equation}
+\begin{align*}
 [1;1,2,3] 	
-\rightarrow Es gilt		2 + \frac{1}{3} = \frac{7}{3} \\
-\rightarrow Es gilt		1 + \frac{3}{7} = \frac{10}{7} \\
-\rightarrow Es gilt		1 + \frac{7}{10} = \frac{17}{0} \\
-\end{equation}
+&\rightarrow 	2 + \frac{1}{3} = \frac{7}{3} \\
+&\rightarrow 	1 + \frac{3}{7} = \frac{10}{7} \\
+&\rightarrow 	1 + \frac{7}{10} = \frac{17}{0} 
+\qedhere
+\end{align*}
 \end{beispiel}
 Wie man im Beispiel sieht, ist die intuitive Berechnung der
 Näherungsbrüche eines Kettenbruchs, indem man ihn von unten her
@@ -65,24 +64,29 @@ Ausserdem kann man mit Hilfe dieser Rekursionsformel die Grenzwerte
 unendlicher Kettenbrüche untersuchen.
 
 \subsection{Rekursionsformel}
-Die Berechnung der Konvergenten (siehe Abschnitt 10.3.3) eines Kettenbruches 
+Die Berechnung der Konvergenten (siehe
+Abschnitt~\ref{kettenbruch:nichtperiodisch}) eines Kettenbruches 
 kann erheblich vereinfacht werden, indem eine Rekursionsformeln für den Zähler 
-und den Nenner eingeführt wird. Anders formuliert können Grenzwerte für unendliche 
-Zahlen oder Funktionen mit Hilfe der Rekursionsformel schneller definiert werden.
+und den Nenner eingeführt wird.
+Anders formuliert können Grenzwerte für unendliche 
+Zahlen oder Funktionen mit Hilfe der Rekursionsformel schneller definiert
+werden.
+
 Betrachten wir zunächst die folgende Näherungsbrüche:
 
 \begin{align*}
-a_0 + \frac{b_1}{a_1} , a_0 + \cfrac{b_1}{a_1 + \frac{b_2}{a_2}} , \cdots
+a_0 + \frac{b_1}{a_1} , a_0 + \cfrac{b_1}{a_1 + \cfrac{b_2}{a_2}} , \cdots
 \end{align*}
-Wie in Kapitel 17.1.1 erwähnt wird hier der Nenner wieder als Kettenbruch dargestellt.
+Wie in Abschnitt 17.1.1 erwähnt wird hier der Nenner wieder als Kettenbruch dargestellt.
 Insofern  werden Terme der Form
 \begin{align*}
-a_k + \cfrac{b_{k + 1}}{a_{k + 1} + \frac{p}{q}}
+a_k + \cfrac{b_{k + 1}}{a_{k + 1} + \cfrac{p}{q}}
 \end{align*}
-immer ausgerechnet
+immer zu
 \begin{align*}
-\cfrac{b_{k+1}}{a_{k+1} + \frac{p}{q}} = \frac{b_{k+1} \cdot q}{a_{k+1} \cdot q + p}
+\cfrac{b_{k+1}}{a_{k+1} + \cfrac{p}{q}} = \frac{b_{k+1} \cdot q}{a_{k+1} \cdot q + p}
 \end{align*}
+ausgerechnet.
 Dies lässt sich auch durch die folgende Matrizenschreibweise ausdrücken:
 \begin{equation}
 		\begin{pmatrix}
@@ -100,7 +104,8 @@ Dies lässt sich auch durch die folgende Matrizenschreibweise ausdrücken:
 		\begin{pmatrix}
 		p \\
 		q
-		\end{pmatrix}
+		\end{pmatrix}.
+\label{kettenbruch:section:Rekursionsformel}
 \end{equation}
 Der ``unterste'' Bruch ist $\frac{b_n}{a_n}$, also in Vektorschreibweise
 \begin{align*}
@@ -117,9 +122,9 @@ a_0 + 	\begin{pmatrix}
 			b_n\\
 			a_n
 		\end{pmatrix}
-\textrm{Aufbau ``von rechts nach links''}
+\qquad\textrm{Aufbau ``von rechts nach links''.}
 \end{align*}
-aber das Matrizenprodukt kann man auch von links beginnend ausmultiplizieren, als
+Aber das Matrizenprodukt kann man auch von links beginnend ausmultiplizieren als
 \begin{align*}
 		\begin{pmatrix}
 			0& b_1\\
@@ -133,16 +138,18 @@ aber das Matrizenprodukt kann man auch von links beginnend ausmultiplizieren, al
 		\begin{pmatrix}
 			b_n\\
 			a_n
-		\end{pmatrix}
+		\end{pmatrix},
 \end{align*}
-d.h. man kann bei $b_1, a_1$ beginnen.
-Man kann die beiden Schritten
+d.h. man kann bei $b_1, a_1$ beginnen, dies wird weiter unten im Detail
+ausgeführt.
+
+Man kann die beiden Schritte
 \begin{align*}
-\frac{p}{q} \rightarrow a_k + \frac{p}{q} \rightarrow \cfrac{b_k}{a_k + \frac{p}{q}}
+\frac{p}{q} \rightarrow a_k + \frac{p}{q} \rightarrow \cfrac{b_k}{a_k + \cfrac{p}{q}}
 \end{align*}
 auch separat als Matrizen schreiben.
 \begin{align*}
-a_k + \frac{p}{q} = \frac{a_k \cdot q + p}{q} \enspace d.h. \enspace	
+a_k + \frac{p}{q} &= \frac{a_k \cdot q + p}{q} &&\text{d.~h.} &&
 	\begin{pmatrix}
 		1& a_k\\
 		0& 1
@@ -151,9 +158,8 @@ a_k + \frac{p}{q} = \frac{a_k \cdot q + p}{q} \enspace d.h. \enspace
 		p\\
 		q
 	\end{pmatrix}
-\end{align*}
-\begin{align*}
-cfrac{b_k}{\frac{p}{q}} = \frac{b_k \cdot q}{p} \textrm{d.h.}	
+\\
+\cfrac{b_k}{\frac{p}{q}} &= \frac{b_k \cdot q}{p} &&\text{d.~h.} &&
 	\begin{pmatrix}
 		1& b_k\\
 		0& 1
@@ -161,7 +167,7 @@ cfrac{b_k}{\frac{p}{q}} = \frac{b_k \cdot q}{p} \textrm{d.h.}
 	\begin{pmatrix}
 		p\\
 		q
-	\end{pmatrix}
+	\end{pmatrix}.
 \end{align*}
 Tatsächlich ist die Kombination der beiden Schritte
 \begin{align*}
@@ -178,8 +184,9 @@ Tatsächlich ist die Kombination der beiden Schritte
 			1& a_n
 		\end{pmatrix}
 \end{align*}
-wie auf der vorangegangene Seite gefunden.
-Aufbau des Kettenbruchs von rechts
+wie in \eqref{kettenbruch:section:Rekursionsformel}  gefunden.
+\subsubsection {Aufbau des von links nach rechts}
+Das Produkt von Matrizen kann man auch von links her ausmultiplizieren.
 \begin{align*}
 		\begin{pmatrix}
 			1& a_0\\
@@ -203,9 +210,9 @@ Aufbau des Kettenbruchs von rechts
 			a_n
 		\end{pmatrix}
 \end{align*}
-Aufbau des Kettenbruchs von links: Matrizen von links her ausmultiplizieren
-Start:
-\begin{align*}
+\begin{itemize}
+\item Start:
+\begin{equation*}
 		\begin{pmatrix}
 			1& a_0\\
 			0& 1
@@ -215,9 +222,9 @@ Start:
 			B_{-1}& B_0
 		\end{pmatrix}
 	=	P_0
-\end{align*}
-Schritt 1:
-\begin{align*}
+\end{equation*}
+\item Schritt 1: von rechts mit nächsten Matrixfaktor multiplizieren
+\begin{equation*}
 		\begin{pmatrix}
 			1& a_0\\
 			0& 1
@@ -229,7 +236,7 @@ Schritt 1:
 	=	\begin{pmatrix}
 			a_0& b_1 + a_0 \cdot a_1\\
 			1&	a_1
-		\end{pmatrix}\\
+		\end{pmatrix}
 	=	\begin{pmatrix}
 			A_{-1}& A_0\\
 			B_{-1}& B_0
@@ -243,13 +250,13 @@ Schritt 1:
 			B_0& B_1
 		\end{pmatrix}
 	=	P_1
-\end{align*}
-Schritt 2:
-\begin{align*}
+\end{equation*}
+\item Schritt 2:
+\begin{equation*}
 P_1 \cdot	\begin{pmatrix}
 				0& b_2\\
 				1& a_2
-			\end{pmatrix}\\
+			\end{pmatrix}
 		=	\begin{pmatrix}
 				A_0& A_1\\
 				B_0& B_1
@@ -263,13 +270,13 @@ P_1 \cdot	\begin{pmatrix}
 				B_1& b_2 \cdot B_0 + a_2 \cdot B_1
 			\end{pmatrix}
 		= 	P_2
-\end{align*}
-Schritt 3:
-\begin{align*}
+\end{equation*}
+\item Schritt 3:
+\begin{equation*}
 P_2 \cdot	\begin{pmatrix}
 				0& b_3\\
 				1& a_3
-			\end{pmatrix}\\
+			\end{pmatrix}
 		=	\begin{pmatrix}
 				A_1& A_2\\
 				B_1& B_2
@@ -282,49 +289,71 @@ P_2 \cdot	\begin{pmatrix}
 				A_2& b_3 \cdot A_1 + a_3 \cdot A_2\\
 				B_2& b_3 \cdot B_1 + a_3 \cdot B_2
 			\end{pmatrix}
-		= 	P_2
-\end{align*}
-So macht man weiter bis zum Schritt $n_1$, der die Matrix
-\begin{align*}
+		= 	P_2 \qquad \text{liefert.}
+\end{equation*}
+\item Schritt $n-1$:
+So macht man weiter bis zum Schritt $n-1$, der die Matrix
+\begin{equation*}
 P_{n-1} = 	\begin{pmatrix}
 				A_{n-2}& A_{n-1}\\
 				B_{n-2}& B_{n-1}			
 			\end{pmatrix}
-\end{align*}
-liefert.\\
-Zähler und Nenner des Näherungsbruchs bekommt man dann durch Multiplikation mit $\begin{pmatrix}
+\end{equation*}
+liefert.
+\item Schritt $n$:
+Zähler und Nenner des Näherungsbruchs bekommt man jetzt durch Multiplikation
+mit 
+\[
+\begin{pmatrix}
 b_n\\
 a_n
-\end{pmatrix}$. Dies ist aber die zweite Spalte der Matrix $\begin{pmatrix}
+\end{pmatrix}.
+\]
+Dies ist aber die zweite Spalte der Matrix
+\[
+\begin{pmatrix}
 0& b_n\\
 1& a_n
-\end{pmatrix}$, d.h., Zähler und Nenner stehen in der zweite Spalte von $P_n$.
+\end{pmatrix},
+\]
+d.~h.~Zähler und Nenner stehen in der zweite Spalte von $P_n$.
+\end{itemize}
 
-\underline{Folgerung:}\\
-
-$\frac{A_n}{B_n}$ ist der Wert von
+\subsubsection{Rekursionsformeln für $A_n$ und $B_n$}
+Wir möchten jetzt Formeln für die Berechnung von Zähler $A_n$ und Nenner $B_n$
+des Wertes
 \begin{align*}
+\frac{A_n}{B_n}
+=
 a_0 + \cfrac{b_1}{a_1+\cfrac{b_2}{a_2+\cfrac{\cdots}{\cdots+\cfrac{b_{n-1}}{a_{n-1} + \cfrac{b_n}{a_n}}}}}
 \end{align*}
-Die Berechnung von $A_n, B_n$ kann man jetzt auch ohne die Matrizenschreibweise aufschreiben:
-Start:
+des $n$-ten Näherungsbruches bekommen.
+Die Berechnung von $A_n, B_n$ kann man auch ohne die Matrizenschreibweise
+aufschreiben:
+\begin{itemize}
+\item Start:
 \begin{align*}
-A_{-1} = 0		\qquad		A_0 = a_0 \\
-B_{-1} = 1		\qquad		B_0 = 1 \\
+A_{-1} &= 0		&		A_0 &= a_0 \\
+B_{-1} &= 1		&		B_0 &= 1 
 \end{align*}
-$\rightarrow$ 0-te Näherung: $\frac{A_0}{B_0} = a_0$
-Schritt:
+$\rightarrow$ 0-te Näherung: $\displaystyle\frac{A_0}{B_0} = a_0$
+\item Schritt $k\to k+1$:
 \begin{align*}
-k \rightarrow k + 1 \\
-A_{k+1} = A_{k-1} \cdot b_k + A_k \cdot a_k \\
-B_{k+1} = B_{k-1} \cdot b_k + B_k \cdot a_k
+k &\rightarrow k + 1
+&
+A_{k+1} &= A_{k-1} \cdot b_k + A_k \cdot a_k \\
+&&
+B_{k+1} &= B_{k-1} \cdot b_k + B_k \cdot a_k
 \end{align*}
-Näherungsbruch $n: \frac{A_n}{B_n}$
-
-Schliesslich sind für reguläre oder einfache Kettenbrüche die Formeln einfacher, weil $b_k = 1$
-und so:
+\item
+Näherungsbruch $n$: \qquad$\displaystyle\frac{A_n}{B_n}$
+\end{itemize}
+\subsubsection{Einfache Kettenbrüche}
+Schliesslich sind für reguläre oder einfache Kettenbrüche die Formeln
+einfacher, weil $b_k = 1$.
+Es gilt
 \begin{align*}
-A_{k+1} = A_{k-1} + A_k \cdot a_k \\
-B_{k+1} = B_{k-1} + B_k \cdot a_k
+A_{k+1} &= A_{k-1} + A_k \cdot a_k \\
+B_{k+1} &= B_{k-1} + B_k \cdot a_k.
 \end{align*}
-Hiermit haben wir die wichtigsten Zusammenhänge in Bezug auf die Näherungszahlen herausgearbeitet.
+Hiermit haben wir die wichtigsten Zusammenhänge als Vorbereitung für die Näherungszahlen herausgearbeitet.
