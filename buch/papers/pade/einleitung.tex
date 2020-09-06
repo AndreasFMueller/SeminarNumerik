@@ -5,7 +5,12 @@
 %
 \section{Warum die Taylor-Reihe nicht gut genug ist\label{pade:section:einleitung}}
 \rhead{Einleitung}
+\index{Taylor-Reihe}%
 Für praktische Berechnungen von Modellen in der Physik, Ingenieurwissenschaften und weiteren Gebieten wird die Taylor-Reihe schon früh im Studium als ein nützliches Werkzeug gelehrt.
+\index{Physik}%
+\index{Ingenieurwissenschaften}%
+\index{gebrochen rationale Funktion}%
+\index{Funktion!gebrochen rational}%
 Leider liefert die Taylor-Reihe nicht immer eine genügend gute Approximation.
 Dieses Paper beschäftigt sich mit der Padé-Approximation, welche aus gebrochen rationalen Funktionen besteht und oft in der Notation
 \begin{equation*}
@@ -17,13 +22,15 @@ R_{[L/M]}
 \end{equation*}
 angetroffen wird. 
 Die Definition dieser Notation wird im Abschnitt \ref{pade:subsection:Pade_erstellen} erläutert.
-Padé-Approximationen sind Brüche, welche nur wenig komplizierter als Taylor-Reihen sind und ergänzen somit die Taylor-Reihe als Approximationsmethode.
+Padé-Appro\-xi\-ma\-tio\-nen sind Brüche, welche nur wenig komplizierter
+als Taylor-Reihen sind und ergänzen somit die Taylor-Reihe als
+Approximationsmethode.
 Die Padé-Approximation kann gewisse Funktionen besser approximieren als Polynome, denn Polynome divergieren bei grösser werdenden Werten immer, während Brüche beschränkte Funktionen approximieren können.
 Wenn die Taylor-Reihe keine genügenden Ergebnisse liefert, kann die Padé-Approximation verwendet werden, um die Approximation zu verbessern.
 
  
 
-\subsection{Das Taylor-Reihen Problem
+\subsection{Das Taylor-Reihen-Problem
 \label{pade:Taylorfehler}}
 
 Das Problem der Taylor-Reihe ist, dass sie nicht immer gegen die Funktion konvergiert und das auch in der Nähe des Entwicklungspunktes.
@@ -32,13 +39,16 @@ Die Funktion
 f(x)
 =
 \left\{\begin{array}{cc}
-0 & x<0  \\
-e^{\frac{-1}{x^2}} & 0 \leq x
+0 & x\le 0  \\
+e^{-\frac{1}{x^2}} & 0 < x
 \end{array}\right.\end{equation}
 hat eine Taylor-Reihe $Tf(x)=0$.
 Nur für sogenannte analytische Funktionen erhält man die gewünschte $Tf(x)=f(x)$ in der Umgebung des Entwicklungspunktes. 
+
 In der Praxis wird die Funktion jedoch nur mit immer längeren Polynomen approximiert da wir keine unendlich lange Polynome verwenden können.
 Diese Vorgehensweise kann bei praktischen Problemen auch einen sehr unerwünschten und limitierenden Effekt haben. 
+
+\begin{beispiel}
 Schauen wir das Beispiel 
 \begin{equation*}
 f(x)
@@ -50,7 +60,7 @@ f(x)
 an. 
 
 Die originale Funktion $f(x)$ ist eine monoton wachsende, stetige Funktion, welche für $0\leq x\leq\infty$ nur Werte zwischen eins und $\sqrt{2}$ beinhaltet.
-Die dazugehörige Taylor-Reihe, mit dem Entwicklungspunkt $x_0=0$, konvergiert für $x>\frac{1}{2}$ nicht. 
+Die dazugehörige Taylor-Reihe mit dem Entwicklungspunkt $x_0=0$ konvergiert für $x>\frac{1}{2}$ nicht. 
 Das Verhalten der originalen Funktion und deren Taylor-Reihe ist in dem Graphen \ref{pade:prob1} ersichtlich. 
 
 \begin{figure}
@@ -65,16 +75,19 @@ Die Padé-Approximation ist eine spezielle Art von rationalen Brüchen, welche e
 Diese Art der Approximation führt oft zu einem besseren Resultat als eine Taylor-Reihe. 
 Manchmal können mit der Padé-Approximation auch dann gute Ergebnisse gewonnen werden, wenn eine Taylor-Reihe wie in diesem Beispiel nicht konvergiert. 
 
-Wenn man aus den Koeffizienten der Taylor-Reihe nun eine Padé-Approximation, nach der im Abschnitt \ref{pade:subsection:Pade_erstellen} gezeigten Methode, ermittelt 
-\begin{equation*}
+Wenn man aus den Koeffizienten der Taylor-Reihe 
+nach der im Abschnitt \ref{pade:subsection:Pade_erstellen} gezeigten Methode
+eine Padé-Approximation ermittelt, findet man
+\begin{equation}
 R_{[2/ 2]}(x)
 =
 \frac{P^{[2/2]}(x)}{Q^{[2/2]}(x)}
 =
-\frac{1+\frac{13}{4}x+\frac{41}{16}x^2}{1 + \frac{11}{4}x + \frac{29}{16}x^2} 
+\frac{1+\frac{13}{4}x+\frac{41}{16}x^2}{1 + \frac{11}{4}x + \frac{29}{16}x^2}.
 \label{pade:bspordnung2}
-\end{equation*}
-und diese Approximation bei immer grösser werdendem $x$ betrachtet
+\end{equation}
+Für 
+immer grösser werdendes $x$ ist der Grenzwert
 \begin{equation*}
 \lim_{x \to \infty}
 \left(
@@ -83,10 +96,17 @@ und diese Approximation bei immer grösser werdendem $x$ betrachtet
 =
 \frac{49}{29} = 1.413793103,
 \end{equation*}
-erhält man ein Ergebnis, welches sehr nahe an der originalen Funktion liegt. 
-In der Grafik \ref{pade:prob3} ist gut ersichtlich, wie viel besser sich die Padé-Approximation im Vergleich zu der Taylor-Approximation verhält.
-Betrachtet man die beiden Fehler der Taylor-Reihe \ref{pade:prob2} und der Padé-Approximation \ref{pade:prob4} zur originalen Funktion, kann man sehen, dass die Padé-Approximation deutlich besser ist.
-Dies obwohl von der originalen Funktion nicht mehr Informationen bekannt waren als bei der Taylor-Reihe, da das Polynom ja aus der Taylor-Reihe erstellt wurde.
+man erhält ein Ergebnis, welches sehr nahe an der originalen Funktion liegt. 
+In der Grafik \ref{pade:prob3} ist gut ersichtlich, wie viel besser
+sich die Padé-Approximation im Vergleich zu der Taylor-Appro\-xi\-ma\-tion
+verhält.
+Betrachtet man die beiden Fehler der Taylor-Reihe \ref{pade:prob2}
+und der Padé-Appro\-xi\-ma\-tion \ref{pade:prob4} zur originalen Funktion,
+kann man sehen, dass die Padé-Approximation deutlich besser ist.
+Dies obwohl von der originalen Funktion nicht mehr Informationen
+bekannt waren als bei der Taylor-Reihe, da
+die Padé-Approximation ja aus der Taylor-Reihe erstellt wurde.
+\end{beispiel}
 
 In den folgenden Abschnitten wird nun inklusive einiger Beispiele aufgezeigt, wie man eine Padé-Approximation erstellt.
 Zum besseren Verständnis wird zuerst erklärt wie die Potenzreihe einer Funktion gefunden werden kann.
