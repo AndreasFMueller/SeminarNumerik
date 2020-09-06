@@ -30,29 +30,30 @@ Als Beispiel bestimmen wir den Kettenbruch von $\frac{17}{10} = [1;1,2,3]$:
 \begin{equation}
 \frac{17}{10}
 =
-1 + \frac{7}{10}
+{\color{blue}1} + \frac{{\color{red}7}}{{\color{darkgreen}10}}
 =
 1 + \cfrac{1}{\cfrac{10}{7}}
 =
-1 + \cfrac{1}{1+\cfrac{3}{7}}
+1 + \cfrac{1}{{\color{blue}1}+\cfrac{{\color{red}3}}{{\color{darkgreen}7}}}
 =
-1 + \cfrac{1}{1+\cfrac{1}{1+\cfrac{1}{\cfrac{7}{3}}}}
+1 + \cfrac{1}{1+\cfrac{1}{\frac{7}{3}}}
 =
-1 + \cfrac{1}{1+\cfrac{1}{2+\cfrac{1}{3}}}
+1 + \cfrac{1}{1+\cfrac{1}{{\color{blue}2}+\cfrac{{\color{red}1}}{{\color{darkgreen}3}}}}.
 \end{equation}
+Dies entspricht der Durchführung des euklidischen Algorithmus:
 \begin{align*}
-17 &= 1\cdot 10 + 7 \\
-10 &= 1\cdot 7 + 3 \\
-7 &= 2\cdot 3 + 1 \\
-3 &= 3\cdot 1 + 0
+17 &= {\color{blue}1}\cdot {\color{darkgreen}10} + {\color{red}7}, \\
+10 &= {\color{blue}1}\cdot {\color{darkgreen}7} + {\color{red}3}, \\
+7 &= {\color{blue}2}\cdot {\color{darkgreen}3} + {\color{red}1}, \\
+3 &= 3\cdot 1 + 0.
 \end{align*}
 Diese Methode kann auch umgekehrt angewendet werden.
-Berechnen wir nun den Kettenbruch in einem Bruch zurück.
+Rechnen wir den Kettenbruch in einen Bruch zurück:
 \begin{align*}
 [1;1,2,3] 	
 &\rightarrow 	2 + \frac{1}{3} = \frac{7}{3} \\
 &\rightarrow 	1 + \frac{3}{7} = \frac{10}{7} \\
-&\rightarrow 	1 + \frac{7}{10} = \frac{17}{0} 
+&\rightarrow 	1 + \frac{7}{10} = \frac{17}{10}.
 \qedhere
 \end{align*}
 \end{beispiel}
@@ -75,9 +76,13 @@ werden.
 Betrachten wir zunächst die folgende Näherungsbrüche:
 
 \begin{align*}
-a_0 + \frac{b_1}{a_1} , a_0 + \cfrac{b_1}{a_1 + \cfrac{b_2}{a_2}} , \cdots
+a_0 + \frac{b_1}{a_1},
+\quad
+a_0 + \cfrac{b_1}{a_1 + \cfrac{b_2}{a_2}},
+\quad
+\cdots
 \end{align*}
-Wie in Abschnitt 17.1.1 erwähnt wird hier der Nenner wieder als Kettenbruch dargestellt.
+Wie in Abschnitt \ref{kettenbruch:section:1s} erwähnt wird hier der Nenner wieder als Kettenbruch dargestellt.
 Insofern  werden Terme der Form
 \begin{align*}
 a_k + \cfrac{b_{k + 1}}{a_{k + 1} + \cfrac{p}{q}}
@@ -147,8 +152,9 @@ Man kann die beiden Schritte
 \begin{align*}
 \frac{p}{q} \rightarrow a_k + \frac{p}{q} \rightarrow \cfrac{b_k}{a_k + \cfrac{p}{q}}
 \end{align*}
-auch separat als Matrizen schreiben.
-\begin{align*}
+auch separat als Matrizen schreiben:
+\[
+\begin{aligned}
 a_k + \frac{p}{q} &= \frac{a_k \cdot q + p}{q} &&\text{d.~h.} &&
 	\begin{pmatrix}
 		1& a_k\\
@@ -168,7 +174,8 @@ a_k + \frac{p}{q} &= \frac{a_k \cdot q + p}{q} &&\text{d.~h.} &&
 		p\\
 		q
 	\end{pmatrix}.
-\end{align*}
+\end{aligned}
+\]
 Tatsächlich ist die Kombination der beiden Schritte
 \begin{align*}
 		\begin{pmatrix}
@@ -185,7 +192,7 @@ Tatsächlich ist die Kombination der beiden Schritte
 		\end{pmatrix}
 \end{align*}
 wie in \eqref{kettenbruch:section:Rekursionsformel}  gefunden.
-\subsubsection {Aufbau des von links nach rechts}
+\subsubsection {Aufbau des Produktes von links nach rechts}
 Das Produkt von Matrizen kann man auch von links her ausmultiplizieren.
 \begin{align*}
 		\begin{pmatrix}
@@ -338,13 +345,15 @@ B_{-1} &= 1		&		B_0 &= 1
 \end{align*}
 $\rightarrow$ 0-te Näherung: $\displaystyle\frac{A_0}{B_0} = a_0$
 \item Schritt $k\to k+1$:
-\begin{align*}
-k &\rightarrow k + 1
+\[
+\begin{aligned}
+k &\rightarrow k + 1:
 &
 A_{k+1} &= A_{k-1} \cdot b_k + A_k \cdot a_k \\
 &&
 B_{k+1} &= B_{k-1} \cdot b_k + B_k \cdot a_k
-\end{align*}
+\end{aligned}
+\]
 \item
 Näherungsbruch $n$: \qquad$\displaystyle\frac{A_n}{B_n}$
 \end{itemize}

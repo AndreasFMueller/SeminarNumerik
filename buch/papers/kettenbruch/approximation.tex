@@ -29,76 +29,94 @@ Das heisst, dann gilt für alle rationalen Zahlen $\frac{c}{d} \ne
 Ziel dieses Abschnittes ist, eine genügend gute Approximation der
 Näherungsbrüche zu zeigen. Wir werden hier Resultate zusammentragen und 
 diese dokumentieren. Gibt man sich eine beliebige Zahl $x$
-vor, so kann man sich die Frage stellen, welche "unkürzbaren" Brüche
+vor, so kann man sich die Frage stellen, welche ``unkürzbaren'' Brüche
 $\frac{p}{q}$ mit vorgegebenem Höchstnenner sich gut approximieren
 lässt. 
 \begin{beispiel}
-Näherung von $\pi$ mit dem unendliche Dezimalbruch:
-$\pi = [3;7,15,1,292,1,1,1,2,1,3,1,14,2,\cdots]$
-Die Näherung $3.14 = \frac{314}{100}$ ist eine Näherung. Aber
-$\frac{22}{7} = 3.14285714\dots$ hat einen viel kleineren Nenner und
+Näherung von $\pi$ mit dem unendliche Kettenbruch
+\[
+\pi
+=
+[3;7,15,1,292,1,1,1,2,1,3,1,14,2,\cdots].
+\]
+Die Näherung $3.14 = \frac{314}{100}$ ist eine Näherung.
+Aber $\frac{22}{7} = 3.14285714\dots$ hat einen viel kleineren Nenner und
 ist eine deutlich bessere Näherung von $\pi$.
-Eine noch bessere Näherung ist der Kettenbruch
+Eine noch bessere Näherung ist der Näherungsbruch
 \begin{equation}
-\frac{355}{113} = 3 + \cfrac{1}{7+\cfrac{1}{15+\cfrac{1}{1}}} = 3.1415\overline{92}.
+\frac{355}{113}
+=
+3 + \cfrac{1}{7+\cfrac{1}{15+\cfrac{1}{1}}}
+=
+3.1415\overline{92}.
 \end{equation}
 Folgende Näherungswerte von $\pi$ können schnell und einfach berechnet werden:
-\begin{equation}
-3,\frac{22}{7} \approx 3.143 ; \frac{333}{106} \approx 3.14151 ; \frac{355}{113} 
-\approx 3.1415929 ; \frac{103993}{33102} \approx 3.1415926530 ; \cdots.
-\end{equation}
+\begin{equation*}
+3, \quad
+\frac{22}{7} \approx 3.143, \quad
+\frac{333}{106} \approx 3.14151, \quad
+\frac{355}{113} \approx 3.1415929, \quad
+\frac{103993}{33102} \approx 3.1415926530, \quad
+\cdots.
+\qedhere
+\end{equation*}
 \end{beispiel}
 Die Bestapproximation ist einfach formuliert durch die Bestimmung
 derjenigen rationalen Brüchen, welche von einer gegebenen rationalen
 oder irrationalen Zahl einen festgelegten minimalen Abstand haben
 und dabei einen möglichst kleinen positiven Nenner besitzen. Diesbezüglich liefern Kettenbrüche
-bestmögliche Approximationen durch rationale Zahlen. \cite{kettenbruch:numerical-analysis}
+bestmögliche Approximationen durch rationale Zahlen
+\cite{kettenbruch:numerical-analysis}.
 
 \subsection{Approximation einer Funktion}
-Die Funktion $\tan^{-1}(x)$ spielt bei der Berechnung von $\pi$ an vielen Stellen eine Rolle. 
+Die Funktion $\tan^{-1}(x)$ spielt bei der Berechnung von $\pi$ an
+vielen Stellen eine Rolle. 
 Der Kettenbruch von $\tan^{-1}(x)$ kann folgendermassen dargestellt werden.
 \begin{equation}
 \tan^{-1}(x)
 =
-\cfrac{x}{1+\cfrac{x^2}{3+\cfrac{4x^2}{5+\cfrac{9x^2}{7+\cfrac{16x^2}{9+\cdots}}}}}
+\cfrac{x}{1+\cfrac{x^2}{3+\cfrac{4x^2}{5+\cfrac{9x^2}{7+\cfrac{16x^2}{9+\cfrac{\cdots}{\cdots}}}}}}
 \qquad	(|x|< 1).
 \end{equation}
-Diese spezielle Darstellungsform der Arkustangens Funktion wird in Kapitel 19 begründet.
+Diese spezielle Darstellungsform der Arkustangensfunktion wird in Kapitel~19
+begründet.
 Somit kann der Kettenbruch auch umgeschrieben werden als Funktion $f_n$
 \begin{equation}
 f_n(x) = \cfrac{x}{1+\cfrac{x^2}{3+\cfrac{4x^2}{5+\cfrac{\cdots}{\cdots+\cfrac{(n-1)^2x^2}{2n-1}}}}}
 \qquad	(|x|< 1).
 \end{equation}
 %\end{beispiel}
-Hiermit kann nach $n$-te Bildung der Kettenbruchreaktion einen Grenzwert
+Hiermit kann nach der $n$-ten Bildung der Kettenbruchrekursion einen Grenzwert
 erreichen:
 \begin{equation}
 \tan^{-1}(x) = \lim_{n\to\infty} f_n(x), \qquad (|x| < 1)
 \end{equation}
 Die Konvergenz der Funktion kann an einem Beispiel beurteilt werden. 
+In Tabelle~\ref{kettenbruch:tabelle}
+sind die Näherungsbrüche von 
 \begin{equation}
 \tan^{-1}(1) = \pi/4 \approx 0.785398
 \end{equation}
+zusammengestellt.
 
 \begin{table}
 \centering
 \begin{tabular}{>{$}c<{$}>{$}l<{$}}
 n	& f_n(1) 	\\
 \hline
-2	& 0.750000 	\\
-3	& 0.791667 	\\
-4	& 0.784314 	\\
-5	& 0.785586 	\\
-6	& 0.785366 	\\
-7	& 0.785404	\\
-8	& 0.785397	\\
-9	& 0.785398	\\
+2	& 0.\underline{7}50000 	\\
+3	& 0.\underline{7}91667 	\\
+4	& 0.\underline{78}4314 	\\
+5	& 0.\underline{785}586 	\\
+6	& 0.\underline{7853}66 	\\
+7	& 0.\underline{785}404	\\
+8	& 0.\underline{78539}7	\\
+9	& 0.\underline{785398}	\\
 \hline
 \end{tabular}
 \caption{Näherungsstufen mit Kettenbruchentwicklung von der Funktion $\tan^{-1}(1)$
 \label{kettenbruch:tabelle}}
 \end{table}
-
 In wenigen und einfachen Schritten haben wir mit Hilfe einer
-Kettenbruchentwicklung ein System gebildet das die Konvergenz der
-Funktion $\tan^{-1}(x)$ vorantreibt und präzise Resultate liefert.
+Kettenbruchentwicklung eine Folge gebildet die gegen den Grenzwert
+$\tan^{-1}(1)$ konvergiert und schnell präzise Resultate liefert.
