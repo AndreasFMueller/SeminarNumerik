@@ -351,22 +351,27 @@ b_{1}\\
 \end{pmatrix}
 \]
 zu lösen.
-Die $a_k$ Koeffizienten können nun aus den $b_k$ und den $c_n$ Koeffizienten berechnet werden.
+Die $a_k$ Koeffizienten können nun aus den $b_k$ und den $c_n$ Koeffizienten berechnet werden:
 \begin{equation}
 \renewcommand\arraystretch{1.25}
+\left.
 \begin{aligned}
-a_{0}&=c_{0} \\
-a_{1}&=c_{1}+b_{1} c_{0} \\
-a_{2}&=c_{2}+b_{1} c_{1}+b_{2} c_{0} \\
-a_{3}&=c_{3}+b_{1} c_{2}+b_{2} c_{1} + b_{3} c_{0} 
+a_{0}&=c_{0} \rlap{$\displaystyle\phantom{\frac11}$}\\
+a_{1}&=c_{1}+b_{1} c_{0} \rlap{$\displaystyle\phantom{\frac11}$}\\
+a_{2}&=c_{2}+b_{1} c_{1}+b_{2} c_{0} \rlap{$\displaystyle\phantom{\frac11}$}\\
+a_{3}&=c_{3}+b_{1} c_{2}+b_{2} c_{1} + b_{3} c_{0}  \rlap{$\displaystyle\phantom{\frac11}$}
 \end{aligned}
+\quad
+\right\}
 \qquad\Rightarrow\qquad
+\left\{
+\quad
 \begin{aligned}
-a_{0}&=1 \\
+a_{0}&=1\phantom{\frac{1}{1}} \\
 a_{1}&=\frac{1}{2}+\frac{17}{4} \cdot 1 = \frac{19}{4}\\
 a_{2}&=-\frac{5}{8} +\frac{17}{4}\cdot \frac{1}{2} +\frac{47}{8} \cdot 1 = \frac{59}{8} \\
 a_{3}&=\frac{13}{16}+\frac{17}{4}\cdot -\frac{5}{8} + \frac{47}{8}\cdot \frac{1}{2} + \frac{169}{64} \cdot 1 = \frac{239}{64}\\
-\end{aligned}
+\end{aligned}\right.
 \end{equation}
 Daraus resultiert der gesamte Padé-Approximant der dritten Ordnung
 \begin{equation}
