@@ -74,11 +74,13 @@ H(s) = e^{-sT}
 ausgedrückt wird.
 
 Verschiedene Methoden wie z.B. die Wurzelortskurven können nicht mit einer Totzeit umgehen, sondern nur mit Übertragungsfunktionen, welche normalerweise als gebrochen rationale Funktionen vorliegen.
-Die Übertragungsfunktion besteht aus einem Nenner- und Zählerpolynom welches der Form
+Die Übertragungsfunktion besteht aus einem Nenner- und Zählerpolynom
+welches der Form
 \begin{equation*}
 H(s)=\frac{P(s)}{Q(s)}
 \end{equation*}
 entspricht.
+Wir bezeichnen die Grade von $P(s)$ und $Q(s)$ mit $p$ und $q$.
 
 Beim Design von Filtern, Reglern oder anderen frequenzabhängigen Netzwerken, verwendet man die Laplace- oder Z-Transformierte der Übertragungsfunktion, um die Eigenschaften des zu entwerfenden Netzwerkes zu synthetisieren oder zu analysieren.
 \index{Laplace-Transformation}%
@@ -248,7 +250,7 @@ und $p>q$ (rechts) ist.
 };
 \end{tikzpicture}
 \caption{Rücktransformation der Padé-Approximanten im Zeitbereich geplottet
-wenn $P=Q$ ist.\label{pade:totzeit1}}
+wenn $p=q$ ist.\label{pade:totzeit1}}
 \end{figure}
 %
 \begin{figure}
@@ -260,7 +262,7 @@ wenn $P=Q$ ist.\label{pade:totzeit1}}
 };
 \end{tikzpicture}
 \caption{Rücktransformation der Padé-Approximanten im Zeitbereich geplottet
-wenn $P=Q-10$ ist.\label{pade:totzeit2}}
+wenn $p=q-10$ ist.\label{pade:totzeit2}}
 \end{figure}
 
 Transformieren wir nun diese gebrochenen Polynome, welche sich noch
