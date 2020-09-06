@@ -209,7 +209,7 @@ Diese ist im negativen Bereich der Funktionsachse deutlich schlechter als die Pa
 \includegraphics[width=0.50\linewidth]{./papers/pade/python/bilder/poles1.pdf}
 };
 \end{tikzpicture}
-\caption{Pole und Nullstellen in der komplexen Ebene wenn $P=Q$ ist.
+\caption{Pol- und Nullstellen in der komplexen Ebene wenn $P=Q$ ist.
 \label{pade:poles1}}
 \end{figure}
 %
@@ -224,7 +224,7 @@ Diese ist im negativen Bereich der Funktionsachse deutlich schlechter als die Pa
 \includegraphics[width=0.50\linewidth]{./papers/pade/python/bilder/poles3.pdf}
 };
 \end{tikzpicture}
-\caption{Pole und Nullstellen in der komplexen Ebene wenn $p>q$ (links)
+\caption{Pol- und Nullstellen in der komplexen Ebene wenn $p>q$ (links)
 und $p<q$ (rechts) ist.
 \label{pade:poles2}}
 \end{figure}
@@ -274,15 +274,25 @@ Nicht alle Implementationen der Rücktransformation von Übertragungsfunktionen 
 Bei Polynomen grosser Ordnung oder wenn das Nenner- und Zähler- Polynom nicht gleicher Ordnung sind, können bei einer Rücktransformation Fehler auftauchen.
 Dies ist jedoch ein anderes Thema, welches den Rahmen dieses Papers sprengen würde.
 
-In der Grafik \ref{pade:prole} sind nun die Pol- und Nullstellen von höheren Ordnungen dargestellt. 
-Auffallend ist die schöne Symmetrie der Pol- und Nullstellen welche bei gleicher Ordnung der Nenner- und Zähler- Polynome um den Nullpunkt verteilt sind.
-Diese Symmetrie verschwindet wenn der Grad des Nenner- oder des Zähler- Polynoms grösser gewählt wird.
-Dies kann man soweit treiben, bis eine Polstelle in den rechten Bereich der komplexen Halbebenen reicht \ref{pade:poles2},
+In den Abbildungen \ref{pade:poles1} und \ref{pade:poles2}
+sind nun die Pol- und Nullstellen von höheren Ordnungen dargestellt. 
+Auffallend ist die schöne Symmetrie der Pol- und Nullstellen, welche
+bei gleicher Ordnung der Nenner- und Zählerpolynome um den Nullpunkt
+verteilt sind.
+Diese Symmetrie verschwindet wenn der Grad des Nenner- oder des
+Zählerpolynoms grösser gewählt wird.
+Dies kann man soweit treiben, bis eine Polstelle in den rechten
+Bereich der komplexen Halbebenen reicht \ref{pade:poles2},
 was ein instabiles System zur Folge hat.
-Ein instabiles System beutetet hier, dass der rücktransformierte Einheitssprung eine anwachsende Schwingung ist.
+Ein instabiles System beutetet hier, dass der rücktransformierte
+Einheitssprung eine anwachsende Schwingung ist.
 
-Verwendet man nun die Approximanten höherer und gleicher Ordnung für die Rücktransformation in Grafik \ref{pade:totzeit1}, erhält man einen immer besser werdenden Einheitssprung mit einem kleinen Überschwinger vor und nach dem Sprung. 
-Auffallend ist hier, dass der Padé-Approximant höchster Ordnung zu Beginn den grössten Fehlerpeak hat.
+Verwendet man nun die Approximanten höherer und gleicher Ordnung
+für die Rücktransformation in Grafik \ref{pade:totzeit1}, erhält
+man einen immer besser werdenden Einheitssprung mit einem kleinen
+Überschwinger vor und nach dem Sprung.
+Auffallend ist hier, dass der Padé-Approximant höchster Ordnung zu
+Beginn den grössten Fehlerpeak hat.
 Dieser ist sogar so hoch wie der Einheitssprung selbst.
 \index{Fehlerpeak}%
 
