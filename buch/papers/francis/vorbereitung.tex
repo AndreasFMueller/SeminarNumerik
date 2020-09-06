@@ -47,8 +47,7 @@ Zusätzlich soll die Länge des neuen Vektors $\hat{Q}_1b$, bzw. dieser einzelne
 \begin{bmatrix}
 -y\\
 0\\
-.\\
-.\\
+\vdots\\
 0
 \end{bmatrix}.
 \end{equation}
@@ -93,12 +92,11 @@ welche an den gewünschten Stellen in der ersten Spalte Nullen hat.
 
 Das gleiche Prinzip wird jetzt auf die Submatrix angewendet.
 Durch den zweiten Reflektor entstehen Nullen in der zweiten Spalte:
-
 \begin{align*}
 	Q_{2}&=
 	\begin{bmatrix}
-	1 & 0 & 0 & ... & 0\\
-	0 & 1 & 0 & ... & 0\\
+	1 & 0 & 0 & \dots & 0\\
+	0 & 1 & 0 & \dots & 0\\
 	0 & 0 &\\
 	\vdots & \vdots & &\hat{Q}_2 &\\
 	 &  &\\
@@ -120,7 +118,7 @@ Das Resultat ist eine Matrix in der Hessenberg-Form, welche ähnlich zu $A$ ist.
 Das heisst für uns, sie besitzt dieselben Eigenwerte wie die Matrix $A$.
 Die ganzen Multiplikation der Reflektoren kann zusammengefasst werden, sodass sich eine einzige Ähnlichkeitstransformation
 \begin{equation}
-	H=Q_{n-2}Q_{n-1}...Q_{1}AQ_{1}^{-1}...Q_{n-1}^{-1}Q_{n-2}^{-1}
+	H=Q_{n-2}Q_{n-1}\dots Q_{1}AQ_{1}^{-1}\dots Q_{n-1}^{-1}Q_{n-2}^{-1}
 \end{equation}
 ergibt.
 Mit 

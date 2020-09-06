@@ -1,0 +1,42 @@
+%
+% main.tex -- Paper zum Thema arctan
+%
+% (c) 2020 Hochschule Rapperswil
+%
+\chapter{Interpolation und numerische Ableitung\label{chapter:interdiff}}
+\lhead{Interpolation und numerische Ableitung}
+\rhead{}
+\begin{refsection}
+\chapterauthor{Andreas Müller}
+\index{Interpolation}%
+\index{Ableitung, numerische}%
+\index{numerische Ableitung}%
+
+{\parindent0pt
+In} Kapitel~\ref{chapter:interpolation} wurde gezeigt, wie man durch
+Interpolation gute Approximationen einer Funktion in einem Interval
+finden kann.
+Für äquidistante Stützstellen ist das Interpolationspolynom vor allem in
+der Mitte des Intervalls sehr genau.
+Man kann daher versuchen, diese Approximation durch das Interpolationspolynom
+auch für eine Approximation der Ableitung der Funktion zu verwenden, indem
+man das Interpolationspolynom ableitet.
+\index{Interpolationspolynom}%
+Am Ende dieses Prozesses sollte sich eine Formel ergeben, welche die
+Ableitung näherungsweise aus Funktionswerten in der Nähe des
+interessierenden Punktes bestimmt, ganz ähnlich wie das aus der
+Taylor-Reihe abgeleitet, in Kapitel~\ref{chapter:ableitung} beschriebene
+Verfahren.
+\index{Taylor-Reihe}%
+Dieses Kapitel führt die Berechnung der Gewichte der Funktionswerte durch
+und untersucht mit Hilfe der Fourier-Transformation, was man von dem Verfahren
+erwarten kann.
+\index{Fourier-Transformation}%
+
+\input{papers/interdiff/problem.tex}
+\input{papers/interdiff/interpolation.tex}
+\input{papers/interdiff/ableitung.tex}
+\input{papers/interdiff/experimente.tex}
+
+\printbibliography[heading=subbibliography]
+\end{refsection}
