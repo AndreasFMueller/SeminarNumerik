@@ -5,8 +5,6 @@
 %
 \section{Approximation
 \label{kettenbruch:section:Approximation}}
-\rhead{Approximation}
-
 In der Einleitung wurde erwähnt, dass die Bestimmung von guten
 Näherungsbrüchen eine wichtige Anwendung von Kettenbrüchen ist. Es
 gilt nämlich, dass jeder Näherungsbruch der Kettenbruchentwicklung
@@ -14,8 +12,8 @@ einer reellen Zahl eine besonders gute rationale Näherung dieser
 Zahl ist.
 
 \subsection{Definition}
-
 Eine rationale Zahl $\frac{a}{b}$ mit $b>0$ heisst beste Näherung
+\index{beste Approximation}%
 erster Art an eine reelle Zahl $x$, wenn es keine von $\frac{a}{b}$
 verschiedene rationale Zahl mit gleichem oder kleinerem Nenner gibt,
 die bezüglich des Absolutbetrages näher bei $x$ liegt.
@@ -25,7 +23,10 @@ Das heisst, dann gilt für alle rationalen Zahlen $\frac{c}{d} \ne
 \biggl|x-\frac{a}{b}\biggr| < \biggl| x-\frac{c}{d}\biggr|.
 \end{equation}
 
+\rhead{Approximation}
+
 \subsection{Näherungsgesetz}
+\index{Näherungsgesetz}%
 Ziel dieses Abschnittes ist, eine genügend gute Approximation der
 Näherungsbrüche zu zeigen. Wir werden hier Resultate zusammentragen und 
 diese dokumentieren. Gibt man sich eine beliebige Zahl $x$
@@ -33,6 +34,7 @@ vor, so kann man sich die Frage stellen, welche ``unkürzbaren'' Brüche
 $\frac{p}{q}$ mit vorgegebenem Höchstnenner sich gut approximieren
 lässt. 
 \begin{beispiel}
+\index{Höchstnenner}%
 Näherung von $\pi$ mit dem unendliche Kettenbruch
 \[
 \pi
@@ -62,6 +64,7 @@ Folgende Näherungswerte von $\pi$ können schnell und einfach berechnet werden:
 \end{equation*}
 \end{beispiel}
 Die Bestapproximation ist einfach formuliert durch die Bestimmung
+\index{Bestapproximation}%
 derjenigen rationalen Brüchen, welche von einer gegebenen rationalen
 oder irrationalen Zahl einen festgelegten minimalen Abstand haben
 und dabei einen möglichst kleinen positiven Nenner besitzen. Diesbezüglich liefern Kettenbrüche
@@ -69,6 +72,8 @@ bestmögliche Approximationen durch rationale Zahlen
 \cite{kettenbruch:numerical-analysis}.
 
 \subsection{Approximation einer Funktion}
+\index{arctan@$\arctan(x)$}%
+\index{arctan@$\tan^{-1}$}%
 Die Funktion $\tan^{-1}(x)$ spielt bei der Berechnung von $\pi$ an
 vielen Stellen eine Rolle. 
 Der Kettenbruch von $\tan^{-1}(x)$ kann folgendermassen dargestellt werden.
@@ -89,7 +94,7 @@ f_n(x) = \cfrac{x}{1+\cfrac{x^2}{3+\cfrac{4x^2}{5+\cfrac{\cdots}{\cdots+\cfrac{(
 Hiermit kann nach der $n$-ten Bildung der Kettenbruchrekursion einen Grenzwert
 erreichen:
 \begin{equation}
-\tan^{-1}(x) = \lim_{n\to\infty} f_n(x), \qquad (|x| < 1)
+\tan^{-1}(x) = \lim_{n\to\infty} f_n(x), \qquad (|x| < 1).
 \end{equation}
 Die Konvergenz der Funktion kann an einem Beispiel beurteilt werden. 
 In Tabelle~\ref{kettenbruch:tabelle}
