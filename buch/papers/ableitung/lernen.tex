@@ -8,24 +8,22 @@ Neuronale Netzwerke sind in der Regel 'supervised learning'-Algorithmen, diese G
 		\node [input, name=input] {};
 		\node [block, right of=input] (neuronalnet) {$N(x)$};
 		\node [block, right of=neuronalnet,
-		node distance=3cm] (loss) {$\Lb$};
+		node distance=3cm] (loss) {$\Lb (y, \hat{y})$};
 		% We draw an edge between the controller and system block to 
 		% calculate the coordinate u. We need it to place the measurement block. 
 		\draw [->] (neuronalnet) -> node[name=u] {$\hat{y}$} (loss);
 		\node [output, right of=loss] (output) {};
-		\node [block, below of=u] (measurements) {update};
 		
 		% Once the nodes are placed, connecting them is easy. 
 		\draw [draw,->] (input) -- node {$x$} (neuronalnet);
 		\draw [draw,<-] (loss) -- node {$y$} (output);
-		%\draw [->] (system) -- node [name=y] {$y$}(output);
-		%\draw [->] (y) |- (measurements);
-		%\draw [->] (measurements) -| node[pos=0.99] {$-$} 
+		\draw [out=-90, in=-90, draw, ->] (loss) to node[below] {Update} (neuronalnet);
+
 		\end{tikzpicture}
-		
+	
+		\caption{Trainieren eines neuronalen Netzwerks}
+		\label{ableitung:fig:nn_concept}
 	\end{center}
-	\label{ableitung:fig:nn_concept}
-	\caption{Trainieren eines neuronalen Netzwerks}\label{fig}
 \end{figure}
 Das neuronale Netzwerk als Blackbox versucht aus dem Input $x$ einen brauchbaren Output $\hat{y}$ zu erzeugen, welcher dann mittels einer Fehlerfunktion $\Lb$ zum bestehnden Output $y$ verglichen wird. Der Lernprozess kann der Abbildung \ref{ableitung:fig:nn_concept} entnommen werden. Nach jeder Trainingsiteration werden die inneren Parameter des neuronalen Netzwerks $N(x)$ optimiert, um das bestmögliche Resultat für die gegebenen Datenpaare $(x,y)$ zu errechnen.
 Die Bewertung des aktuellen Lernstands ist mittels der Fehlerfunktion
