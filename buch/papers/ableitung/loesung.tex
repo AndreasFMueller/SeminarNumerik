@@ -8,7 +8,7 @@
 \rhead{Lösung}
 Wie bereits erklärt, basiert die Lösung darauf, dass ein geeignetes numerisches Verfahren anstelle des Backpropagation-Algorithmus verwendet wird um den Gradienten zu berchnen. Der Gradientenabstieg kann somit weiterhin vom Framework übernommen werden, obschon die Gradientenberechnung ersetzt wurde. Dies ermöglicht zu einem spätern Zeitpunkt einen Vergleich beider Verfahren.
 \subsection{Finite Differenzen Methode}
-Die Finite Differenzen Methode ist motiviert durch die klassische Ableitung. Die Ableitung (Tangente) wird als Sekante zweier Punkte der Funktion berechnet, wobei beide Punkte einen Abstand von $\Delta h \rightarrow 0$ annehmen.
+Die Finite Differenzen Methode ist motiviert durch die klassische Ableitung. Gemäss Abbildung \ref{ableitung:fig:differential_quotient} wird die Abbleitung als Sekante zweier Punkte der Funktion berechnet, wobei beide Punkte einen Abstand von $\Delta h \rightarrow 0$ annehmen. Dies entspricht dann der Tangente, welche die Abbleitung am Punkt $f(x_0)$ darstellt.
 Dieses Konzept ist als Differentialquotient
 \begin{equation}
 f'(x_0) = \lim_{{\Delta h} \rightarrow 0} \frac{f(x_0+\Delta h) - f(x_0)}{\Delta h}
@@ -26,45 +26,48 @@ f'(x_0) &= \frac{f(x_0 + h) - f(x_0 - h)}{2h} \\
 \end{equation}
 schreiben, wobei $h$ hier den Abstand zweier benachbarter Datenpunkte annimmt. Die Genauigkeit ist limitiert durch den Abstand der zwei Stützstellen.
 \begin{figure}
-	\centering
-\begin{tikzpicture}[>=stealth',
-dot/.style={circle,draw,fill=white,inner sep=0pt,minimum size=4pt}]
+\centering
+	\begin{tikzpicture}[>=stealth',
+	dot/.style={circle,draw,fill=white,inner sep=0pt,minimum size=4pt}]
+	
+	% draw axis lines
+	\draw[->,thick] (-0.5,0) -- ++(11,0) node[below left]{$x$};
+	\draw[->,thick] (0,-0.5) -- ++(0,7) node[below right]{$f(x)$};
+	\coordinate (O) at (0,0);
+	
+	% create path for function curve
+	\path[thick,red] (-0.3,2) to[out=-25, in=200] coordinate[pos=0.2] (p) coordinate[pos=0.6] (q) (9,5);
+	% fill area
+	\fill[blue, opacity=.1] (p) -| (q);
+	% draw the secant line with fixed length
+	\draw[shorten <=-1.5cm] (p) -- ($ (p)!7.5cm!(q) $) node[below right, pos=0.9]{Sekante};
+	% draw function curve
+	\draw[thick,red] (-0.3,2) to[out=-25, in=200] (9,5);
+	
+	% draw all points
+	\node[dot,label={above:$P$}] (P) at (p) {};
+	\node[dot,label={above:$Q$}] (Q) at (q) {};
+	\node[dot] (p1) at (P |- O) {};
+	\node[dot] (p2) at (Q |- O) {};
+	\node[dot] (p3) at (P -| Q) {};
+	
+	% draw lines between nodes and place text
+	\draw (P) -- node[left]{$f(x_{0})$} (p1) node[dot,label={below:$x_{0}$}]{};
+	\draw (p2) node[dot,label={below:$x_{0} + \Delta h$}]{} -- (p3);
+	\path (p1) -- node[below]{$\varepsilon$} (p2);
+	
+	% draw blue arrows between nodes
+	\draw[<->,blue,thick] (P) -- node[below]{$\Delta h$} (p3);
+	\draw[<->,blue,thick] (Q) -- node[right]{$f(x_{0} + \Delta h) - f(x_{0})$} (p3);
+	
+	% draw the explanation for the y-value of point Q
+	\draw[help lines] (Q) -- (Q -| {(9.5,0)}) ++(-0.5,0) coordinate (p4);
+	\draw[help lines, <->] (p4) -- node[fill=white,text=black]{$f(x_{0} + \Delta h)$} (p4 |- O);
 
-% draw axis lines
-\draw[->,thick] (-0.5,0) -- ++(11,0) node[below left]{$x$};
-\draw[->,thick] (0,-0.5) -- ++(0,7) node[below right]{$f(x)$};
-\coordinate (O) at (0,0);
+	\end{tikzpicture}
 
-% create path for function curve
-\path[thick,red] (-0.3,2) to[out=-25, in=200] coordinate[pos=0.2] (p) coordinate[pos=0.6] (q) (9,5);
-% fill area
-\fill[blue, opacity=.1] (p) -| (q);
-% draw the secant line with fixed length
-\draw[shorten <=-1.5cm] (p) -- ($ (p)!7.5cm!(q) $) node[below right, pos=0.9]{Sekante};
-% draw function curve
-\draw[thick,red] (-0.3,2) to[out=-25, in=200] (9,5);
-
-% draw all points
-\node[dot,label={above:$P$}] (P) at (p) {};
-\node[dot,label={above:$Q$}] (Q) at (q) {};
-\node[dot] (p1) at (P |- O) {};
-\node[dot] (p2) at (Q |- O) {};
-\node[dot] (p3) at (P -| Q) {};
-
-% draw lines between nodes and place text
-\draw (P) -- node[left]{$f(x_{0})$} (p1) node[dot,label={below:$x_{0}$}]{};
-\draw (p2) node[dot,label={below:$x_{0} + \varepsilon$}]{} -- (p3);
-\path (p1) -- node[below]{$\varepsilon$} (p2);
-
-% draw blue arrows between nodes
-\draw[<->,blue,thick] (P) -- node[below]{$\Delta h$} (p3);
-\draw[<->,blue,thick] (Q) -- node[right]{$f(x_{0} + \Delta h) - f(x_{0})$} (p3);
-
-% draw the explanation for the y-value of point Q
-\draw[help lines] (Q) -- (Q -| {(9.5,0)}) ++(-0.5,0) coordinate (p4);
-\draw[help lines, <->] (p4) -- node[fill=white,text=black]{$f(x_{0} + \varepsilon)$} (p4 |- O);
-
-\end{tikzpicture}
+	\caption{Differential Quotient in grafischer Darstellung}
+	\label{ableitung:fig:differential_quotient}
 \end{figure}
 
 \subsection{Taylor-Methode}

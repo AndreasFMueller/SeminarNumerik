@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2020.6.10)  5 SEP 2020 08:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2020.6.10)  10 SEP 2020 12:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -879,26 +879,7 @@ Missing character: There is no ) in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no s in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no D in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no q in font nullfont!
+Missing character: There is no Q in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no t in font nullfont!
@@ -2282,7 +2263,7 @@ or  <return>  to continue without it.
 
 ! Undefined control sequence.
 l.70 \subsection
-                {Taylor Methode}
+                {Taylor-Methode}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -2297,7 +2278,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.70 \subsection{T
-                  aylor Methode}
+                  aylor-Methode}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -2307,6 +2288,7 @@ Missing character: There is no y in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
+Missing character: There is no - in font nullfont!
 Missing character: There is no M in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no t in font nullfont!
@@ -2314,24 +2296,6 @@ Missing character: There is no h in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no e in font nullfont!
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 70--71
-[]
- []
-
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.72 M
-      ithilfe der Taylor Reihe l√§sst sich jede beliebige analytische Funkti...
-
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 Missing character: There is no M in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no t in font nullfont!
@@ -2349,6 +2313,7 @@ Missing character: There is no y in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
+Missing character: There is no - in font nullfont!
 Missing character: There is no R in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no i in font nullfont!
@@ -2402,6 +2367,7 @@ Missing character: There is no p in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no x in font nullfont!
+Missing character: There is no i in font nullfont!
 Missing character: There is no m in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -2413,18 +2379,10 @@ Missing character: There is no D in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no s in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
 Missing character: There is no w in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no r in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no s in font nullfont!
+Missing character: There is no d in font nullfont!
 Missing character: There is no f in font nullfont!
 Missing character: There is no √ in font nullfont!
 Missing character: There is no º in font nullfont!
@@ -2473,52 +2431,41 @@ Missing character: There is no c in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no n in font nullfont!
-Missing character: There is no A in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no l in font nullfont!
+Missing character: There is no M in font nullfont!
 Missing character: There is no e in font nullfont!
-Missing character: There is no i in font nullfont!
 Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no z in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no n in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no z in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no N in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no z in font nullfont!
 Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no t in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 72--73
+Overfull \hbox (20.0pt too wide) in paragraph at lines 70--72
 []
  []
 
 
-Overfull \hbox (19.46533pt too wide) in paragraph at lines 72--73
+Overfull \hbox (19.46533pt too wide) in paragraph at lines 70--72
 \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )$
  []
 
 
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.74 \begin{equation}
-                     
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 74--74
-[] 
- []
-
-
-Overfull \hbox (262.89604pt too wide) detected at line 77
+Overfull \hbox (262.89604pt too wide) detected at line 75
 \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) = \OML/c
 mm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a\OT1/cmr/m/n/10 ) + [](\OML/cmm/
 m/it/10 x \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 a\OT1/cmr/m/n/10 ) + [](\OML/cm
@@ -2683,8 +2630,7 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
-Missing character: There is no √ in font nullfont!
-Missing character: There is no ñ in font nullfont!
+Missing character: There is no O in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no n in font nullfont!
@@ -2945,7 +2891,11 @@ Missing character: There is no g in font nullfont!
 Missing character: There is no m in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no t in font nullfont!
-Missing character: There is no 5 in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no √ in font nullfont!
+Missing character: There is no º in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no f in font nullfont!
 Missing character: There is no S in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no √ in font nullfont!
@@ -2961,20 +2911,14 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no l in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no m in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
 Missing character: There is no A in font nullfont!
 Missing character: There is no b in font nullfont!
 Missing character: There is no s in font nullfont!
@@ -2999,13 +2943,22 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (5.76158pt too wide) in paragraph at lines 77--83
-                                                                          $\OML
-/cmm/m/it/10 h$
+Overfull \hbox (5.76158pt too wide) in paragraph at lines 75--81
+                                                                         $\OML/
+cmm/m/it/10 h$
  []
 
+! Undefined control sequence.
+l.82 ...Bf(x-h) + Cf(x) + Df(x+h) + Ef(x+2h) \text
+                                                  {.}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-Overfull \hbox (259.08838pt too wide) detected at line 85
+
+Overfull \hbox (261.86617pt too wide) detected at line 83
 [] \OMS/cmsy/m/n/10 ^^Y \OML/cmm/m/it/10 Af\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x 
 \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 h\OT1/cmr/m/n/10 ) + \OM
 L/cmm/m/it/10 Bf\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 ^^@ \OML/c
@@ -3013,7 +2966,7 @@ mm/m/it/10 h\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 Cf\OT1/cmr/m/n/10 (\OML/cmm/m/
 it/10 x\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 Df\OT1/cmr/m/n/10 (\OML/cmm/m/it/10
  x \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 h\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 Ef\
 OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x \OT1/cmr/m/n/10 + 2\OML/cmm/m/it/10 h\OT1/cm
-r/m/n/10 )
+r/m/n/10 )\OML/cmm/m/it/10 :
  []
 
 Missing character: There is no D in font nullfont!
@@ -3094,14 +3047,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.88 \begin{split}
+l.86 \begin{split}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ! Misplaced alignment tab character &.
-l.89 Af(x-2h) \approx &
+l.87 Af(x-2h) \approx &
                         Af(x) + Af'(x)(-2h) + A\frac{1}{2}f''(x)(-2h)^2+A\fr...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3113,7 +3066,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 <recently read> &
                  
-l.90 &
+l.88 &
        f''''(x)(-2h)^4 + A\frac{1}{120}f'''''(x)(-2h)^5 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3123,7 +3076,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.91 Bf(x-h) \approx &
+l.89 Bf(x-h) \approx &
                        Bf(x) + Bf'(x)(-h) + B\frac{1}{2}f''(x)(-h)^2+B\frac{...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3135,7 +3088,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 <recently read> &
                  
-l.92 &
+l.90 &
        f''''(x)(-h)^4 + B\frac{1}{120}f'''''(x)(-h)^5 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3145,7 +3098,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.93 Cf(x) = &
+l.91 Cf(x) = &
                Cf(x) \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3155,7 +3108,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.94 Df(x+h) \approx &
+l.92 Df(x+h) \approx &
                        Df(x) + Df'(x)(+h) + D\frac{1}{2}f''(x)(+h)^2+D\frac{...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3167,7 +3120,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 <recently read> &
                  
-l.95 &
+l.93 &
        f''''(x)(+h)^4 + D\frac{1}{120}f'''''(x)(+h)^5 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3177,7 +3130,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.96 Ef(x+2h) \approx &
+l.94 Ef(x+2h) \approx &
                         Ef(x) + Df'(x)(+2h) + E\frac{1}{2}f''(x)(+2h)^2+E\fr...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3189,7 +3142,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 <recently read> &
                  
-l.97 &
+l.95 &
        f''''(x)(+2h)^4 + E\frac{1}{120}f'''''(x)(+2h)^5
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3199,20 +3152,20 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-! LaTeX Error: \begin{equation} on input line 87 ended by \end{split}.
+! LaTeX Error: \begin{equation} on input line 85 ended by \end{split}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.98 \end{split}
+l.96 \end{split}
                 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (2048.45593pt too wide) detected at line 99
+Overfull \hbox (2048.45593pt too wide) detected at line 97
 \OML/cmm/m/it/10 Af\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 ^^@ \OT
 1/cmr/m/n/10 2\OML/cmm/m/it/10 h\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^Y \OML/cmm
 /m/it/10 Af\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) + \OML/cmm/m/it
@@ -3268,7 +3221,7 @@ OT1/cmr/m/n/10 )[]
 Missing character: There is no B in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no i in font nullfont!
-Missing character: There is no e in font nullfont!
+Missing character: There is no E in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no s in font nullfont!
@@ -3544,14 +3497,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.102 \begin{linsys}
+l.100 \begin{linsys}
                     {6}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ! Misplaced alignment tab character &.
-l.103 f(x)                        \cdot(&
+l.101 f(x)                        \cdot(&
                                          &  A&+&B&+&C&+&D&+&  E)&=&0 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3561,7 +3514,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.103 f(x)                        \cdot(&&
+l.101 f(x)                        \cdot(&&
                                             A&+&B&+&C&+&D&+&  E)&=&0 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3571,7 +3524,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.103 f(x)                        \cdot(&&  A&
+l.101 f(x)                        \cdot(&&  A&
                                               +&B&+&C&+&D&+&  E)&=&0 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3581,7 +3534,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.103 f(x)                        \cdot(&&  A&+&
+l.101 f(x)                        \cdot(&&  A&+&
                                                 B&+&C&+&D&+&  E)&=&0 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3591,7 +3544,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.103 f(x)                        \cdot(&&  A&+&B&
+l.101 f(x)                        \cdot(&&  A&+&B&
                                                   +&C&+&D&+&  E)&=&0 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3601,7 +3554,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.103 ...                       \cdot(&&  A&+&B&+&
+l.101 ...                       \cdot(&&  A&+&B&+&
                                                   C&+&D&+&  E)&=&0 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3611,7 +3564,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.103 ...                     \cdot(&&  A&+&B&+&C&
+l.101 ...                     \cdot(&&  A&+&B&+&C&
                                                   +&D&+&  E)&=&0 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3621,7 +3574,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.103 ...                   \cdot(&&  A&+&B&+&C&+&
+l.101 ...                   \cdot(&&  A&+&B&+&C&+&
                                                   D&+&  E)&=&0 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3631,7 +3584,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.103 ...                 \cdot(&&  A&+&B&+&C&+&D&
+l.101 ...                 \cdot(&&  A&+&B&+&C&+&D&
                                                   +&  E)&=&0 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3641,7 +3594,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.103 ...               \cdot(&&  A&+&B&+&C&+&D&+&
+l.101 ...               \cdot(&&  A&+&B&+&C&+&D&+&
                                                     E)&=&0 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3651,7 +3604,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.103 ...          \cdot(&&  A&+&B&+&C&+&D&+&  E)&
+l.101 ...          \cdot(&&  A&+&B&+&C&+&D&+&  E)&
                                                   =&0 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3661,7 +3614,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.103 ...        \cdot(&&  A&+&B&+&C&+&D&+&  E)&=&
+l.101 ...        \cdot(&&  A&+&B&+&C&+&D&+&  E)&=&
                                                   0 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3671,7 +3624,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.104 \frac{1}{2} f'(x)(h)        \cdot(&
+l.102 \frac{1}{2} f'(x)(h)        \cdot(&
                                          &-2A&-&B& & &+&D&+& 2E)&=&\frac{2}{...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3681,7 +3634,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.104 \frac{1}{2} f'(x)(h)        \cdot(&&
+l.102 \frac{1}{2} f'(x)(h)        \cdot(&&
                                           -2A&-&B& & &+&D&+& 2E)&=&\frac{2}{...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3691,7 +3644,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.104 \frac{1}{2} f'(x)(h)        \cdot(&&-2A&
+l.102 \frac{1}{2} f'(x)(h)        \cdot(&&-2A&
                                               -&B& & &+&D&+& 2E)&=&\frac{2}{...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3701,7 +3654,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.104 \frac{1}{2} f'(x)(h)        \cdot(&&-2A&-&
+l.102 \frac{1}{2} f'(x)(h)        \cdot(&&-2A&-&
                                                 B& & &+&D&+& 2E)&=&\frac{2}{...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3711,7 +3664,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.104 \frac{1}{2} f'(x)(h)        \cdot(&&-2A&-&B&
+l.102 \frac{1}{2} f'(x)(h)        \cdot(&&-2A&-&B&
                                                    & &+&D&+& 2E)&=&\frac{2}{...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3721,7 +3674,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.104 ...{1}{2} f'(x)(h)        \cdot(&&-2A&-&B& &
+l.102 ...{1}{2} f'(x)(h)        \cdot(&&-2A&-&B& &
                                                    &+&D&+& 2E)&=&\frac{2}{h}\\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3731,7 +3684,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.104 ...}{2} f'(x)(h)        \cdot(&&-2A&-&B& & &
+l.102 ...}{2} f'(x)(h)        \cdot(&&-2A&-&B& & &
                                                   +&D&+& 2E)&=&\frac{2}{h}\\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3741,7 +3694,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.104 ...2} f'(x)(h)        \cdot(&&-2A&-&B& & &+&
+l.102 ...2} f'(x)(h)        \cdot(&&-2A&-&B& & &+&
                                                   D&+& 2E)&=&\frac{2}{h}\\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3751,7 +3704,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.104 ... f'(x)(h)        \cdot(&&-2A&-&B& & &+&D&
+l.102 ... f'(x)(h)        \cdot(&&-2A&-&B& & &+&D&
                                                   +& 2E)&=&\frac{2}{h}\\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3761,7 +3714,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.104 ...'(x)(h)        \cdot(&&-2A&-&B& & &+&D&+&
+l.102 ...'(x)(h)        \cdot(&&-2A&-&B& & &+&D&+&
                                                    2E)&=&\frac{2}{h}\\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3771,7 +3724,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.104 ...h)        \cdot(&&-2A&-&B& & &+&D&+& 2E)&
+l.102 ...h)        \cdot(&&-2A&-&B& & &+&D&+& 2E)&
                                                   =&\frac{2}{h}\\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3781,7 +3734,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.104 ...        \cdot(&&-2A&-&B& & &+&D&+& 2E)&=&
+l.102 ...        \cdot(&&-2A&-&B& & &+&D&+& 2E)&=&
                                                   \frac{2}{h}\\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3791,7 +3744,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.105 \frac{1}{6} f''(x)(h^2)     \cdot(&
+l.103 \frac{1}{6} f''(x)(h^2)     \cdot(&
                                          &14A&+&B& & &+&D&+& 4E)&=&0 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3801,7 +3754,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.105 \frac{1}{6} f''(x)(h^2)     \cdot(&&
+l.103 \frac{1}{6} f''(x)(h^2)     \cdot(&&
                                           14A&+&B& & &+&D&+& 4E)&=&0 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3811,7 +3764,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.105 \frac{1}{6} f''(x)(h^2)     \cdot(&&14A&
+l.103 \frac{1}{6} f''(x)(h^2)     \cdot(&&14A&
                                               +&B& & &+&D&+& 4E)&=&0 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3821,7 +3774,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.105 \frac{1}{6} f''(x)(h^2)     \cdot(&&14A&+&
+l.103 \frac{1}{6} f''(x)(h^2)     \cdot(&&14A&+&
                                                 B& & &+&D&+& 4E)&=&0 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3831,7 +3784,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.105 \frac{1}{6} f''(x)(h^2)     \cdot(&&14A&+&B&
+l.103 \frac{1}{6} f''(x)(h^2)     \cdot(&&14A&+&B&
                                                    & &+&D&+& 4E)&=&0 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3841,7 +3794,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.105 ...{1}{6} f''(x)(h^2)     \cdot(&&14A&+&B& &
+l.103 ...{1}{6} f''(x)(h^2)     \cdot(&&14A&+&B& &
                                                    &+&D&+& 4E)&=&0 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3851,7 +3804,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.105 ...}{6} f''(x)(h^2)     \cdot(&&14A&+&B& & &
+l.103 ...}{6} f''(x)(h^2)     \cdot(&&14A&+&B& & &
                                                   +&D&+& 4E)&=&0 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3861,7 +3814,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.105 ...6} f''(x)(h^2)     \cdot(&&14A&+&B& & &+&
+l.103 ...6} f''(x)(h^2)     \cdot(&&14A&+&B& & &+&
                                                   D&+& 4E)&=&0 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3871,7 +3824,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.105 ... f''(x)(h^2)     \cdot(&&14A&+&B& & &+&D&
+l.103 ... f''(x)(h^2)     \cdot(&&14A&+&B& & &+&D&
                                                   +& 4E)&=&0 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3881,7 +3834,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.105 ...''(x)(h^2)     \cdot(&&14A&+&B& & &+&D&+&
+l.103 ...''(x)(h^2)     \cdot(&&14A&+&B& & &+&D&+&
                                                    4E)&=&0 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3891,7 +3844,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.105 ...(h^2)     \cdot(&&14A&+&B& & &+&D&+& 4E)&
+l.103 ...(h^2)     \cdot(&&14A&+&B& & &+&D&+& 4E)&
                                                   =&0 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3901,7 +3854,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.105 ...^2)     \cdot(&&14A&+&B& & &+&D&+& 4E)&=&
+l.103 ...^2)     \cdot(&&14A&+&B& & &+&D&+& 4E)&=&
                                                   0 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3911,7 +3864,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.106 \frac{1}{24} f''''(x)(h^3)  \cdot(&
+l.104 \frac{1}{24} f''''(x)(h^3)  \cdot(&
                                          &-8A&-&B& & &+&D&+& 8E)&=&0 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3921,7 +3874,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.106 \frac{1}{24} f''''(x)(h^3)  \cdot(&&
+l.104 \frac{1}{24} f''''(x)(h^3)  \cdot(&&
                                           -8A&-&B& & &+&D&+& 8E)&=&0 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3931,7 +3884,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.106 \frac{1}{24} f''''(x)(h^3)  \cdot(&&-8A&
+l.104 \frac{1}{24} f''''(x)(h^3)  \cdot(&&-8A&
                                               -&B& & &+&D&+& 8E)&=&0 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3941,7 +3894,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.106 \frac{1}{24} f''''(x)(h^3)  \cdot(&&-8A&-&
+l.104 \frac{1}{24} f''''(x)(h^3)  \cdot(&&-8A&-&
                                                 B& & &+&D&+& 8E)&=&0 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3951,7 +3904,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.106 \frac{1}{24} f''''(x)(h^3)  \cdot(&&-8A&-&B&
+l.104 \frac{1}{24} f''''(x)(h^3)  \cdot(&&-8A&-&B&
                                                    & &+&D&+& 8E)&=&0 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3961,7 +3914,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.106 ...{1}{24} f''''(x)(h^3)  \cdot(&&-8A&-&B& &
+l.104 ...{1}{24} f''''(x)(h^3)  \cdot(&&-8A&-&B& &
                                                    &+&D&+& 8E)&=&0 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3971,7 +3924,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.106 ...}{24} f''''(x)(h^3)  \cdot(&&-8A&-&B& & &
+l.104 ...}{24} f''''(x)(h^3)  \cdot(&&-8A&-&B& & &
                                                   +&D&+& 8E)&=&0 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3981,7 +3934,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.106 ...24} f''''(x)(h^3)  \cdot(&&-8A&-&B& & &+&
+l.104 ...24} f''''(x)(h^3)  \cdot(&&-8A&-&B& & &+&
                                                   D&+& 8E)&=&0 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3991,7 +3944,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.106 ...} f''''(x)(h^3)  \cdot(&&-8A&-&B& & &+&D&
+l.104 ...} f''''(x)(h^3)  \cdot(&&-8A&-&B& & &+&D&
                                                   +& 8E)&=&0 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -4001,7 +3954,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.106 ...f''''(x)(h^3)  \cdot(&&-8A&-&B& & &+&D&+&
+l.104 ...f''''(x)(h^3)  \cdot(&&-8A&-&B& & &+&D&+&
                                                    8E)&=&0 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -4011,7 +3964,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.106 ...(x)(h^3)  \cdot(&&-8A&-&B& & &+&D&+& 8E)&
+l.104 ...(x)(h^3)  \cdot(&&-8A&-&B& & &+&D&+& 8E)&
                                                   =&0 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -4021,7 +3974,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.106 ...)(h^3)  \cdot(&&-8A&-&B& & &+&D&+& 8E)&=&
+l.104 ...)(h^3)  \cdot(&&-8A&-&B& & &+&D&+& 8E)&=&
                                                   0 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -4031,7 +3984,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.107 \frac{1}{120} f'''''(x)(h^4)\cdot(&
+l.105 \frac{1}{120} f'''''(x)(h^4)\cdot(&
                                          &16A&+&B& & &+&D&+&16E)&=&0
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -4041,7 +3994,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.107 \frac{1}{120} f'''''(x)(h^4)\cdot(&&
+l.105 \frac{1}{120} f'''''(x)(h^4)\cdot(&&
                                           16A&+&B& & &+&D&+&16E)&=&0
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -4051,7 +4004,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.107 \frac{1}{120} f'''''(x)(h^4)\cdot(&&16A&
+l.105 \frac{1}{120} f'''''(x)(h^4)\cdot(&&16A&
                                               +&B& & &+&D&+&16E)&=&0
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -4061,7 +4014,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.107 \frac{1}{120} f'''''(x)(h^4)\cdot(&&16A&+&
+l.105 \frac{1}{120} f'''''(x)(h^4)\cdot(&&16A&+&
                                                 B& & &+&D&+&16E)&=&0
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -4071,7 +4024,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.107 \frac{1}{120} f'''''(x)(h^4)\cdot(&&16A&+&B&
+l.105 \frac{1}{120} f'''''(x)(h^4)\cdot(&&16A&+&B&
                                                    & &+&D&+&16E)&=&0
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -4081,7 +4034,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.107 ...{1}{120} f'''''(x)(h^4)\cdot(&&16A&+&B& &
+l.105 ...{1}{120} f'''''(x)(h^4)\cdot(&&16A&+&B& &
                                                    &+&D&+&16E)&=&0
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -4091,7 +4044,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.107 ...}{120} f'''''(x)(h^4)\cdot(&&16A&+&B& & &
+l.105 ...}{120} f'''''(x)(h^4)\cdot(&&16A&+&B& & &
                                                   +&D&+&16E)&=&0
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -4101,7 +4054,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.107 ...120} f'''''(x)(h^4)\cdot(&&16A&+&B& & &+&
+l.105 ...120} f'''''(x)(h^4)\cdot(&&16A&+&B& & &+&
                                                   D&+&16E)&=&0
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -4111,7 +4064,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.107 ...0} f'''''(x)(h^4)\cdot(&&16A&+&B& & &+&D&
+l.105 ...0} f'''''(x)(h^4)\cdot(&&16A&+&B& & &+&D&
                                                   +&16E)&=&0
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -4121,7 +4074,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.107 ... f'''''(x)(h^4)\cdot(&&16A&+&B& & &+&D&+&
+l.105 ... f'''''(x)(h^4)\cdot(&&16A&+&B& & &+&D&+&
                                                   16E)&=&0
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -4131,7 +4084,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.107 ...''(x)(h^4)\cdot(&&16A&+&B& & &+&D&+&16E)&
+l.105 ...''(x)(h^4)\cdot(&&16A&+&B& & &+&D&+&16E)&
                                                   =&0
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -4141,7 +4094,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.107 ...(x)(h^4)\cdot(&&16A&+&B& & &+&D&+&16E)&=&
+l.105 ...(x)(h^4)\cdot(&&16A&+&B& & &+&D&+&16E)&=&
                                                   0
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -4151,20 +4104,20 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-! LaTeX Error: \begin{equation} on input line 101 ended by \end{linsys}.
+! LaTeX Error: \begin{equation} on input line 99 ended by \end{linsys}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.108 \end{linsys}
+l.106 \end{linsys}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (755.18854pt too wide) detected at line 109
+Overfull \hbox (755.18854pt too wide) detected at line 107
 \OT1/cmr/m/n/10 6\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/
 m/n/10 ) \OMS/cmsy/m/n/10 ^^A \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A \OT1/cmr/m/n/
 10 + \OML/cmm/m/it/10 B \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 C \OT1/cmr/m/n/10 + 
@@ -4243,7 +4196,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.121 \begin{align}
+l.119 \begin{align}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -4256,7 +4209,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.122 \begin{bmatrix}
+l.120 \begin{bmatrix}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -4264,7 +4217,7 @@ or  <return>  to continue without it.
 
 Missing character: There is no 1 in font nullfont!
 ! Misplaced alignment tab character &.
-l.123 1 &
+l.121 1 &
           1 & 1 & 1 & 1 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -4275,7 +4228,7 @@ might try typing `S' now just to see what is salvageable.
 
 Missing character: There is no 1 in font nullfont!
 ! Misplaced alignment tab character &.
-l.123 1 & 1 &
+l.121 1 & 1 &
               1 & 1 & 1 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -4286,7 +4239,7 @@ might try typing `S' now just to see what is salvageable.
 
 Missing character: There is no 1 in font nullfont!
 ! Misplaced alignment tab character &.
-l.123 1 & 1 & 1 &
+l.121 1 & 1 & 1 &
                   1 & 1 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -4297,7 +4250,7 @@ might try typing `S' now just to see what is salvageable.
 
 Missing character: There is no 1 in font nullfont!
 ! Misplaced alignment tab character &.
-l.123 1 & 1 & 1 & 1 &
+l.121 1 & 1 & 1 & 1 &
                       1 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -4310,7 +4263,7 @@ Missing character: There is no 1 in font nullfont!
 Missing character: There is no - in font nullfont!
 Missing character: There is no 2 in font nullfont!
 ! Misplaced alignment tab character &.
-l.124 -2 &
+l.122 -2 &
            -1 & 0 & 1 & 2 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -4322,7 +4275,7 @@ might try typing `S' now just to see what is salvageable.
 Missing character: There is no - in font nullfont!
 Missing character: There is no 1 in font nullfont!
 ! Misplaced alignment tab character &.
-l.124 -2 & -1 &
+l.122 -2 & -1 &
                 0 & 1 & 2 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -4333,7 +4286,7 @@ might try typing `S' now just to see what is salvageable.
 
 Missing character: There is no 0 in font nullfont!
 ! Misplaced alignment tab character &.
-l.124 -2 & -1 & 0 &
+l.122 -2 & -1 & 0 &
                     1 & 2 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -4344,7 +4297,7 @@ might try typing `S' now just to see what is salvageable.
 
 Missing character: There is no 1 in font nullfont!
 ! Misplaced alignment tab character &.
-l.124 -2 & -1 & 0 & 1 &
+l.122 -2 & -1 & 0 & 1 &
                         2 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -4356,7 +4309,7 @@ might try typing `S' now just to see what is salvageable.
 Missing character: There is no 2 in font nullfont!
 Missing character: There is no 4 in font nullfont!
 ! Misplaced alignment tab character &.
-l.125 4 &
+l.123 4 &
           1 & 0 & 1 & 4 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -4367,7 +4320,7 @@ might try typing `S' now just to see what is salvageable.
 
 Missing character: There is no 1 in font nullfont!
 ! Misplaced alignment tab character &.
-l.125 4 & 1 &
+l.123 4 & 1 &
               0 & 1 & 4 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -4378,7 +4331,7 @@ might try typing `S' now just to see what is salvageable.
 
 Missing character: There is no 0 in font nullfont!
 ! Misplaced alignment tab character &.
-l.125 4 & 1 & 0 &
+l.123 4 & 1 & 0 &
                   1 & 4 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -4389,7 +4342,7 @@ might try typing `S' now just to see what is salvageable.
 
 Missing character: There is no 1 in font nullfont!
 ! Misplaced alignment tab character &.
-l.125 4 & 1 & 0 & 1 &
+l.123 4 & 1 & 0 & 1 &
                       4 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -4402,7 +4355,7 @@ Missing character: There is no 4 in font nullfont!
 Missing character: There is no - in font nullfont!
 Missing character: There is no 8 in font nullfont!
 ! Misplaced alignment tab character &.
-l.126 -8 &
+l.124 -8 &
            -1 & 0 & 1 & 8 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -4414,7 +4367,7 @@ might try typing `S' now just to see what is salvageable.
 Missing character: There is no - in font nullfont!
 Missing character: There is no 1 in font nullfont!
 ! Misplaced alignment tab character &.
-l.126 -8 & -1 &
+l.124 -8 & -1 &
                 0 & 1 & 8 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -4425,7 +4378,7 @@ might try typing `S' now just to see what is salvageable.
 
 Missing character: There is no 0 in font nullfont!
 ! Misplaced alignment tab character &.
-l.126 -8 & -1 & 0 &
+l.124 -8 & -1 & 0 &
                     1 & 8 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -4436,7 +4389,7 @@ might try typing `S' now just to see what is salvageable.
 
 Missing character: There is no 1 in font nullfont!
 ! Misplaced alignment tab character &.
-l.126 -8 & -1 & 0 & 1 &
+l.124 -8 & -1 & 0 & 1 &
                         8 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -4449,7 +4402,7 @@ Missing character: There is no 8 in font nullfont!
 Missing character: There is no 1 in font nullfont!
 Missing character: There is no 6 in font nullfont!
 ! Misplaced alignment tab character &.
-l.127 16 &
+l.125 16 &
            1 & 0 & 1 & 16 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -4460,7 +4413,7 @@ might try typing `S' now just to see what is salvageable.
 
 Missing character: There is no 1 in font nullfont!
 ! Misplaced alignment tab character &.
-l.127 16 & 1 &
+l.125 16 & 1 &
                0 & 1 & 16 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -4471,7 +4424,7 @@ might try typing `S' now just to see what is salvageable.
 
 Missing character: There is no 0 in font nullfont!
 ! Misplaced alignment tab character &.
-l.127 16 & 1 & 0 &
+l.125 16 & 1 & 0 &
                    1 & 16 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -4482,66 +4435,14 @@ might try typing `S' now just to see what is salvageable.
 
 Missing character: There is no 1 in font nullfont!
 ! Misplaced alignment tab character &.
-l.127 16 & 1 & 0 & 1 &
+l.125 16 & 1 & 0 & 1 &
                        16 \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-
-! LaTeX Error: \begin{document} ended by \end{bmatrix}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.128 \end{bmatrix}
-                   
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.129 \cdot
-           
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-! LaTeX Error: Environment bmatrix undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.130 \begin{bmatrix}
-                     
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: \begin{document} ended by \end{bmatrix}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.136 \end{bmatrix}
-                   
 (That makes 100 errors; please try again.) 
 Here is how much of TeX's memory you used:
- 20 strings out of 494328
- 404 string characters out of 6162815
+ 18 strings out of 494328
+ 246 string characters out of 6162815
  56006 words of memory out of 5000000
- 3454 multiletter control sequences out of 15000+600000
+ 3453 multiletter control sequences out of 15000+600000
  3640 words of font info for 14 fonts, out of 8000000 for 9000
  350 hyphenation exceptions out of 8191
  18i,3n,12p,396b,82s stack positions out of 5000i,500n,10000p,200000b,80000s
