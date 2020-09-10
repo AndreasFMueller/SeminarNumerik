@@ -6,9 +6,9 @@
 \section{Lösung
 \label{ableitung:section:loesung}}
 \rhead{Lösung}
-Wie bereits erklärt, basiert die Lösung darauf, dass ein geeignetes numerisches Verfahren anstelle des Backpropagation-Algorithmus verwendet wird um den Gradienten zu berchnen. Der Gradientenabstieg kann somit weiterhin vom Framework übernommen werden, obschon die Gradientenberechnung ersetzt wurde. Dies ermöglicht zu einem spätern Zeitpunkt einen Vergleich beider Verfahren.
+Wie bereits erklärt, basiert die Lösung darauf, dass ein geeignetes numerisches Verfahren anstelle des Backpropagation-Algorithmus verwendet wird, um den Gradienten zu berechnen. Der Gradientenabstieg kann somit weiterhin vom Framework übernommen werden, obschon die Gradientenberechnung ersetzt wurde. Dies ermöglicht zu einem spätern Zeitpunkt einen Vergleich beider Verfahren.
 \subsection{Finite Differenzen Methode}
-Die Finite Differenzen Methode ist motiviert durch die klassische Ableitung. Gemäss Abbildung \ref{ableitung:fig:differential_quotient} wird die Abbleitung als Sekante zweier Punkte der Funktion berechnet, wobei beide Punkte einen Abstand von $\Delta h \rightarrow 0$ annehmen. Dies entspricht dann der Tangente, welche die Abbleitung am Punkt $f(x_0)$ darstellt.
+Die Finite Differenzen Methode ist motiviert durch die klassische Ableitung. Gemäss Abbildung \ref{ableitung:fig:differential_quotient} wird die Abbleitung als Sekante zweier Punkte der Funktion definiert, wobei $\Delta h \rightarrow 0$ annimmt und somit beide Punkte zu einem Punkt konvergieren. Dies entspricht dann der Tangente, welche die Abbleitung am Punkt $f(x_0)$ darstellt.
 Dieses Konzept ist als Differentialquotient
 \begin{equation}
 f'(x_0) = \lim_{{\Delta h} \rightarrow 0} \frac{f(x_0+\Delta h) - f(x_0)}{\Delta h}
@@ -71,13 +71,14 @@ schreiben, wobei $h$ hier den Abstand zweier benachbarter Datenpunkte annimmt. D
 \end{figure}
 
 \subsection{Taylor-Methode}
-Mithilfe der Taylor-Reihe lässt sich jede beliebige analytische Funktion $f(x)$ approximieren. Dies wird für die Herleitung einer etwas stabileren numerischen Methode zu nutzen gemacht.
+Mithilfe der Taylor-Reihe 
 \begin{equation}
 f(x) = f(a)+{\frac {f'(a)}{1!}}(x-a)+{\frac {f''(a)}{2!}}(x-a)^{2}+{\frac {f'''(a)}{3!}}(x-a)^{3}+\cdots
 \label{ableitung:eqn:taylorseries}
 \end{equation}
+lässt sich jede beliebige analytische Funktion $f(x)$ approximieren. Dies wird für die Herleitung einer etwas stabileren numerischen Methode zu Nutzen gemacht.
 Um eine höhere Genauigkeit zu erreichen, kann die Anzahl der Stützstellen erhöhrt werden. 
-Dies lässt sich mithilfe der Taylorreihe herleiten.
+Dies lässt sich mithilfe der Taylor-Reihe herleiten.
 Im Grunde wird ein Polynom höherer Ordnung gesucht, welches Stützstellen in einem uniformen Abstand hat.
 Die Ableitung dieses Polynoms sollte dann eine höhere Genauigkeit aufweisen, da durch die höhere Ordnung die Ursprungsfunktiuon besser um den Punkt der Ableitung approximiert werden kann.
 Als Beispiel soll die erste Ableitung mit fünf Stützstellen in gleichem Abstand $h$ berechnet werden:
@@ -98,7 +99,7 @@ Ef(x+2h) \approx & Ef(x) + Df'(x)(+2h) + E\frac{1}{2}f''(x)(+2h)^2+E\frac{1}{6} 
 & f''''(x)(+2h)^4 + E\frac{1}{120}f'''''(x)(+2h)^5
 \end{split}
 \end{equation}
-Bei Einsetzen dieser Gleichungen in die erste Gleichung (siehe oben) ist ersichtlich, dass nur die Koeffizienten der 2. Ordnung bestehen bleiben müssen und folglich 1 ergeben müssen. Der Rest sollte verschwinden und 0 ergeben. Zur Unterstüzung der Lesbarkeit können die Terme nach Ableitungsgrad sortiert werden:
+Nach Einsetzen dieser Gleichungen in die erste Gleichung (siehe oben) ist ersichtlich, dass nur die Koeffizienten der 2. Ordnung bestehen bleiben müssen und folglich 1 ergeben müssen. Der Rest sollte verschwinden und 0 ergeben. Zur Unterstüzung der Lesbarkeit können die Terme nach Ableitungsgrad sortiert werden:
 \begin{equation}
 \begin{linsys}{6}
 f(x)                        \cdot(&&  A&+&B&+&C&+&D&+&  E)&=&0 \\
@@ -201,15 +202,15 @@ Der Restterm $R_{n}$ ist abhängig von der Taylor-Reihe der zu ableitenden Funkt
 so ist die Approximation nicht genau.
 Aus der Fehlerabschätzung ergeben sich grundsätzlich zwei Typen an Problemen, die interessant sind zu untersuchen.
 Die Terme des ersten Types werden mit zunehmender Ordnung kleiner, während bei dem zweiten Typ die Terme immer grösser werden.
-Gleichzeitig muss aber ein guter Kompromiss gefunden werden, welcher den Abstand $h$ nicht zu klein werden lässt. Ein sehr kleines $h$ führt zu mehr Rauschanfälligkeit, da bei benachbarten Punkten ein Rauschen von $\pm \epsilon$ höher ins Gewicht fällt.
+Gleichzeitig muss aber ein guter Kompromiss gefunden werden, welcher den Abstand $h$ nicht zu klein werden lässt. Ein sehr kleines $h$ führt zu mehr Rauschanfälligkeit, da bei benachbarten Punkten ein Rauschen höher ins Gewicht fällt.
 
-Als Beispiel für eine Funktion, bei welcher die Terme kleiner werden, können die trigonometrischen Funktionen verwendet werden. Im Speziellen hat der Sinus
+Als Beispiel für eine Funktion, bei welcher die Terme kleiner werden, können die trigonometrischen Funktionen dienen. Im Speziellen hat der Sinus
 \begin{equation}
 	\sin = \sum _{n=0}^{\infty }{\frac {(-1)^{n}}{(2n+1)!}}x^{2n+1} \left(x\right)\approx x-{\frac {x^{3}}{3!}}+{\frac {x^{5}}{5!}}-{\frac {x^{7}}{7!}}+{\frac{x^9}{9!}}+R_n
 \end{equation}
 eine alternierende Taylor-Reihe. Der Fehler
 \begin{equation}
-R_n < \mid {\frac{x^{11}}{11!} \mid}
+R_n < \biggl| {\frac{x^{11}}{11!} \biggr|}
 \end{equation}
 kann somit auf einem Interval von $-1<x<1$ nicht grösser werden als $\approx 2.5 \cdot 10^{-8}$.
 Auf der anderen Seite erweist sich die die geometrische Reihe

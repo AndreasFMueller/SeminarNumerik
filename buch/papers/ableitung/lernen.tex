@@ -1,6 +1,5 @@
 \subsection{Was ist Lernen?}
-Anders als das menschliche Lernen lernt das neuronale Netzwerk durch den Vergleich einer errechneten Ausgabe mit der erwarteten Ausgabe.
-Neuronale Netzwerke sind in der Regel 'supervised learning'-Algorithmen, diese Gruppe von Algorithmen benötigen einen Datensatz, welcher aus einem Input $x$ und einem erwarteten Output $y$ bestehet.
+Neuronale Netzwerke lernen durch den Vergleich einer errechneten Ausgabe mit der erwarteten Ausgabe. Sie gehören in der Regel zur Gruppe der 'supervised learning'-Algorithmen. Diese Gruppe von Algorithmen benötigen einen Datensatz, welcher aus einem Input $x$ und einem erwarteten Output $y$ bestehet.
 \begin{figure}
 	\begin{center}
 		\begin{tikzpicture}[auto, node distance=2cm,>=latex']
@@ -25,7 +24,7 @@ Neuronale Netzwerke sind in der Regel 'supervised learning'-Algorithmen, diese G
 		\label{ableitung:fig:nn_concept}
 	\end{center}
 \end{figure}
-Das neuronale Netzwerk als Blackbox versucht aus dem Input $x$ einen brauchbaren Output $\hat{y}$ zu erzeugen, welcher dann mittels einer Fehlerfunktion $\Lb$ zum bestehnden Output $y$ verglichen wird. Der Lernprozess kann der Abbildung \ref{ableitung:fig:nn_concept} entnommen werden. Nach jeder Trainingsiteration werden die inneren Parameter des neuronalen Netzwerks $N(x)$ optimiert, um das bestmögliche Resultat für die gegebenen Datenpaare $(x,y)$ zu errechnen.
+Das neuronale Netzwerk als Blackbox versucht aus dem Input $x$ einen brauchbaren Output $\hat{y}$ zu erzeugen, welcher dann mittels einer Fehlerfunktion $\Lb$ zum bestehnden Output $y$ verglichen wird. Der Lernprozess kann Schematisch wie in Abbildung \ref{ableitung:fig:nn_concept} dargestellt werden. Nach jeder Trainingsiteration werden die inneren Parameter des neuronalen Netzwerks $N(x)$ optimiert, um das bestmögliche Resultat für die gegebenen Datenpaare $(x,y)$ zu errechnen.
 Die Bewertung des aktuellen Lernstands ist mittels der Fehlerfunktion
 \begin{equation}
 	\Lb(y_{i},\hat{y_i})
@@ -39,13 +38,13 @@ dem berechneten Output des neuronalen Netzwerks $N(x)$ entspricht. Dies lässt s
 \Lb(y,N(x))
 \end{equation}
 einsetzten.
-Die Fehlerfunktion $\Lb$ wird in der Literatur auch oft \textit{Loss}-Funktion genannt. Das Resultat ist eine qualitative Aussage über den Fehler, auch \textit{loss} genannt. Als einfaches Beispiel für eine solche Fehlerfunktion $\Lb$ kann die mittlere quadratische Abweichung 
+Die Fehlerfunktion $\Lb$ liefert somit ein Mass für den Fehler, also eine quantitative Bewertung des Fehlers und wird in der Literatur auch oft \textit{Loss}-Funktion genannt. Als einfaches Beispiel für eine solche Fehlerfunktion $\Lb$ kann die mittlere quadratische Abweichung 
 \begin{equation}
 \text{MSE: } \Lb (y, \hat{y}) = \frac{1}{2} \sum_i \left( \hat{y} - y \right)^2
 \label{ableitung:eqn:loss}
 \end{equation}
 verwendet werden. Diese hat die Eigenschaft, dass sie Vorzeichen unabhänig ist und bei grösserer Distanz zwischen $y$ und $\hat{y}$ der Fehler auch dementsprechend grösser wird.
-Die Aufgabe des Lernprozesses ist es nun die bestmögliche Lösung für den Fehler zu finden. Entsprechen gilt es für
+Die Aufgabe des Lernprozesses ist es nun, die bestmögliche Lösung für den Fehler zu finden. Entsprechen gilt es für
 \begin{equation}
 	\min \left( \Lb(y,\hat{y}) \right) 
 	\label{ableitung:eqn:min_loss}

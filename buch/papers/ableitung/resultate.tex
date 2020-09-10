@@ -1,9 +1,9 @@
 \section{Resultate
 	\label{ableitung:section:resultate}}
 \rhead{Resultate}
-Dei Resultate dieser Arbeit sollen hauptäschlich zeigen, ob die Finite Differenzen Methode als Option zur Optimierung neuronaler Netzwerke geeignet ist. Es ist klar, dass implementationsbedingt die Trainingsgeschwindigkeit nicht dem Backpropagation Algorithmus das Wasser reichen kann. Viel wichtiger ist eine qualitative Aussage treffen zu können, ob die Methode eine interessante Variante darstellt und ob das Gedankenexperiment funktioniert.
+Die Resultate dieser Arbeit sollen hauptäschlich zeigen, ob die Finite Differenzen Methode als Option zur Optimierung neuronaler Netzwerke geeignet ist. Es ist klar, dass implementationsbedingt die Trainingsgeschwindigkeit nicht dem Backpropagation Algorithmus das Wasser reichen kann. Viel wichtiger ist eine qualitative Aussage machen zu können, ob die Methode eine interessante Variante darstellt und ob das Gedankenexperiment funktioniert.
 
-Um dies an einem einfachen Beispiel zu verdeutlichen, wird versucht eine logische XOR Verknüpfung zu trainieren. Ein XOR-Gate ist ein elektronisches Bauteil, welches im Prinzip eine 'Entweder-Oder' Logik abbildet. Im gewählten Fall hat das Bauteil 2 digitale Eingänge und sollte entweder der Erste oder der Zweite aktiv sein, so ist der Ausgang ebenfalls aktiv. Sollte keiner der beiden Ausänge oder beide Ausgänge aktiv sein, so ist der Ausgang inaktiv. Dies kann man der Logiktabelle in Abbildung \ref{ableitung:fig:xor-gate-logic} entnehmen.
+Um dies an einem einfachen Beispiel zu verdeutlichen, wird versucht, eine logische XOR Verknüpfung zu trainieren. Ein XOR-Gate ist ein elektronisches Bauteil, welches eine 'Entweder-Oder' Logik abbildet. Im gewählten Fall hat das Bauteil zwei digitale Eingänge und sollte entweder der Erste oder der Zweite aktiv sein, so ist der Ausgang ebenfalls aktiv. Sollte keiner der beiden Ausänge oder beide Ausgänge aktiv sein, so ist der Ausgang inaktiv. Dies kann man der Logiktabelle in Abbildung \ref{ableitung:fig:xor-gate-logic} entnehmen.
 \begin{figure}[h]
 	 \centering
 	\begin{tikzpicture}
@@ -67,11 +67,34 @@ Um dies an einem einfachen Beispiel zu verdeutlichen, wird versucht eine logisch
 	\caption{Das Neuronale Netzwerk zum erlernen des XOR Logikoperators}
 	\label{ableitung:fig:nn-result-net}
 \end{figure}
-Das gewählte Netzwerk, um diese Logik abzubilden, besteht aus 3 Schichten und ist in Abbildung \ref{ableitung:fig:nn-result-net} ersichtlich. Die Mittelschicht (Hidden Layer) wird benötigt, da sich mit nur einer Schicht keine Funktion finden lässt welche die Punkte in einer Ebene trennt. Dies wird in Abbildung \ref{ableitung:fig:visualisation-surface} noch einmal verdeutlicht.
+Das gewählte Netzwerk, um diese Logik abzubilden, besteht aus drei Schichten und ist in Abbildung \ref{ableitung:fig:nn-result-net} ersichtlich. Die Mittelschicht (Hidden Layer) wird benötigt, da sich mit nur einer Schicht keine Funktion finden lässt welche die Punkte in einer Ebene trennt. Dies wird in Abbildung \ref{ableitung:fig:visualisation-surface} noch einmal verdeutlicht.
+
+\tikzset{   cirwhite/.style={draw=gray,circle,fill=white,minimum size=1pt,inner sep=2pt,line width=0.2mm},
+	cirred/.style={draw=gray,circle,fill=red,minimum size=1pt,inner sep=2pt,line width=0.2mm},
+}
+
 \begin{figure}
 	\centering
-	\includegraphics[width=0.3\textwidth]{papers/ableitung/images/xor_surface.png}
-	\caption{Visualisierung der Punkt in einer xy-Ebene und deren separierbarkeit.}
+    \begin{tikzpicture}[x=2mm,y=2mm]
+    
+    \draw[|->, -latex, draw] (-1,0) -- (15,0); %draw axis
+    \draw[|->, -latex, draw] (0,-1) -- (0,15);
+    
+    \node[anchor=west] at (15,0) {$I_1$};  % draw axis labels
+    \node[anchor=south] at (0,15) {$I_2$};
+    
+    \draw (-3,7) -- (7,-3);    % draw diagonal lines
+    \draw (-3,14) -- (14,-3); 
+    \draw[gray] (0,8) -- (8,8);   % lines
+    \draw[gray] (8,0) -- (8,8);
+    
+    \node[cirwhite] at (0,0) {0}; % circles
+    \node[cirred] at (0,8) {1}; 
+    \node[cirred] at (8,0) {1};    
+    \node[cirwhite] at (8,8) {0};                                      
+    
+    \end{tikzpicture}
+	\caption{Visualisierung der Punkt in einer xy-Ebene und deren Separierbarkeit.}
 	\label{ableitung:fig:visualisation-surface}
 \end{figure}
 Das Experiment wurde basierend auf dem PyTorch Framework implementiert. Das Netzwerk wurde jeweils mit der Finiten Differenzen Methode und dem Backpropagation Algorithmus trainiert. Bei der FDM wurden verschiedene Anzahl an Stützstellen (Support) gewählt und unterschiedliche Abstände $h$ verwendet. Die Resultate sind in den Abbildungen \ref{ableitung:fig:xor_h1}, \ref{ableitung:fig:xor_h01}, \ref{ableitung:fig:xor_h1} zu finden. Die $y$-Achse in der Abbildung stellt den quadratischen Fehler zwischen $\hat{y}$ und $y$ dar, während die $x$-Achse die Entwicklung über die Anzahl Iterationen aufzeigt.

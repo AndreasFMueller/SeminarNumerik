@@ -7,7 +7,7 @@ Das neuronale Netzwerk wird durch eine sehr hohe Anzahl an Parametern charakteri
 		\label{ableitung:fig:neuronal_network}
 	\end{center}
 \end{figure} 
-Anhand eines einfachen neuronalen Netzwerks gemäss Abbildung \ref{ableitung:fig:neuronal_network} können die Komponenten eingeführt werden. $W$ sind die Gewichte, $b$ die Offsets, oft auch \textit{bias} genannt, und $\sigma$ ist die Aktivierungsfunktion. Die Aktivierungsfunktion wird benötigt, um die Linearität der verschiedenen Schichten zu brechen. In der letzten Schicht wird die Aktivierungsfunktion $\sigma$ zusätzlich verwendet um den Output auf das vorliegende Problem abzubilden. Eine lineare Ausgabe zwischen $[-\infty, \infty]$ ist erwünscht, sofern ein Regressionsproblem vorliegt Bei einem stochastischen Problem werden die Outputwerte als Wahrscheinlichkeiten interpretiert und sollten daher den Wertebereich $[0,1]$ annehmen, entsprechend wird eine Funktion mit entsprechendem Abbildungsbereich für $\sigma$ gewählt. Aus diesem Grund kann $\sigma$ oft eine lineare-, sigmoid- oder $\tanh$- Funktion annehmen.
+Abbildung \ref{ableitung:fig:neuronal_network} zeigt die Komponenten eines einfachen neuronalen Netzwerks. $W$ sind die Gewichte, $b$ die Offsets, oft auch \textit{bias} genannt, und $\sigma$ ist die Aktivierungsfunktion. Die Aktivierungsfunktion wird benötigt, um die Linearität der verschiedenen Schichten zu brechen. In der letzten Schicht wird die Aktivierungsfunktion $\sigma$ zusätzlich verwendet, um den Output auf das vorliegende Problem abzubilden. Eine Ausgabe zwischen $[-\infty, \infty]$ ist erwünscht, sofern ein Regressionsproblem vorliegt. In diesem Fall wird eine lineare Funktion für $\sigma$ in der letzten Schicht gewählt. Bei einem stochastischen Problem werden die Outputwerte als Wahrscheinlichkeiten interpretiert und sollten daher den Wertebereich $[0,1]$ annehmen, entsprechend wird eine Funktion mit entsprechendem Abbildungsbereich für $\sigma$ gewählt. Aus diesem Grund kann $\sigma$ oft eine lineare, sigmoid oder $\tanh$ Funktion annehmen.
 \begin{equation}
 a^{l}_{j} = \sigma \left( \sum\limits_{k}w^{l}_{jk} \cdot a^{l-1}_{k}+b^{l}_{j} \right)
 \label{ableitung:eqn:simple_neuron_eqn}
@@ -24,7 +24,7 @@ Da die Neuronen mit den vorangegangenen Schichten gekoppelt sind, kann man die G
 \end{equation}
 schreiben. Dementsprechend resultiert daraus das Minimalproblem
 \begin{equation}
-	\min \{ \Lb(y_{i}, \sigma^{l}(W^{l}\sigma^{l-1}(W^{l-1}\cdots \sigma^{1}(W^{1}x+b^{1}) + b^{l-1} \cdots ) \} \text{,}
+	\min \{ \Lb(y, \sigma^{l}(W^{l}\sigma^{l-1}(W^{l-1}\cdots \sigma^{1}(W^{1}x+b^{1}) + b^{l-1} \cdots ) \} \text{,}
 \end{equation}
 wobei $w$ und $b$ variabel sind und $x$ und $y$ durch den Trainings-Datensatz gegeben sind.
 Um die Nomenklatur zusammenzufassen, gelten folgende Variabeln und Parameter in einem neuronalen Netzwerk: 
