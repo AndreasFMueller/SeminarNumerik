@@ -14,14 +14,20 @@ Die Fehlerfunktion
 \begin{equation}
 \Lb(w_1, \cdots, w_n, b_1, \cdots, b_n) = \Lb(p)=\sum_{i=1}^{n}\Lb_{i}(p)=\sum_{i=1}^{n}\Lb(\hat{y_i}-y_i)^2
 \end{equation}
-berechnet den Fehler, welcher durch die $w$ und $b$ beeinflusst wird. Aus Gründen der Einfachheit wird hier das vollständige Einsetzten des Ausdrucks für das neuronale Netzwerk aus \eqref{ableitung:eqn:full_net} weggelassen.
-Um das Beispiel zu veranschaulichen, wird ein einfaches neuronales Netzwerk mit zwei Parametern  gewählt. Das Netwerk
+\begin{figure}
+	\begin{center}
+		\input{papers/ableitung/single_neuron_example.tex}
+		\caption{Übersicht eines Neuronalen Netzwerks}
+		\label{ableitung:fig:single_neuron}
+	\end{center}
+\end{figure} 
+berechnet den Fehler, welcher durch die $w$ und $b$ beeinflusst wird. Um die Konsequenzen der partiellen Ableitung nach den jeweiligen Parametern einzuführen, wird als Beispiel ein Netzwerk, entsprechend Abbildung \ref{ableitung:fig:single_neuron}, mit nur einem Neuron gewählt.
+An diesem Beispiel
 \begin{equation}
-	\hat{y} = \sigma \left( w_1 \cdot x + b_1 \right)
+\hat{y} = \sigma \left( w_1 \cdot x + b_1 \right)
 \end{equation}
-mit den Parametern $w_1$ und $b_1$ soll hier als einfaches Beispiel dienen.
-
-Dieses Netzwerk kann eingesetzt werden in die Fehlerfunktion $\Lb$. Die anschliessende Differentiation nach den inneren Parametern $w$ und $b$ führt zum Gradienten der beiden Parametern. Die neuen Parameter 
+lassen sich alle Effekte gut zeigen.
+Dieses Netzwerk kann in die Fehlerfunktion $\Lb$, gemäss der Gleichung \ref{ableitung:eqn:loss_net}, eingesetzt werden. Die anschliessende Differentiation nach den inneren Parametern $w$ und $b$ führt zum Gradienten der beiden Parametern. Die neuen Parameter 
 \begin{equation}
 \begin{split}
 \begin{bmatrix}w_{1}\\b_{1}\end{bmatrix}_{\text{new}}:&={\begin{bmatrix}w_{1}\\b_{1}\end{bmatrix}}-\eta {\begin{bmatrix}
@@ -31,5 +37,4 @@ Dieses Netzwerk kann eingesetzt werden in die Fehlerfunktion $\Lb$. Die anschlie
 \end{split}
 \end{equation}
 werden nach vollziehen des Gradientenabstiegs in jeder Iteration aktualisiert.
-
-Es ist unschwer zu erkennen, dass mit steigender Netzkomplexität die Terme noch viel grösser werden. Dies ist auf die Kettenregel $u'(v(x)) = u'(v(x)) \cdot (v'(x))$ zurückzuführen. Mit diesem Verfahren ist der Gradientenabstieg zwar möglich, jedoch sehr rechenintensiv. Aus diesem Grunde verwenden die meisten Frameworks den Backpropagation-Algorithmus, welcher etwas effizienter ist.
+Dieses Beispiel mit einem Neuron zeigt auf, dass, dass mit steigender Netzkomplexität die Terme noch viel grösser werden. Dies ist auf die Kettenregel $u'(v(x)) = u'(v(x)) \cdot (v'(x))$ zurückzuführen. Mit diesem Verfahren ist der Gradientenabstieg zwar möglich, jedoch sehr rechenintensiv. Aus diesem Grunde verwenden die meisten Frameworks den Backpropagation-Algorithmus, welcher etwas effizienter ist.

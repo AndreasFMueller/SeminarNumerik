@@ -36,6 +36,7 @@ gegeben. Dabei gilt, dass
 dem berechneten Output des neuronalen Netzwerks $N(x)$ entspricht. Dies lässt sich in die Fehlerfunktion (Mean-Squared-Error)
 \begin{equation}
 \Lb(y,N(x))
+\label{ableitung:eqn:loss_net}
 \end{equation}
 einsetzten.
 Die Fehlerfunktion $\Lb$ liefert somit ein Mass für den Fehler, also eine quantitative Bewertung des Fehlers und wird in der Literatur auch oft \textit{Loss}-Funktion genannt. Als einfaches Beispiel für eine solche Fehlerfunktion $\Lb$ kann die mittlere quadratische Abweichung 
@@ -46,7 +47,7 @@ Die Fehlerfunktion $\Lb$ liefert somit ein Mass für den Fehler, also eine quant
 verwendet werden. Diese hat die Eigenschaft, dass sie Vorzeichen unabhänig ist und bei grösserer Abweichung zwischen $y$ und $\hat{y}$ der Fehler auch dementsprechend quadratisch grösser wird.
 Der Lenprozess versucht also ein Minimum 
 \begin{equation}
-	\min \left( \Lb(y,N(x)}) \right) 
+	\min \left( \Lb(y,N(x)) \right) 
 	\label{ableitung:eqn:min_loss}
 \end{equation}
 zu finden, in dem es die inneren Parameter des neuronalen Netzwerks so wählt, dass der Fehler möglichst klein wird.

@@ -1,4 +1,15 @@
 \subsection{Der Backpropagation-Algorithmus}
+
+%5. 25.2.4 Backprop: Dieser Abschnitt ist immer noch sehr schwer verständlich. Im Moment ist für mich der grösste Stolperstein, dass Sie nicht erklären, was z eigentlich ist. Auch ist der erste Absatz von 25.2.4 über eine halbe Seite lang, da braucht man einen ziemlich langen Atem, das durchzustehen. Oft ist das auch ein Hinweis darauf, dass man die Ideen noch nicht genügend aufgeschlüsselt hat. Vielleicht sollten Sie den Absatz unterteilen:
+%
+%1. Teil/Absatz: Das Problem klären. Gesicht ist eine Parameter-Änderung, die eine Output-Änderung hervorruft, die den Fehler reduziert. Statt den Fehler in einem Schritt zu reduzieren, reduziert man ihn Schrittweise, indem man in jedem Layer versucht, die Parameter so zu ändern, dass der Fehler reduziert wird. Dies führt auf einen Fehler in der vorangegangenen Schicht, den man im nächsten Schritt reduzieren will.
+%
+%2. Teil/Absatz: Bezeichnungen. Da man jetzt weiss, was der Plan ist, kann man sagen, wie man diese Fehler und Fehleränderungen bezeichnen will. Damit ist dann klar, was \delta und z bedeuten.
+%
+%3. Teil/Absatz: Berechnung der Änderung in jedem Layer. Hier kann man jetzt die partiellen Ableitungen und das Hadamard-Produkt bringen.
+%
+%4. Teil/Absatz: Backprop, da haben Sie ja schon einen eigenen Absatz.
+
 Der Backpropagation-Algorithmus kann als einfache Matrixmultiplikation
 \begin{equation}
 \Lb(y_{i}, \sigma^{l}(W^{l}\sigma^{l-1}(W^{l-1}\cdots \sigma^{1}(W^{1}x_i+b^{1}) + b^{l-1} \cdots ) )
