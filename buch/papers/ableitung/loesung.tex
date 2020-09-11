@@ -6,9 +6,9 @@
 \section{Lösung
 \label{ableitung:section:loesung}}
 \rhead{Lösung}
-Wie bereits erklärt, basiert die Lösung darauf, dass ein geeignetes numerisches Verfahren anstelle des Backpropagation-Algorithmus verwendet wird, um den Gradienten zu berechnen. Der Gradientenabstieg kann somit weiterhin vom Framework übernommen werden, obschon die Gradientenberechnung ersetzt wurde. Dies ermöglicht zu einem spätern Zeitpunkt einen Vergleich beider Verfahren.
+Wie bereits erklärt, basiert die Lösung für die Gradientenberechnung darauf ein geeignetes numerisches Verfahren anstelle des Backpropagation-Algorithmus zu verwenden. Der Gradientenabstieg kann somit weiterhin vom Framework übernommen werden, obschon die Gradientenberechnung ersetzt wurde. Dies ermöglicht zu einem spätern Zeitpunkt einen Vergleich beider Verfahren.
 \subsection{Finite Differenzen Methode}
-Die Finite Differenzen Methode ist motiviert durch die klassische Ableitung. Gemäss Abbildung \ref{ableitung:fig:differential_quotient} wird die Ableitung als Sekante zweier Punkte der Funktion definiert, wobei $\Delta h \rightarrow 0$ annimmt und somit beide Punkte zu einem Punkt konvergieren. Dies entspricht dann der Tangente, welche die Ableitung am Punkt $f(x_0)$ darstellt.
+Die Finite Differenzen Methode ist motiviert durch die klassische Ableitung. Gemäss Abbildung \ref{ableitung:fig:differential_quotient} wird die Ableitung als Sekante zweier Punkte der Funktion definiert. Dies entspricht dann der Tangente, welche die Ableitung am Punkt $f(x_0)$ darstellt.
 Dieses Konzept ist als Differentialquotient
 \begin{equation}
 f'(x_0) = \lim_{{\Delta h} \rightarrow 0} \frac{f(x_0+\Delta h) - f(x_0)}{\Delta h}

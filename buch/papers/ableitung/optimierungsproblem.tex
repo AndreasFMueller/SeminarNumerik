@@ -1,6 +1,6 @@
 \subsection{Das Optimierungsproblem}
 Wie bereits erwähnt, ist durch die extrem hohe Anzahl an Parametern ein Durchprobieren aller Parameterkombinationen nicht möglich.
-Es würde kein Resultat in nützlicher Frist gefunden werden können.
+Es könnte kein Resultat in nützlicher Frist gefunden werden können.
 Aus diesem Grund werden andere Verfahren verwendet, um das neuronale Netzwerk zu optimieren.
 Alle diese Verfahren basieren auf dem Gradientenabstieg und werden in der Literatur oft auch 'Optimizer' genannt. Näheres zum Gradientenabstieg kann in Kapitel \textbf{xyz} gefunden werden.
 
@@ -9,7 +9,7 @@ Der Abstiegsschritt
 \begin{equation}
 p_{\text{new}}:=p-\eta \nabla \Lb_{i}(p)
 \end{equation}
-findet Parameterwerte $p_{\text{new}}$, für die der Fehler kleiner ist. Die Parameter $p$ stehen für sämtliche inneren Gewichte $w$ und Offsetwerte $b$. Die Schrittweite $\eta$ muss experimentell ermittelt und wird oft auch als \textit{learning rate} bezeichnet. Die Kunst liegt darin, $\eta$ so zu wählen, dass lokale Minima und Rauschen die Konvergenz nicht behindern. Der Algorithmus bricht erst ab, wenn ein Minimum erreicht ist oder die Anzahl an Iterationen ausgeschöpft ist.
+findet Parameterwerte $p_{\text{new}}$, für die der Fehler kleiner ist. Die Parameter $p$ stehen für sämtliche inneren Gewichte $w$ und Offsetwerte $b$. Die Schrittweite $\eta$ muss experimentell ermittelt und wird oft auch als \textit{learning rate} bezeichnet. Die Kunst liegt darin, $\eta$ so zu wählen, dass lokale Minima und Rauschen die Konvergenz nicht behindern. Der Algorithmus bricht erst ab, wenn ein Minimum erreicht ist oder die vorgegebene maximale Anzahl an Iterationen ausgeschöpft ist.
 Die Fehlerfunktion
 \begin{equation}
 \Lb(w_1, \cdots, w_n, b_1, \cdots, b_n) = \Lb(p)=\sum_{i=1}^{n}\Lb_{i}(p)=\sum_{i=1}^{n}\Lb(\hat{y_i}-y_i)^2
@@ -33,7 +33,7 @@ Dieses Netzwerk kann in die Fehlerfunktion $\Lb$, gemäss der Gleichung \ref{abl
 \begin{bmatrix}w_{1}\\b_{1}\end{bmatrix}_{\text{new}}:&={\begin{bmatrix}w_{1}\\b_{1}\end{bmatrix}}-\eta {\begin{bmatrix}
 {\frac {\partial }{\partial w_{1}}}(\sigma(w_{1}x_{i}+b_{1})-y_{i})^{2}\\
 {\frac {\partial }{\partial b_{1}}}(\sigma(w_{1}x_{i}+b_{1})-y_{i})^{2}\end{bmatrix}} \\ & =
-{\begin{bmatrix}w_{1}\\b_{1}\end{bmatrix}}-\eta {\begin{bmatrix}2((\sigma(w_{1}x_{i}+b_{1}) - y_i) \cdot \sigma'(w_{1}x_{i}+b_{1}) \cdot (w_{1}x_{i}+b_{1}) x_{i} \\2((\sigma(w_{1}x_{i}+b_{1}) - y_i) \cdot \sigma'(w_{1}x_{i}+b_{1}) \cdot (w_{1}x_{i}+b_{1}) \end{bmatrix}}
+{\begin{bmatrix}w_{1}\\b_{1}\end{bmatrix}}-\eta {\begin{bmatrix}2(\sigma(w_{1}x_{i}+b_{1}) - y_i) \cdot \sigma'(w_{1}x_{i}+b_{1}) \cdot (w_{1}x_{i}+b_{1}) x_{i} \\2(\sigma(w_{1}x_{i}+b_{1}) - y_i) \cdot \sigma'(w_{1}x_{i}+b_{1}) \cdot (w_{1}x_{i}+b_{1}) \end{bmatrix}}
 \end{split}
 \end{equation}
 werden nach vollziehen des Gradientenabstiegs in jeder Iteration aktualisiert.
