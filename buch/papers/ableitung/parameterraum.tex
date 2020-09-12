@@ -1,5 +1,5 @@
 \subsection{Der Parameterraum}
-Das neuronale Netzwerk wird durch eine sehr hohe Anzahl an Parametern charakterisiert, welche im durch den Lernprozesses optimiert werden müssen. Um zu verstehen, woher diese Parameter stammen, muss der innere Aufbau eines neuronalen Netzwerks betrachtet werden.
+Das neuronale Netzwerk wird durch eine sehr hohe Anzahl an Parametern charakterisiert, welche im durch den Lernprozesses optimiert werden müssen. Der innere Aufbau eines neuronalen Netzwerks erklärt die Herkunft dieser Parameter.
 \begin{figure}
 	\begin{center}
 		\input{papers/ableitung/neuronal_network.tex}
@@ -7,9 +7,9 @@ Das neuronale Netzwerk wird durch eine sehr hohe Anzahl an Parametern charakteri
 		\label{ableitung:fig:neuronal_network}
 	\end{center}
 \end{figure} 
-Abbildung \ref{ableitung:fig:neuronal_network} zeigt die Komponenten eines einfachen neuronalen Netzwerks. $W$ sind die Gewichte, $b$ die Offsets, oft auch \textit{bias} genannt, und $\sigma$ ist die Aktivierungsfunktion. Die Aktivierungsfunktion wird benötigt, um die Linearität der verschiedenen Schichten zu brechen. In der letzten Schicht wird die Aktivierungsfunktion $\sigma$ zusätzlich verwendet, um den Output auf das vorliegende Problem abzubilden. Eine Ausgabe zwischen $[-\infty, \infty]$ ist erwünscht, sofern ein Regressionsproblem vorliegt. In diesem Fall wird eine lineare Funktion für $\sigma$ in der letzten Schicht gewählt. Bei einem stochastischen Problem werden die Outputwerte als Wahrscheinlichkeiten interpretiert und sollten daher den Wertebereich $[0,1]$ annehmen, entsprechend wird eine Funktion mit entsprechendem Abbildungsbereich für $\sigma$ gewählt. Aus diesem Grund kann $\sigma$ oft eine lineare, sigmoid oder $\tanh$ Funktion annehmen.
+Abbildung \ref{ableitung:fig:neuronal_network} zeigt die Komponenten eines einfachen neuronalen Netzwerks. $W$ sind die Gewichte, $b$ die Offsets, oft auch \textit{bias} genannt, und $\sigma$ ist die Aktivierungsfunktion. Die Aktivierungsfunktion in den mittleren Schichten wird benötigt, um die Linearität der verschiedenen Schichten zu brechen. In der letzten Schicht wird die Aktivierungsfunktion $\sigma$ aber hauptsächlich verwendet, um den Output auf das vorliegende Problem abzubilden. Eine Ausgabe zwischen $[-\infty, \infty]$ ist erwünscht, sofern ein Regressionsproblem vorliegt. In diesem Fall wird ausnahmsweise eine lineare Funktion für $\sigma$ in der letzten Schicht gewählt. Bei einem stochastischen Problem werden die Outputwerte als Wahrscheinlichkeiten interpretiert und sollten daher den Wertebereich $[0,1]$ annehmen, folglich wird eine Funktion mit entsprechendem Abbildungsbereich für $\sigma$ gewählt. Aus diesem Grund kann $\sigma$ oft eine  sigmoid oder $\tanh$ Funktion und in Ausnahmefällen auch eine lineare Funktion annehmen
 \begin{equation}
-a^{l}_{j} = \sigma \left( \sum\limits_{k}w^{l}_{jk} \cdot a^{l-1}_{k}+b^{l}_{j} \right)
+a^{l}_{j} = \sigma \biggl( \sum\limits_{k}w^{l}_{jk} \cdot a^{l-1}_{k}+b^{l}_{j} \biggr)
 \label{ableitung:eqn:simple_neuron_eqn}
 \end{equation}
 beschreibt somit für jedes Neuron $a^{l}_{j}$ aus Abbildung \ref{ableitung:fig:neuronal_network} den Zusammenhang zwischen den Gewichten und den vorhergehenden Neuronen $a^{l-1}_{k}$. Der Input Layer 
@@ -26,8 +26,8 @@ schreiben. Dementsprechend resultiert daraus das Minimalproblem
 \begin{equation}
 	\min \{ \Lb(y, \sigma^{l}(W^{l}\sigma^{l-1}(W^{l-1}\cdots \sigma^{1}(W^{1}x+b^{1}) + b^{l-1} \cdots ) \} \text{,}
 \end{equation}
-wobei $w$ und $b$ variabel sind und $x$ und $y$ durch den Trainings-Datensatz gegeben sind.
-Um die Nomenklatur zusammenzufassen, gelten folgende Variabeln und Parameter in einem neuronalen Netzwerk: 
+wobei die Parameter $w$ und $b$ während dem Training bestimmt werden, während $x$ und $y$ durch den Trainings-Datensatz gegeben sind.
+Um die Nomenklatur zusammenzufassen, gelten folgende Bezeichnungen in einem neuronalen Netzwerk: 
 \begin{itemize}
 	\item{$x$: Input ins neuronale Netzwerk}
 	\item{$y$: Erwarteter Output aus dem neuronalen Netzwerk gemäss dem Trainingsdatensatz}
