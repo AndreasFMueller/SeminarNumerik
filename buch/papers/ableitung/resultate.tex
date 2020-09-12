@@ -8,7 +8,7 @@ Um dies an einem einfachen Beispiel zu verdeutlichen, wird versucht, eine logisc
 	 \centering
 	\begin{tikzpicture}
 	
-	\node (y) at (3, 1) {$y$};
+	\node (y) at (3, 1) {$y_1$};
 	
 	\node[american xor port, draw, number inputs=2] at (1.5, 1) (notx) {};
 	
@@ -49,8 +49,8 @@ Um dies an einem einfachen Beispiel zu verdeutlichen, wird versucht, eine logisc
 	
 	\node[inputNode, thick] (o1) at (9, 0.75) {$a^{3}_{1}$};
 	
-	\draw[stateTransition] (4, 1.5) -- node[above] {$I_1$} (i1);
-	\draw[stateTransition] (4, 0) -- node[above] {$I_2$} (i2);
+	\draw[stateTransition] (4, 1.5) -- node[above] {$x_1$} (i1);
+	\draw[stateTransition] (4, 0) -- node[above] {$x_2$} (i2);
 	
 	
 	\draw[stateTransition] (i1) -- (h1);
@@ -61,7 +61,7 @@ Um dies an einem einfachen Beispiel zu verdeutlichen, wird versucht, eine logisc
 	\draw[stateTransition] (h1) -- (o1);
 	\draw[stateTransition] (h2) -- (o1);
 	
-	\draw[stateTransition] (o1) -- node[above] {$O_1$} (10, 0.75);
+	\draw[stateTransition] (o1) -- node[above] {$y_1$} (10, 0.75);
 
 	\end{tikzpicture}
 	\caption{Das Neuronale Netzwerk zum erlernen des XOR Logikoperators}
@@ -80,8 +80,8 @@ Das gewählte Netzwerk, um diese Logik abzubilden, besteht aus drei Schichten un
     \draw[|->, -latex, draw] (-1,0) -- (15,0); %draw axis
     \draw[|->, -latex, draw] (0,-1) -- (0,15);
     
-    \node[anchor=west] at (15,0) {$I_1$};  % draw axis labels
-    \node[anchor=south] at (0,15) {$I_2$};
+    \node[anchor=west] at (15,0) {$x_1$};  % draw axis labels
+    \node[anchor=south] at (0,15) {$x_2$};
     
     \draw (-3,7) -- (7,-3);    % draw diagonal lines
     \draw (-3,14) -- (14,-3); 
@@ -97,7 +97,7 @@ Das gewählte Netzwerk, um diese Logik abzubilden, besteht aus drei Schichten un
 	\caption{Visualisierung der Punkt in einer xy-Ebene und deren Separierbarkeit.}
 	\label{ableitung:fig:visualisation-surface}
 \end{figure}
-Das Experiment wurde basierend auf dem PyTorch Framework implementiert. Das Netzwerk wurde jeweils mit der Finiten Differenzen Methode und dem Backpropagation Algorithmus trainiert. Bei der FDM wurden verschiedene Anzahl an Stützstellen (Support) gewählt und unterschiedliche Abstände $h$ verwendet. Die Resultate sind in den Abbildungen \ref{ableitung:fig:xor_h1}, \ref{ableitung:fig:xor_h01}, \ref{ableitung:fig:xor_h1} zu finden. Die $y$-Achse in der Abbildung stellt den quadratischen Fehler zwischen $\hat{y}$ und $y$ dar, während die $x$-Achse die Entwicklung über die Anzahl Iterationen aufzeigt.
+Das Experiment wurde basierend auf dem PyTorch Framework implementiert. Das Netzwerk wurde jeweils mit der Finiten Differenzen Methode und dem Backpropagation Algorithmus trainiert. Bei der FDM wurden verschiedene Anzahlen an Stützstellen (Support) gewählt und unterschiedliche Abstände $h$ verwendet. Die Resultate sind in den Abbildungen \ref{ableitung:fig:xor_h1}, \ref{ableitung:fig:xor_h01}, \ref{ableitung:fig:xor_h1} zu finden. Die vertikale-Achse in der Abbildung stellt den quadratischen Fehler zwischen $\hat{y}$ und $y$ dar, während die horizontale-Achse die Entwicklung über die Anzahl Iterationen aufzeigt.
 
 \begin{figure}
 	\begin{tikzpicture}
