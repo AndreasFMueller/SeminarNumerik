@@ -27,3 +27,9 @@ buch.ind:	buch.idx
 
 separate:	buch.aux buch.pdf
 	bash splitpapers
+
+numerik.pdf:	
+	pdfjam --outfile numerik.pdf \
+		../cover/front.pdf 1,{} \
+		buch.pdf 1-504 \
+		../cover/back.pdf {},1

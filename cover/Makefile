@@ -3,7 +3,7 @@
 #
 # (c) 2018 Prof Dr Andreas Müller, Hochschule Rapperswil
 #
-all:	buchcover.png
+all:	buchcover.png front.pdf back.pdf
 
 buchcover.pdf:	buchcover.tex
 	pdflatex buchcover.tex
@@ -14,3 +14,9 @@ buchcover.png:	buchcover.pdf Makefile
 
 nozzle.jpg:	nozzle.png
 	convert nozzle.png -density 300 -units PixelsPerInch -flop nozzle.jpg
+
+front.pdf:	front.tex buchcover.pdf
+	pdflatex front.tex
+
+back.pdf:	back.tex buchcover.pdf
+	pdflatex back.tex
