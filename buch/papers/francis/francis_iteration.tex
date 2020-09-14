@@ -108,33 +108,33 @@ Für diesen wird der näher am letzten Matrixelement liegende Eigenwert der unte
 	
 	\begin{equation}
 	A=
-	\begin{bmatrix}
-	17 & -28.941 & 1.847 & -4.46 & 2.257\\
-	-27.677 & 33.94 & 26.188 & -2.228 & 1.268\\
-	0 & 25.096 & 20.687 & -6.606 & -0.197\\
-	0 & 0 & -5.963 & \textcolor{orange}{-16.816} & \textcolor{orange}{-12.445}\\
-	0 & 0 & 0 & \textcolor{orange}{-9.01} & \textcolor{red}{10.189}\\
-	\end{bmatrix} 
+	\begin{bmatrix*}[r]
+	17\phantom{.000} & -28.941 & 1.847 & -4.46\phantom{0} & 2.257\\
+	-27.677 & 33.94\phantom{0} & 26.188 & -2.228 & 1.268\\
+	0\phantom{.000} & 25.096 & 20.687 & -6.606 & -0.197\\
+	0\phantom{.000} & 0\phantom{.000} & -5.963 & \textcolor{orange}{-16.816} & \textcolor{orange}{-12.445}\\
+	0\phantom{.000} & 0\phantom{.000} & 0\phantom{.000} & \textcolor{orange}{-9.01}\phantom{0} & \textcolor{red}{10.189}
+	\end{bmatrix*} 
 	\qquad
 	\text{mit }
 	\texttt{eig}(A)=
-	\begin{bmatrix}
-	65 & \\
-	-21.277 & \\
-	-13.126 & \\
-	21.277 & \\
-	13.126 & \\
-	\end{bmatrix}
+	\begin{bmatrix*}[r]
+	65\phantom{.000}\\
+	-21.277 \\
+	-13.126 \\
+	21.277 \\
+	13.126 
+	\end{bmatrix*}
 	\end{equation}
 	
 	Für die Rayleigh-Quotienten-Shift Strategie würde man also \textcolor{red}{$10.189$} als ersten Shift verwenden.
 	Verfolgt man die Wilkinson-Shift Strategie, würde man die Eigenwerte der Matrix
 
 	\begin{equation}
-	\begin{bmatrix}
+	\begin{bmatrix*}[r]
 	 \textcolor{orange}{-16.816} & \textcolor{orange}{-12.445}\\
-	 \textcolor{orange}{-9.01} & \textcolor{red}{10.189}\\
-	\end{bmatrix}
+	 \textcolor{orange}{-9.01\phantom{0}} & \textcolor{red}{10.189}
+	\end{bmatrix*}
 	\end{equation}
 	berechnen.
 	Dabei findet man $-21.279$ und $13.126$.
