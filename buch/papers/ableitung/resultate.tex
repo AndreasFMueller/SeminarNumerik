@@ -86,41 +86,25 @@ Das gewählte Netzwerk, um diese Logik abzubilden, besteht aus drei
 Schichten und ist in Abbildung \ref{ableitung:fig:nn-result-net}
 ersichtlich.
 Die Mittelschicht (hidden layer) wird benötigt, da sich mit nur
-einer Schicht keine Funktion finden lässt, welche die Punkte in
-einer Ebene trennt.
+einer Schicht keine Funktion finden lässt, welche die zwei Inputs auf den Output abbilden kann. 
+In Abbildung \ref{ableitung:fig:visualisation-surface} ist ersichtlich, dass sich keine einfache Funktion im zweidimensionalen Raum finden lässt, welche das Kriterium erfüllt. Es wird eine Sattelfläche im dreidimensionalen Raum benötigt, wie in Abbildung \ref{ableitung:fig:visualisation-surface-2}, um die Anforderungen zu erfüllen. 
 \index{hidden layer}%
 \index{Mittelschicht}%
 Dies wird in Abbildung \ref{ableitung:fig:visualisation-surface}
 noch einmal verdeutlicht.
 
-\tikzset{   cirwhite/.style={draw=gray,circle,fill=white,minimum size=1pt,inner sep=2pt,line width=0.2mm},
-	cirred/.style={draw=gray,circle,fill=red,minimum size=1pt,inner sep=2pt,line width=0.2mm},
-}
-
 \begin{figure}
 	\centering
-    \begin{tikzpicture}[x=2mm,y=2mm]
-    
-    \draw[|->, -latex, draw] (-1,0) -- (15,0); %draw axis
-    \draw[|->, -latex, draw] (0,-1) -- (0,15);
-    
-    \node[anchor=west] at (15,0) {$x_1$};  % draw axis labels
-    \node[anchor=south] at (0,15) {$x_2$};
-    
-    \draw (-3,7) -- (7,-3);    % draw diagonal lines
-    \draw (-3,14) -- (14,-3); 
-    \draw[gray] (0,8) -- (8,8);   % lines
-    \draw[gray] (8,0) -- (8,8);
-    
-    \node[cirwhite] at (0,0) {0}; % circles
-    \node[cirred] at (0,8) {1}; 
-    \node[cirred] at (8,0) {1};    
-    \node[cirwhite] at (8,8) {0};                                      
-    
-    \end{tikzpicture}
-	\caption{Visualisierung der Punkte in der $x$-$y$-Ebene und deren
+		\input{papers/ableitung/surface_seperation.tex}
+		\caption{Visualisierung der Punkte in der $x_1$-$x_2$-Ebene und deren
 		Separierbarkeit.}
 	\label{ableitung:fig:visualisation-surface}
+\end{figure}
+\begin{figure}
+	\centering
+	\input{papers/ableitung/surface_plot.tex}
+	\caption{Visualisierung der Sattelfläche für den Output $y_1$.}
+	\label{ableitung:fig:visualisation-surface-2}
 \end{figure}
 Das Experiment wurde basierend auf dem PyTorch Framework implementiert.
 \index{PyTorch Framework}%

@@ -1,0 +1,53 @@
+%\documentclass[margin=10pt]{standalone}
+%\usepackage{pgfplots}
+\pgfplotsset{compat=1.13}% <- immer compat setzen!
+\usepgfplotslibrary{fillbetween}
+%\begin{document}
+	\begin{tikzpicture} 
+	\begin{axis}[
+	domain=0:1,% geändert
+	xmin=0, xmax=1,
+	ymin=0, ymax=1,
+	xlabel = $x_1$ Achse,
+	ylabel = $x_2$ Achse
+	]
+
+	\path[name path=axisy] (0,1) -- (1,1);
+	\path[name path=axisx] (0,0) -- (1,0);
+
+
+
+	\addplot+[mark=none, color=black, name path=A] {\x+0.33}
+		node[above, color= blue, rotate=40] at (0.8,0.2) {$y_1=0$}
+		node[above, color= blue, rotate=40] at (0.25,0.75) {$y_1=0$}
+	;
+	\addplot+[mark=none, color=black, name path=B] {\x-0.33} 
+		node[below, color=red, rotate=40] at (0.48,0.52) {$y_1=1$}
+	;
+	
+	\addplot [blue,fill opacity=0.05]
+	fill between[of=A and axisy]
+	;
+	\addplot [blue,fill opacity=0.05]
+	fill between[of=B and axisx]
+	;
+	
+	\addplot [red,fill opacity=0.05]
+		fill between[of=A and B]
+	;
+	    
+
+	\end{axis} 
+	
+	\coordinate (a) at (0,0);
+	\fill[red] (a) circle (2pt);
+	\coordinate (b) at (6.85,5.7);
+	\fill[red] (b) circle (2pt);
+	
+	\coordinate (c) at (0,5.7);
+	\fill[blue] (c) circle (2pt);
+	\coordinate (d) at (6.85,0);
+	\fill[blue] (d) circle (2pt);
+	
+	\end{tikzpicture}
+%\end{document}
