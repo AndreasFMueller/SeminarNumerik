@@ -27,7 +27,7 @@ Das Ziel des Backpropagation-Algorithmus ist nun die partiellen Ableitungen $\pa
 \end{equation}
 zu finden, wobei $W^{n}$ und $b^{n}$ jeweils die Gewichte im $n$-ten Layer des neuronalen Netzwerks darstellen.
 Dies gilt unter der Annahme, dass die Fehlerfunktion $\Lb$ einen Skalar
-als Resultat liefert und die einzelnen Schichten $l$ jeweils nur der
+als Resultat liefert und die einzelnen Schichten $l$ jeweils nur mit
 ihrer benachbarten Schicht $l+1$ verbunden sind.
 
 Für den Zusammenhang der Layer führen wir die Notation
@@ -74,10 +74,10 @@ letzten Schicht.
 Als nächstes muss nun rückwärts gerechnet --- back propagiert --- werden.
 Die Änderung des Fehlers
 \begin{equation}
-\delta^{l} = ((w^{l+1} \delta^{l+1})^T \odot \sigma'(z^l)
+\delta^{l} = ((W^{l+1} \delta^{l+1})^T \odot \sigma'(z^l)
 \end{equation}
 beschreibt nun den Zusammenhang zwischen den Schichten $l+1$ und $l$, was an den Ausdrücken $\delta^{l+1}$ und $ \delta^{l}$ abzulesen ist.
-Die Transponierte der Matrix $w^{l+1}$ kann man sich intuitiv vorstellen, als das 'Rückwärtsrechnen' des gewichteten Fehlers, da $w^{l+1} \cdot (w^{l+1})^T = I$, wobei $I$ für die Einheitsmatrix steht.
+Die Transponierte der Matrix $W^{l+1}$ kann man sich intuitiv vorstellen, als das 'Rückwärtsrechnen' des gewichteten Fehlers, da $W^{l+1} \cdot (W^{l+1})^T = I$, wobei $I$ für die Einheitsmatrix steht.
 Dies ermöglicht die Änderung des Fehlers pro Neuron in der davor liegenden Schicht zu bestimmen.
 Abschliesend müssen noch die Gradienten
 \begin{equation}

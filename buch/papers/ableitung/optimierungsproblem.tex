@@ -16,9 +16,8 @@ Der Abstiegsschritt
 p_{\text{new}}:=p-\eta \nabla \Lb_{i}(p)
 \end{equation}
 findet Parameterwerte $p_{\text{new}}$, für die der Fehler kleiner ist.
-Die Parameter $p$ stehen für sämtliche inneren Gewichte $w$ und Offsetwerte $b$.
-Die Schrittweite $\eta$ muss experimentell ermittelt und wird oft
-auch als {\em learning rate} bezeichnet.
+Die Parameter $p$ stehen für sämtliche inneren Gewichte $w$ und Offsets $b$.
+Die Schrittweite $\eta$, oft auch {\em learning rate}, muss experimentell ermittelt werden.
 \index{learning rate}%
 Die Kunst liegt darin, $\eta$ so zu wählen, dass lokale Minima und Rauschen die Konvergenz nicht behindern.
 Der Algorithmus bricht erst ab, wenn ein Minimum erreicht ist oder die vorgegebene maximale Anzahl an Iterationen ausgeschöpft ist.
@@ -39,9 +38,9 @@ Die Fehlerfunktion
 		\label{ableitung:fig:single_neuron}
 	\end{center}
 \end{figure}%
-berechnet den Fehler, welcher durch die $w$ und $b$ beeinflusst wird.
+berechnet den Fehler, welcher durch $w$ und $b$ beeinflusst wird.
 Die Konsequenzen der partiellen Ableitung nach den jeweiligen
-Parametern werden am Beispiel eines Netzwerk mit nur einem Neuron
+Parametern werden am Beispiel eines Netzwerks mit nur einem Neuron
 wie in Abbildung~\ref{ableitung:fig:single_neuron} berechnet.
 An diesem Beispiel
 \begin{equation}
