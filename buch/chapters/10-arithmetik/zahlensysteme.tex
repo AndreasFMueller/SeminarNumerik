@@ -39,7 +39,7 @@ Genauigkeitsanforderungen die Möglichkeiten der von der Prozessor-Hardware
 implementierten Typen übersteigt.
 Dieser Fall tritt beispielsweise bei Berechnungen in der Kryptographie auf,
 wo oft mit Ganzzahlen mit Tausenden von Stellen gerechnet werden muss.
-\index{Kryptographie}
+\index{Kryptographie}%
 Im Abschnitt~\ref{buch:subsection:mp} mit der GNU Multiprecision-Library
 ein Beispiel einer solchen Bibliothek vorgestellt.
 \index{GNU GMP}%
@@ -51,7 +51,7 @@ ein Beispiel einer solchen Bibliothek vorgestellt.
 \subsection{Zahlendarstellung bezüglich verschiedener Basen
 \label{buch:subsection:basen}}
 Allen Zahlensystemen gemeinsam ist die Positionsdarstellung.
-\index{Positionsdarstellung}
+\index{Positionsdarstellung}%
 Eine Zahl wird als Zeichenkette $x=x_nx_{n-1}\dots x_3x_2x_1x_0$
 geschreiben,
 wobei die Zeichen $x_i$ Ziffern mit $0 \le x_i < b$ sind.
@@ -195,7 +195,7 @@ relative Adressierung braucht.
 \index{Subtraktion}%
 \index{Wortlänge}%
 \index{Prozessor}%
-\index{Adressierung!relative}
+\index{Adressierung!relative}%
 Ebenso kann man davon ausgehen, dass jeder Kern eines Prozessors
 eine Einheit für ganzzahlige Operationen hat, denn er könnte sonst
 nicht einmal die minimal notwendigen Adressberechnungen durchführen.
@@ -239,7 +239,7 @@ mit \texttt{10000000} wird beim Hochzählen genau die Zahlen von $-128$
 bis $127$ aufzählen.
 
 Die Entgegengesetzte einer Zahl kann nach der folgenden Regel gefunden werden:
-\index{entgegengesetzte Zahl}
+\index{entgegengesetzte Zahl}%
 \begin{enumerate}
 \item Man nehme das Komplement jedes einzelnen Bits einer Zahl
 \item Addiere 1.
@@ -598,7 +598,7 @@ mit einen $*$ versehen.
 \subsubsection{Gebräuchliche Formate}
 Der 1985 verabschiedete Standard IEEE~754 beschreibt die heute gebräuchlichen
 Implementation von Gleitkommatypen abschliessend.
-\index{IEEE~754}
+\index{IEEE~754}%
 Damit ist gewährleistet, dass numerische Rechnungen auf verschiedenen
 Prozessoren reproduzierbare Resultate geben.
 
@@ -639,7 +639,7 @@ ausreichend ist.
 \subsubsection{Rundung}
 Der IEEE 754 Standard schreibt auch vor, wie Resultate gerundet werden
 müssen.
-\index{Rundungsregel}
+\index{Rundungsregel}%
 Bei vielen Operationen entstehen Resultate, die einen längeren 
 Nachkommateil haben als in das gegebene Gleitkommaformat passt,
 das Resultat muss gerundet werden.
@@ -840,7 +840,7 @@ erhalten.
 \index{IEEE 754}%
 Daher wird empfohlen, für neue Projek die MPFR Bibliothek (siehe nächsten
 Abschnitt) zu verwenden.
-\index{GNU MPGFR}
+\index{GNU MPFR}%
 \begin{lstlisting}[float,style=C,caption={C-Programm zur Berechnung von $e^x$ mit Hilfe der Taylor-Reihe, implementiert mit GMP},label={numerik:listing:gmp}]
 #include <gmp.h>
 #include <stdio.h>
