@@ -5,7 +5,7 @@
 %
 \section{Ein alternativer Lösungsansatz
 \label{ableitung:section:loesung}}
-\rhead{Lösung}
+\rhead{Ein alternativer Lösungsansatz}
 Wie bereits erklärt, basiert die Lösung für die Gradientenberechnung darauf ein geeignetes numerisches Verfahren anstelle des Backpropagation-Algorithmus zu verwenden.
 Der Gradientenabstieg kann somit weiterhin vom Framework übernommen werden, obschon die Gradientenberechnung ersetzt wurde.
 Dies ermöglicht zu einem spätern Zeitpunkt einen Vergleich beider Verfahren.
@@ -263,7 +263,11 @@ Ein sehr kleines $h$ führt zu mehr Rauschanfälligkeit, da bei benachbarten Pun
 Als Beispiel für eine Funktion, bei welcher die Terme kleiner werden, können die trigonometrischen Funktionen dienen.
 Im Speziellen hat der Sinus
 \begin{equation}
-	\sin(x) = \sum _{n=0}^{\infty }{\frac {(-1)^{n}}{(2n+1)!}}x^{2n+1} \left(x\right)\approx x-{\frac {x^{3}}{3!}}+{\frac {x^{5}}{5!}}-{\frac {x^{7}}{7!}}+{\frac{x^9}{9!}}+R_n
+\sin(x)
+=
+\sum _{n=0}^{\infty}\frac{(-1)^{n}}{(2n+1)!}f^{(2n+1)} (x)
+\approx
+x-{\frac{x^3}{3!}}+\frac{x^5}{5!}-\frac{x^7}{7!}+\frac{x^9}{9!}+R_n
 \end{equation}
 eine alternierende Taylor-Reihe.
 Der Fehler
