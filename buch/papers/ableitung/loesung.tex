@@ -3,19 +3,27 @@
 %
 % (c) 2020 Prof Dr Andreas Müller, Hochschule Rapperswil
 %
-\section{Lösung
+\section{Ein alternativer Lösungsansatz
 \label{ableitung:section:loesung}}
 \rhead{Lösung}
-Wie bereits erklärt, basiert die Lösung für die Gradientenberechnung darauf ein geeignetes numerisches Verfahren anstelle des Backpropagation-Algorithmus zu verwenden. Der Gradientenabstieg kann somit weiterhin vom Framework übernommen werden, obschon die Gradientenberechnung ersetzt wurde. Dies ermöglicht zu einem spätern Zeitpunkt einen Vergleich beider Verfahren.
+Wie bereits erklärt, basiert die Lösung für die Gradientenberechnung darauf ein geeignetes numerisches Verfahren anstelle des Backpropagation-Algorithmus zu verwenden.
+Der Gradientenabstieg kann somit weiterhin vom Framework übernommen werden, obschon die Gradientenberechnung ersetzt wurde.
+Dies ermöglicht zu einem spätern Zeitpunkt einen Vergleich beider Verfahren.
 \subsection{Finite Differenzen Methode}
-Die Finite Differenzen Methode ist motiviert durch die klassische Ableitung. Gemäss Abbildung \ref{ableitung:fig:differential_quotient} wird die Ableitung als Sekante zweier Punkte der Funktion definiert, mit abschliessendem Grenzübergang $\Delta x \rightarrow 0$. Dies entspricht dann der Tangente, welche die Ableitung am Punkt $f(x_0)$ darstellt.
+Die Finite Differenzen Methode ist motiviert durch die klassische Ableitung.
+Gemäss Abbildung \ref{ableitung:fig:differential_quotient} wird die
+Ableitung als Sekante zweier Punkte der Funktion definiert, mit
+anschliessendem Grenzübergang $\Delta x \rightarrow 0$.
+Dies entspricht dann der Tangente, welche die Ableitung am Punkt $f(x_0)$ darstellt.
 Dieses Konzept ist als Differentialquotient
 \begin{equation}
 f'(x_0) = \lim_{{\Delta h} \rightarrow 0} \frac{f(x_0+\Delta x) - f(x_0)}{\Delta x}
 \label{ableitung:equations:differentialquotient}
 \end{equation}
-bekannt. 
-In der Numerik existiert die Möglichkeit von $\Delta x \rightarrow 0$ nicht, da die Datenpunkte diskretisiert sind. Stattdessen sei $h$ der kleinstmögliche Abstand zweier benachbarter Datenpunkte. Entsprechend kann man die numerische Ableitung (Differenzenquotient) als Quotienten
+bekannt.
+In der Numerik existiert die Möglichkeit von $\Delta x \rightarrow 0$ nicht, da die Datenpunkte diskretisiert sind.
+Stattdessen sei $h$ der kleinstmögliche Abstand zweier benachbarter Datenpunkte.
+Entsprechend kann man die numerische Ableitung (Differenzenquotient) als Quotienten
 \begin{equation}
 \begin{split}
 f'(x_0) &= \frac{f(x_0 + h) - f(x_0)}{h} \\
@@ -24,7 +32,8 @@ f'(x_0) &= \frac{f(x_0 + h) - f(x_0 - h)}{2h} \\
 \end{split}
 \label{ableitung:equations:differenzenquotient}
 \end{equation}
-definieren. Die Genauigkeit ist limitiert durch den Abstand der zwei Stützstellen.
+definieren.
+Die Genauigkeit ist limitiert durch den Abstand der zwei Stützstellen.
 \begin{figure}
 \centering
 	\begin{tikzpicture}[>=stealth',
@@ -71,36 +80,73 @@ definieren. Die Genauigkeit ist limitiert durch den Abstand der zwei Stützstell
 \end{figure}
 
 \subsection{Taylor-Methode}
+\index{Taylor-Reihe}%
 Mithilfe der Taylor-Reihe 
 \begin{equation}
 f(x) = f(a)+{\frac {f'(a)}{1!}}(x-a)+{\frac {f''(a)}{2!}}(x-a)^{2}+{\frac {f'''(a)}{3!}}(x-a)^{3}+\cdots
 \label{ableitung:eqn:taylorseries}
 \end{equation}
-lässt sich jede beliebige analytische Funktion $f(x)$ approximieren. Dies wird für die Herleitung einer etwas stabileren numerischen Methode zu Nutzen gemacht.
-Um eine höhere Genauigkeit zu erreichen, kann die Anzahl der Stützstellen erhöht werden. 
+lässt sich jede beliebige analytische Funktion $f(x)$ approximieren.
+Dies wird für die Herleitung einer etwas stabileren numerischen Methode
+ausgenutzt.
+Um eine höhere Genauigkeit zu erreichen, kann die Anzahl der Stützstellen erhöht werden.
 Im Grunde wird ein Polynom höherer Ordnung gesucht, welches Stützstellen in einem uniformen Abstand hat.
-Die Ableitung dieses Polynoms sollte dann eine höhere Genauigkeit aufweisen, da durch die höhere Ordnung die Ursprungsfunktion besser um den Punkt der Ableitung approximiert werden kann.
-Als Beispiel soll die erste Ableitung mit fünf Stützstellen in gleichem Abstand $h$ berechnet werden:
+Die Ableitung dieses Polynoms sollte dann eine höhere Genauigkeit
+aufweisen, da durch die höhere Ordnung die Ursprungsfunktion besser
+um den Punkt der Ableitung approximiert werden kann.
+Als Beispiel soll die erste Ableitung mit fünf Stützstellen in
+gleichem Abstand $h$ berechnet werden:
 \begin{equation}
-\frac{\partial f}{\partial x} \approx Af(x-2h) + Bf(x-h) + Cf(x) + Df(x+h) + Ef(x+2h) \text{.}
+\frac{df}{dx}
+\approx
+Af(x-2h) + Bf(x-h) + Cf(x) + Df(x+h) + Ef(x+2h) \text{.}
 \label{ableitung:eqn:taylor-support}
 \end{equation}
-Die Koeffizienten $A, \cdots, E$ sind so zu bestimmen, dass der Ausdruck rechts in möglichst hoher Ordnung in $h$ mit der Ableitung übereinstimmt.
+Die Koeffizienten $A, \dots, E$ sind so zu bestimmen, dass der
+Ausdruck rechts in möglichst hoher Ordnung in $h$ mit der Ableitung
+übereinstimmt.
 Die Funktionswerte an den Stützstellen, $x-2h, x-h, \cdots, x+2h$ können nun mittels Taylor-Reihe approximiert werden:
-\begin{equation}
-\begin{split}
-Af(x-2h) \approx & Af(x) + Af'(x)(-2h) + A\frac{1}{2}f''(x)(-2h)^2+A\frac{1}{6} + f'''(x)(-2h)^3+A\frac{1}{24} + \\ 
-& f''''(x)(-2h)^4 + A\frac{1}{120}f'''''(x)(-2h)^5 \\
-Bf(x-h) \approx & Bf(x) + Bf'(x)(-h) + B\frac{1}{2}f''(x)(-h)^2+B\frac{1}{6} + f'''(x)(-h)^3+B\frac{1}{24} + \\ 
-& f''''(x)(-h)^4 + B\frac{1}{120}f'''''(x)(-h)^5 \\
-Cf(x) = & Cf(x) \\
-Df(x+h) \approx & Df(x) + Df'(x)(+h) + D\frac{1}{2}f''(x)(+h)^2+D\frac{1}{6} + f'''(x)(+h)^3+D\frac{1}{24} + \\ 
-& f''''(x)(+h)^4 + D\frac{1}{120}f'''''(x)(+h)^5 \\
-Ef(x+2h) \approx & Ef(x) + Df'(x)(+2h) + E\frac{1}{2}f''(x)(+2h)^2+E\frac{1}{6} + f'''(x)(+2h)^3+E\frac{1}{24} + \\ 
-& f''''(x)(+2h)^4 + E\frac{1}{120}f'''''(x)(+2h)^5
-\end{split}
-\end{equation}
-Nach Einsetzen dieser Gleichungen in die Gleichung \ref{ableitung:eqn:taylor-support} ist dürfen nur die Koeffizienten bestehen bleiben und müssen folglich 1 ergeben. Der Rest sollte verschwinden. Zur Unterstützung der Lesbarkeit können die Terme nach Ableitungsgrad sortiert werden:
+\begin{equation*}
+\begin{aligned}
+Af(x-2h)
+&\approx
+Af(x) + Af'(x)(-2h) + A\frac{1}{2}f''(x)(-2h)^2+A\frac{1}{6} + f'''(x)(-2h)^3+A\frac{1}{24}
+\\
+&\qquad+
+f''''(x)(-2h)^4 + A\frac{1}{120}f'''''(x)(-2h)^5
+\\
+Bf(x-h)
+&\approx
+Bf(x) + Bf'(x)(-h) + B\frac{1}{2}f''(x)(-h)^2+B\frac{1}{6} + f'''(x)(-h)^3+B\frac{1}{24}
+\\ 
+&\qquad+
+f''''(x)(-h)^4 + B\frac{1}{120}f'''''(x)(-h)^5
+\\
+Cf(x)
+&=
+Cf(x)
+\\
+Df(x+h)
+&\approx
+Df(x) + Df'(x)(+h) + D\frac{1}{2}f''(x)(+h)^2+D\frac{1}{6} + f'''(x)(+h)^3+D\frac{1}{24}
+\\ 
+&\qquad+
+f''''(x)(+h)^4 + D\frac{1}{120}f'''''(x)(+h)^5
+\\
+Ef(x+2h)
+&\approx
+Ef(x) + Df'(x)(+2h) + E\frac{1}{2}f''(x)(+2h)^2+E\frac{1}{6} + f'''(x)(+2h)^3+E\frac{1}{24}
+\\ 
+&\qquad+
+f''''(x)(+2h)^4 + E\frac{1}{120}f'''''(x)(+2h)^5
+\end{aligned}
+\end{equation*}
+Nach Einsetzen dieser Ausdrücke in die Gleichung
+\ref{ableitung:eqn:taylor-support} ist darf nur der Koeffizient von $f'(x)$
+bestehen bleiben und mussen folglich 1 ergeben.
+Der Rest soll verschwinden.
+Zur Unterstützung der Lesbarkeit können die Terme nach Ableitungsgrad
+sortiert werden:
 \begin{equation}
 \begin{linsys}{6}
 f(x)                        \cdot(&&  A&+&B&+&C&+&D&+&  E)&=&0 \\
@@ -120,15 +166,16 @@ f(x)                        \cdot(&&  A&+&B&+&C&+&D&+&  E)&=&0 \\
 %\frac{1}{120} f'''''(x)(h^4) \cdot (16A + B + D + 16E) &= 0 
 %\end{split}
 %\end{equation}
-Dieses lineare Gleichungssystem für die gesuchten Koeffizienten lässt sich auch in Matrix Form wie folgt schreiben:
+Dieses lineare Gleichungssystem für die gesuchten Koeffizienten lässt
+sich auch in Matrixform
 \begin{align}
-\begin{bmatrix}
+\begin{bmatrix*}[r]
 1 & 1 & 1 & 1 & 1 \\
 -2 & -1 & 0 & 1 & 2 \\
 4 & 1 & 0 & 1 & 4 \\
 -8 & -1 & 0 & 1 & 8 \\
 16 & 1 & 0 & 1 & 16 \\
-\end{bmatrix}
+\end{bmatrix*}
 \cdot
 \begin{bmatrix}
 A \\
@@ -146,7 +193,8 @@ E \\
 0 \\
 \end{bmatrix}
 \end{align}
-Diese Matrix lässt sich nach
+schreiben.
+Die Koeffizientenmatrix lässt sich nach
 \begin{align}
 \begin{bmatrix}
 A \\
@@ -157,13 +205,13 @@ E \\
 \end{bmatrix}
 =
 \frac{1}{h}
-\begin{bmatrix}
+\begin{bmatrix*}[r]
 1 & 1 & 1 & 1 & 1 \\
 -2 & -1 & 0 & 1 & 2 \\
 4 & 1 & 0 & 1 & 4 \\
 -8 & -1 & 0 & 1 & 8 \\
 16 & 1 & 0 & 1 & 16 \\
-\end{bmatrix}^{-1}
+\end{bmatrix*}^{-1}
 \begin{bmatrix}
 0 \\
 2 \\
@@ -188,28 +236,37 @@ f'(x)  \approx \frac{1f(x-2h) - 8f(x-h) + 8f(x-h) - 1f(x+2h)}{12h}
 \label{ableitung:eqn:aprox_5}
 \end{align}
 angenähert durch fünf Stützstellen.
-Analog kann dies natürlich für höhere Ableitungen oder non-uniforme Stützstellen gemacht werden.
+Analog kann man natürlich Approximationen für höhere Ableitungen oder
+für non-uniforme Stützstellen bekommen.
+
 \subsubsection{Fehlerabschätzung}
-Zur Berechnung der ersten Ableitung mit fünf Stützstellen werden die ersten fünf Terme der Taylor-Reihe verwendet. Die Ungenauigkeit dieser Methode ist somit abhängig vom Restterm
+\index{Fehlerabschätzung}%
+Zur Berechnung der ersten Ableitung mit fünf Stützstellen werden die ersten fünf Terme der Taylor-Reihe verwendet.
+Die Ungenauigkeit dieser Methode ist somit abhängig vom Restterm
+\index{Restterm}%
 \begin{align}
 \frac{f(x-2h) - 8f(x-h) + 8f(x-h) - f(x+2h)}{12h} = f'(x) - \frac{1}{30} f^{(5)} (x)h^{4}+R_n(x) \text{.}
 \label{ableitung:eqn:error}
 \end{align}
-Der Restterm $R_{n}$ ist abhängig von der Taylor-Reihe der zu ableitenden Funktion. Funktionen lassen sich somit mit mehr Stützstellen genauer approximieren, da der Rest $R_n$ mit steigender Taylor-Ordnung kleiner wird. Wenn aber die Terme höherer Ordnung schneller anwachsen als die Fakultät
-\begin{align}
-	f^{(n)} > n! \text{,}
-	\label{eqn:fakult}
-\end{align}
+Der Restterm $R_{n}$ ist abhängig von der Taylor-Reihe der zu ableitenden Funktion.
+Funktionen lassen sich somit mit mehr Stützstellen genauer approximieren, da der Rest $R_n$ mit steigender Taylor-Ordnung kleiner wird.
+Wenn aber die Terme höherer Ordnung schneller anwachsen als die Fakultät,
+also $f^{(n)} > n!$,
 so ist die Approximation nicht genau.
+
 Aus der Fehlerabschätzung ergeben sich grundsätzlich zwei Typen an Problemen, die interessant sind zu untersuchen.
 Die Terme des ersten Types werden mit zunehmender Ordnung kleiner, während bei dem zweiten Typ die Terme immer grösser werden.
-Gleichzeitig muss aber ein guter Kompromiss gefunden werden, welcher den Abstand $h$ nicht zu klein werden lässt. Ein sehr kleines $h$ führt zu mehr Rauschanfälligkeit, da bei benachbarten Punkten ein Rauschen höher ins Gewicht fällt.
+Gleichzeitig muss aber ein guter Kompromiss gefunden werden, welcher den Abstand $h$ nicht zu klein werden lässt.
+Ein sehr kleines $h$ führt zu mehr Rauschanfälligkeit, da bei benachbarten Punkten ein Rauschen höher ins Gewicht fällt.
+\index{Rauschen}%
 
-Als Beispiel für eine Funktion, bei welcher die Terme kleiner werden, können die trigonometrischen Funktionen dienen. Im Speziellen hat der Sinus
+Als Beispiel für eine Funktion, bei welcher die Terme kleiner werden, können die trigonometrischen Funktionen dienen.
+Im Speziellen hat der Sinus
 \begin{equation}
 	\sin(x) = \sum _{n=0}^{\infty }{\frac {(-1)^{n}}{(2n+1)!}}x^{2n+1} \left(x\right)\approx x-{\frac {x^{3}}{3!}}+{\frac {x^{5}}{5!}}-{\frac {x^{7}}{7!}}+{\frac{x^9}{9!}}+R_n
 \end{equation}
-eine alternierende Taylor-Reihe. Der Fehler
+eine alternierende Taylor-Reihe.
+Der Fehler
 \begin{equation}
 R_n < \biggl| {\frac{x^{n}}{n!} \biggr|}
 \end{equation}
@@ -218,5 +275,13 @@ Auf der anderen Seite erweist sich die die geometrische Reihe
 \begin{equation}
 	\frac{1}{1-x} = \sum _{n=0}^{\infty} x^n \approx 1 + x + x^2 + x^3 + x^4 + R_n
 \end{equation}
-als sehr schwer zu approximieren. Der Fehler $R_n$ wächst ab $x>1$ nach $\infty$.
-Für die Experimente werden aus diesem Grund verschiedene Abstände $h$ und eine unterschiedliche Anzahl Stützstellen verwendet, um ein Optimum für den jeweiligen Fall zu finden. Es ist jedoch zu erwarten, dass mit steigender Anzahl an Stützstellen das neuronale Netzwerk schneller konvergiert, da die einzelnen Gradienten weniger Rauschen aufweisen.
+als sehr schwer zu approximieren.
+Der Fehler $R_n$ wächst ab $x>1$ unbeschränkt.
+
+Für die Experimente werden aus diesem Grund verschiedene Abstände
+$h$ und eine unterschiedliche Anzahl Stützstellen verwendet, um ein
+Optimum für den jeweiligen Fall zu finden.
+Es ist jedoch zu erwarten, dass mit steigender Anzahl an Stützstellen
+das neuronale Netzwerk schneller konvergiert, da die einzelnen
+Gradienten weniger Rauschen aufweisen.
+\index{Rauschen}%

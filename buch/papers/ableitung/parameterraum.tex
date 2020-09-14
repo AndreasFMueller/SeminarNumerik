@@ -1,18 +1,43 @@
 \subsection{Der Parameterraum}
-Das neuronale Netzwerk wird durch eine sehr hohe Anzahl an Parametern charakterisiert, welche im durch den Lernprozesses optimiert werden müssen. Der innere Aufbau eines neuronalen Netzwerks erklärt die Herkunft dieser Parameter.
+Das neuronale Netzwerk wird durch eine sehr hohe Anzahl an Parametern
+charakterisiert, welche durch den Lernprozesses optimiert werden
+müssen.
+Der innere Aufbau eines neuronalen Netzwerks erklärt die Herkunft
+dieser Parameter.
 \begin{figure}
 	\begin{center}
 		\input{papers/ableitung/neuronal_network.tex}
-		\caption{Übersicht eines Neuronalen Netzwerks}
+		\caption{Übersicht eines neuronalen Netzwerks}
 		\label{ableitung:fig:neuronal_network}
 	\end{center}
 \end{figure} 
-Abbildung \ref{ableitung:fig:neuronal_network} zeigt die Komponenten eines einfachen neuronalen Netzwerks. $W$ sind die Gewichte, $b$ die Offsets, oft auch \textit{bias} genannt, und $\sigma$ ist die Aktivierungsfunktion. Die Aktivierungsfunktion in den mittleren Schichten wird benötigt, um die Linearität der verschiedenen Schichten zu brechen. In der letzten Schicht wird die Aktivierungsfunktion $\sigma$ aber hauptsächlich verwendet, um den Output auf das vorliegende Problem abzubilden. Eine Ausgabe zwischen $[-\infty, \infty]$ ist erwünscht, sofern ein Regressionsproblem vorliegt. In diesem Fall wird ausnahmsweise eine lineare Funktion für $\sigma$ in der letzten Schicht gewählt. Bei einem stochastischen Problem werden die Outputwerte als Wahrscheinlichkeiten interpretiert und sollten daher den Wertebereich $[0,1]$ annehmen, folglich wird eine Funktion mit entsprechendem Abbildungsbereich für $\sigma$ gewählt. Aus diesem Grund kann $\sigma$ oft eine  sigmoid oder $\tanh$ Funktion und in Ausnahmefällen auch eine lineare Funktion annehmen
+Abbildung \ref{ableitung:fig:neuronal_network} zeigt die Komponenten eines einfachen neuronalen Netzwerks.
+$W$ sind die Gewichte, $b$ die Offsets, oft auch \textit{bias} genannt, und $\sigma$ ist die Aktivierungsfunktion.
+\index{Gewicht}%
+\index{Offset}%
+\index{bias}%
+Die Aktivierungsfunktion in den mittleren Schichten wird benötigt, um die Linearität der verschiedenen Schichten zu brechen.
+\index{Aktivierungsfunktion}%
+In der letzten Schicht wird die Aktivierungsfunktion $\sigma$ aber hauptsächlich verwendet, um den Output auf das vorliegende Problem abzubilden.
+Eine Ausgabe zwischen $[-\infty, \infty]$ ist erwünscht, sofern ein Regressionsproblem vorliegt.
+In diesem Fall ist ausnahmsweise eine lineare Funktion für $\sigma$
+in der letzten Schicht erlaubt.
+Bei einem stochastischen Problem werden die Outputwerte als
+Wahrscheinlichkeiten interpretiert und sollten daher Werte im Intervall
+$[0,1]$ annehmen, folglich wird eine Funktion mit entsprechendem
+Wertebereich für $\sigma$ gewählt.
+Aus diesem Grund kann $\sigma$ oft eine  sigmoid oder $\tanh$
+Funktion und in Ausnahmefällen auch eine lineare Funktion sein.
+Die Funktion
 \begin{equation}
 a^{l}_{j} = \sigma \biggl( \sum\limits_{k}w^{l}_{jk} \cdot a^{l-1}_{k}+b^{l}_{j} \biggr)
 \label{ableitung:eqn:simple_neuron_eqn}
 \end{equation}
-beschreibt somit für jedes Neuron $a^{l}_{j}$ aus Abbildung \ref{ableitung:fig:neuronal_network} den Zusammenhang zwischen den Gewichten und den vorhergehenden Neuronen $a^{l-1}_{k}$. Der Input Layer 
+beschreibt somit für jedes Neuron $a^{l}_{j}$ aus Abbildung
+\ref{ableitung:fig:neuronal_network} den Zusammenhang zwischen den
+Gewichten und den vorhergehenden Neuronen $a^{l-1}_{k}$.
+\index{Neuron}%
+Der Input Layer 
 \begin{equation}
 I_k = a_{k}^{0}
 \end{equation}
@@ -37,4 +62,8 @@ Um die Nomenklatur zusammenzufassen, gelten folgende Bezeichnungen in einem neur
 	\item{$b_{j}^{l}$: Das Offset-Gewicht (bias) für das $j$-te Neuron in der Schicht $l$.}
 	\item{$\sigma$: Die Aktivierungsfunktion zur Brechnung der Linearität.}
 \end{itemize}
-Das Trainieren oder Lernen eines neuronalen Netzwerks ist im Grunde nichts anderes als das bestimmen des Minimums des Fehlers mit Hilfe der Paramter $w$ und $b$ für die gegebenen Problemstellung. 
+Das Trainieren oder Lernen eines neuronalen Netzwerks ist im Grunde
+nichts anderes als das Bestimmen des Minimums des Fehlers mit Hilfe
+der Parameter $w$ und $b$ für die gegebene Problemstellung.
+\index{Trainieren}%
+\index{Lernen}%

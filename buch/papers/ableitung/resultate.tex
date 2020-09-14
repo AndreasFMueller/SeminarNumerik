@@ -1,9 +1,24 @@
-\section{Resultate
+\section{Experiment
 	\label{ableitung:section:resultate}}
 \rhead{Resultate}
-Die Resultate dieser Arbeit sollen hauptäschlich zeigen, ob die Finite Differenzen Methode als Option zur Optimierung neuronaler Netzwerke geeignet ist. Es ist klar, dass implementationsbedingt die Trainingsgeschwindigkeit nicht dem Backpropagation Algorithmus das Wasser reichen kann. Viel wichtiger ist eine qualitative Aussage machen zu können, ob die Methode eine interessante Variante darstellt und ob das Gedankenexperiment funktioniert.
+Die Resultate dieser Arbeit sollen hauptsächlich zeigen, ob die
+Finite Differenzen Methode als Option zur Optimierung neuronaler
+Netzwerke geeignet ist.
+Es ist klar, dass implementationsbedingt die Trainingsgeschwindigkeit nicht dem Backpropagation-Algorithmus das Wasser reichen kann.
+Viel wichtiger ist eine qualitative Aussage machen zu können, ob die Methode eine interessante Variante darstellt und ob das Gedankenexperiment funktioniert.
 
-Um dies an einem einfachen Beispiel zu verdeutlichen, wird versucht, eine logische XOR Verknüpfung zu trainieren. Ein XOR-Gate ist ein elektronisches Bauteil, welches eine 'Entweder-Oder' Logik abbildet. Im gewählten Fall hat das Bauteil zwei digitale Eingänge und sollte entweder der Erste oder der Zweite aktiv sein, so ist der Ausgang ebenfalls aktiv. Sollte keiner der beiden Ausänge oder beide Ausgänge aktiv sein, so ist der Ausgang inaktiv. Dies kann man der Logiktabelle in Abbildung \ref{ableitung:fig:xor-gate-logic} entnehmen.
+Um dies an einem einfachen Beispiel zu verdeutlichen, wird versucht,
+eine logische XOR-Verknüpfung zu trainieren.
+Ein XOR-Gate ist ein elektronisches Bauteil, welches eine
+{\em Entweder-Oder}-Logik abbildet.
+\index{XOR}%
+Im gewählten Fall hat das Bauteil zwei digitale Eingänge.
+Ist entweder der Erste oder der Zweite aktiv sein, so ist der Ausgang
+ebenfalls aktiv.
+Ist keiner der beiden Ausänge oder beide Ausgänge aktiv sein,
+so ist der Ausgang inaktiv.
+Dies kann man der Logiktabelle in Abbildung \ref{ableitung:fig:xor-gate-logic} entnehmen.
+\index{Logiktabelle}%
 \begin{figure}[h]
 	 \centering
 	\begin{tikzpicture}
@@ -64,10 +79,19 @@ Um dies an einem einfachen Beispiel zu verdeutlichen, wird versucht, eine logisc
 	\draw[stateTransition] (o1) -- node[above] {$y_1$} (10, 0.75);
 
 	\end{tikzpicture}
-	\caption{Das Neuronale Netzwerk zum erlernen des XOR Logikoperators}
+	\caption{Das neuronale Netzwerk zum Erlernen des XOR Logikoperators}
 	\label{ableitung:fig:nn-result-net}
 \end{figure}
-Das gewählte Netzwerk, um diese Logik abzubilden, besteht aus drei Schichten und ist in Abbildung \ref{ableitung:fig:nn-result-net} ersichtlich. Die Mittelschicht (Hidden Layer) wird benötigt, da sich mit nur einer Schicht keine Funktion finden lässt welche die Punkte in einer Ebene trennt. Dies wird in Abbildung \ref{ableitung:fig:visualisation-surface} noch einmal verdeutlicht.
+Das gewählte Netzwerk, um diese Logik abzubilden, besteht aus drei
+Schichten und ist in Abbildung \ref{ableitung:fig:nn-result-net}
+ersichtlich.
+Die Mittelschicht (hidden layer) wird benötigt, da sich mit nur
+einer Schicht keine Funktion finden lässt, welche die Punkte in
+einer Ebene trennt.
+\index{hidden layer}%
+\index{Mittelschicht}%
+Dies wird in Abbildung \ref{ableitung:fig:visualisation-surface}
+noch einmal verdeutlicht.
 
 \tikzset{   cirwhite/.style={draw=gray,circle,fill=white,minimum size=1pt,inner sep=2pt,line width=0.2mm},
 	cirred/.style={draw=gray,circle,fill=red,minimum size=1pt,inner sep=2pt,line width=0.2mm},
@@ -94,10 +118,17 @@ Das gewählte Netzwerk, um diese Logik abzubilden, besteht aus drei Schichten un
     \node[cirwhite] at (8,8) {0};                                      
     
     \end{tikzpicture}
-	\caption{Visualisierung der Punkt in einer xy-Ebene und deren Separierbarkeit.}
+	\caption{Visualisierung der Punkte in der $x$-$y$-Ebene und deren
+		Separierbarkeit.}
 	\label{ableitung:fig:visualisation-surface}
 \end{figure}
-Das Experiment wurde basierend auf dem PyTorch Framework implementiert. Das Netzwerk wurde jeweils mit der Finiten Differenzen Methode und dem Backpropagation Algorithmus trainiert. Bei der FDM wurden verschiedene Anzahlen an Stützstellen (Support) gewählt und unterschiedliche Abstände $h$ verwendet. Die Resultate sind in den Abbildungen \ref{ableitung:fig:xor_h1}, \ref{ableitung:fig:xor_h01}, \ref{ableitung:fig:xor_h1} zu finden. Die vertikale-Achse in der Abbildung stellt den quadratischen Fehler zwischen $\hat{y}$ und $y$ dar, während die horizontale-Achse die Entwicklung über die Anzahl Iterationen aufzeigt.
+Das Experiment wurde basierend auf dem PyTorch Framework implementiert.
+\index{PyTorch Framework}%
+Das Netzwerk wurde jeweils mit der Finiten Differenzen Methode und dem Backpropagation-Algorithmus trainiert.
+Bei der FDM wurden verschiedene Anzahlen an Stützstellen (Support) gewählt und unterschiedliche Abstände $h$ verwendet.
+Die Resultate sind in den Abbildungen \ref{ableitung:fig:xor_h1},
+\ref{ableitung:fig:xor_h01}, \ref{ableitung:fig:xor_h1} zusammengestellt.
+Die vertikale-Achse in der Abbildung stellt den quadratischen Fehler zwischen $\hat{y}$ und $y$ dar, während die horizontale-Achse die Entwicklung über die Anzahl Iterationen aufzeigt.
 
 \begin{figure}
 	\begin{tikzpicture}
@@ -165,5 +196,7 @@ Das Experiment wurde basierend auf dem PyTorch Framework implementiert. Das Netz
 		\label{ableitung:fig:xor_h001}
 \end{figure}
 
-Es ist erstaunlich, dass bereits bei diesem kleinen Netzwerk numerische Effekte im Backpropagation Algorithmus in einem etwas höheren Fehler resultieren. Der Fehler von $\approx 10^{-14}$ im besten Fall (FDM) ist um Faktor $10^3$ kleiner als die des Backpropagation Algorithmus.
+Es ist erstaunlich, dass bereits bei diesem kleinen Netzwerk numerische Effekte im Backpropagation-Algorithmus in einem etwas höheren Fehler resultieren.
+Der Fehler von $\approx 10^{-14}$ im besten Fall (FDM) ist um Faktor
+$10^3$ kleiner als die des Backpropagation-Algorithmus.
 	

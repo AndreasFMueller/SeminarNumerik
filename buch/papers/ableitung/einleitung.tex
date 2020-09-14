@@ -6,11 +6,35 @@
 \section{Einleitung\label{ableitung:section:einleitung}}
 \rhead{Einleitung}
 Dieses Kapitel befasst sich mit der numerischen Ableitung, im Speziellen mit der Finite Differenzen Methode (FDM).
+\index{Finite Differenzen Methode}%
 Bei dieser Methode handelt es sich um ein Verfahren zur Bestimmung der Ableitung.
-Die Methode wurde von Brook Taylor im 17ten Jahrhunder eingeführt, war aber konzeptionel schon Isaac Newton und Euler viel früher bekannt. 
+Die Methode wurde von Brook Taylor im siebzehnten Jahrhundert eingeführt, war aber konzeptionell schon Isaac Newton und Leonhard Euler viel früher bekannt. 
+\index{Taylor, Brook}%
+\index{Newton, Isaac}%
+\index{Euler, Leonhard}%
 Das Verfahren ist mathematisch sehr einfach zu erklären und ist ebenfalls einfach umzusetzen. Die Einfachheit der Methode lässt Raum, um ein etwas schwierigeres Beispiel zu verwenden, da die Umsetzung in Code unkompliziert ist.
 
 Als Einführung der Methode wird aus diesem Grunde der Gradient im neuronalen Netzwerk berechnet, welcher eine zentrale Rolle im Lernprozess spielt.
-Neuronale Netzwerke sind durch die kostengünstig verfügbare Computerleistung in den letzten Jahrzehnten sehr populär geworden. Moderne Forschung setzt den Schwerpunkt oft auf den angewandten Bereich des Gebiets. Im Fokus ist eine Vielzahl von Problemen, meistens im Bereich der Bild-, Signal- oder Mustererkennung, aber auch Sprachsynthese und Übersetzung können von neuronalen Netzwerken profitieren. Die fundamentalen und mathematischen Grundlagen dieses Gebiets werden heute teils weniger stark hinterfragt, da ein sehr hoher Abstraktionsgrad die Mathematik versteckt.
+\index{Gradient}%
+\index{neuronales Netzwerk}%
+Neuronale Netzwerke sind durch die kostengünstig verfügbare
+Computerleistung in den letzten Jahrzehnten sehr populär geworden.
+Moderne Forschung setzt den Schwerpunkt oft auf den angewandten
+Bereich des Gebiets.
+Im Fokus ist eine Vielzahl von Problemen, meistens im Bereich der
+Bild-, Signal- oder Mustererkennung, aber auch Sprachsynthese und
+-übersetzung können von neuronalen Netzwerken profitieren.
+Die fundamentalen und mathematischen Grundlagen dieses Gebiets werden heute teils weniger stark hinterfragt, da ein sehr hoher Abstraktionsgrad die Mathematik versteckt.
+\index{Bildverarbeitung}%
+\index{Signalverarbeitung}%
+\index{Mustererkennung}%
+\index{Sprachsynthese}%
+\index{Sprachübersetzung}%
 
-Die hohe Verbreitung und die günstige Computerleistung resultiert in immer grösseren Netzwerken und komplizierteren Strukturen, durch ihre wachsende Tiefe auch anfälliger für numerische Probleme sind. Deshalb liegt der Fokus dieser Arbeit auf einfacher Mathematik, die aufzeigt, wo Probleme während des Trainings von sehr tiefen neuronalen Netzwerken entstehen können.
+Die weite Verbreitung und die günstige Computerleistung resultiert
+in immer grösseren Netzwerken und komplizierteren Strukturen, durch
+ihre wachsende Tiefe auch anfälliger für numerische Probleme sind.
+Deshalb liegt der Fokus dieser Arbeit auf einfacher Mathematik, die
+aufzeigt, wo Probleme während des Trainings von sehr tiefen neuronalen
+Netzwerken entstehen können.
+\index{Training}%

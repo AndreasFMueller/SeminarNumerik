@@ -9,51 +9,91 @@
 %3. Teil/Absatz: Berechnung der Änderung in jedem Layer. Hier kann man jetzt die partiellen Ableitungen und das Hadamard-Produkt bringen.
 %
 %4. Teil/Absatz: Backprop, da haben Sie ja schon einen eigenen Absatz.
-Nach betrachten der partiellen Ableitung ist klar, dass dies für tiefe Netzwerke nicht wirklich praktikabel ist. Es sind einfach zu viele Dimensionen, welche mittels der Kettenregel abgeleitet werden müssen. Weiter können die Zusammenhänge zwischen den Schichten nicht wirklich genutzt werden, da nach jedem Parameter einzeln abgeleitet wird.
+Die analytische Berechnung aller partiellen Ableitung nach allen Parametern 
+ist nicht wirklich praktikabel.
+Es sind einfach zu viele Dimensionen, welche mittels der Kettenregel
+abgeleitet werden müssen.
+Weiter können die Zusammenhänge zwischen
+den Schichten nicht wirklich genutzt werden, da nach jedem Parameter
+einzeln abgeleitet wird.
 
-Aus diesem Grund ist der Backpropagation-Algorithmus sehr verbreitet. Er löst genau dieses Problem, in dem er den Fehler pro Schicht berechnet und dann den Fehler der davor liegende Schicht davon abhängig macht. Dies spart einen Teil des Rechenaufwandes der Gradientenberechnung und macht den Algorithmus so einiges effizienter.
+Aus diesem Grund ist der Backpropagation-Algorithmus sehr verbreitet.
+Er löst genau dieses Problem, in dem er den Fehler pro Schicht berechnet und dann den Fehler der davor liegende Schicht davon abhängig macht.
+Dies spart einen Teil des Rechenaufwandes der Gradientenberechnung und macht den Algorithmus so einiges effizienter.
 
 Das Ziel des Backpropagation-Algorithmus ist nun die partiellen Ableitungen $\partial \Lb / \partial w^l_{jk}$ und $\partial \Lb / \partial b^l_j$ für den Fehler eines neuronalen Netzwerks der Form
 \begin{equation}
 \Lb(y_{i}, \sigma^{l}(W^{l}\sigma^{l-1}(W^{l-1}\cdots \sigma^{1}(W^{1}x_i+b^{1}) + b^{l-1} \cdots ) )
 \end{equation}
-zu finden, wobei $W^{n}$ und $b^{n}$ jeweils die Gewichte im $n$-ten Layer des neuronalen Netzwerks darstellen. Dies gilt unter der Annahme, dass die Fehlerfunktion $\Lb$ einen Skalar als Resultat liefert und die einzelnen Schichten $l$ jeweils nur mit ihrer benachbarten Schicht $l+1$ verbunden sind.
-Für den Zusammenhang der Layer führen wir
+zu finden, wobei $W^{n}$ und $b^{n}$ jeweils die Gewichte im $n$-ten Layer des neuronalen Netzwerks darstellen.
+Dies gilt unter der Annahme, dass die Fehlerfunktion $\Lb$ einen Skalar
+als Resultat liefert und die einzelnen Schichten $l$ jeweils nur der
+ihrer benachbarten Schicht $l+1$ verbunden sind.
+
+Für den Zusammenhang der Layer führen wir die Notation
 \begin{equation}
 	\begin{split}
 		a^l_j &= \sigma(z^l_j) \\
 		z^l_j &= \sum\limits_{k}w^{l}_{jk} \cdot a^{l-1}_{k}+b^{l}_{j}
 	\end{split}
 \end{equation}
-ein. $a$ sollte bereits aus der Gleichung \ref{ableitung:eqn:simple_neuron_eqn} bekannt sein, $z$ ist im Grunde der gewichtete Input in ein Neuron, ohne die Aktivierungsfunktion $\sigma$. Diese Notation vereinfacht die weitere Herleitung. Die Änderung des Fehlers in einem einzelnen Neuron
+ein.
+$a$ ist bereits aus der Gleichung~\eqref{ableitung:eqn:simple_neuron_eqn}
+bekannt, $z$ ist im Grunde der gewichtete Input in ein Neuron
+ohne die Aktivierungsfunktion $\sigma$.
+Diese Notation vereinfacht die weitere Herleitung.
+
+Die Änderung des Fehlers in einem einzelnen Neuron
 \begin{equation}
 	\delta^{l}_{j} = \frac{\partial \Lb}{\partial a^{l}_{j}} \sigma'(z^l_j)
 \end{equation}
-lässt sich Ausdrücken als Ableitung der Fehlerfunktion $\Lb$ nach dem jeweiligen Neuron. In der letzten Schicht mit Index L (\textit{last}) gilt somit in Matrixschreibweise
+lässt sich Ausdrücken als Ableitung der Fehlerfunktion $\Lb$ nach dem jeweiligen Neuron.
+In der letzten Schicht mit Index $L$ ({\em last}) gilt somit in
+Matrixschreibweise
 \begin{equation}
 	\delta^{L} = \nabla_a \Lb \odot \sigma'(z^L) \text{,}
 \end{equation}
-wobei $\odot$ der komponentenweise Multiplikation der Matrix (Hadamard Produkt) entspricht. 
-Um den Fehler zu berechnen, legen wir für die Funktion $\Lb$ die quadratische Fehlerfunktion ($L_2$), auch bekannt als Mean-Square-Error, fest
+wobei $\odot$ der komponentenweise Multiplikation der Matrix (Hadamard
+Produkt) entspricht.
+\index{Hadamard-Produkt}%
+Um den Fehler zu berechnen, legen wir uns für die Funktion $\Lb$ auf
+die quadratische Fehlerfunktion
 \begin{equation}
 	\Lb = \frac{1}{2} \sum_j \left( \hat{y} - y \right)^2 \text{.}
 \end{equation}
-Somit resultiert nach der partiellen Ableitung von $\Lb$ und einsetzten von $a^L$ die Gleichung:
+fest, auch bekannt als 
+$L_2$ Mean-Square-Error.
+Somit resultiert nach der partiellen Ableitung von $\Lb$ und
+einsetzten von $a^L$ die Gleichung
 \begin{equation}
-	\delta^{L} = (\hat{y} - a^L) \odot \sigma'(z^L)
+	\delta^{L} = (\hat{y} - a^L) \odot \sigma'(z^L).
 \end{equation}
-$\delta^L$ ist somit ein Ausdruck der Änderung des Fehlers in der letzten Schicht.
+$\delta^L$ ist somit ein Ausdruck der Änderung des Fehlers in der
+letzten Schicht.
 
-Als nächstes muss nun rückwärts gerechnet also --- back propagiert --- werden. Die Änderung des Fehlers
+Als nächstes muss nun rückwärts gerechnet --- back propagiert --- werden.
+Die Änderung des Fehlers
 \begin{equation}
 \delta^{l} = ((w^{l+1} \delta^{l+1})^T \odot \sigma'(z^l)
 \end{equation}
-beschreibt nun den Zusammenhang zwischen den Schichten $l+1$ und $l$, was an den Ausdrücken $\delta^{l+1}$ und $ \delta^{l}$ abzulesen ist. Die Transponierte der Matrix $w^{l+1}$ kann man sich intuitiv vorstellen, als das 'Rückwärtsrechnen' des gewichteten Fehlers, da $w^{l+1} \cdot (w^{l+1})^T = I$, wobei $I$ für die Einheitsmatrix steht. Dies ermöglicht die Änderung des Fehlers pro Neuron in der davor liegenden Schicht zu bestimmen. Abschliesend müssen noch die Gradienten
+beschreibt nun den Zusammenhang zwischen den Schichten $l+1$ und $l$, was an den Ausdrücken $\delta^{l+1}$ und $ \delta^{l}$ abzulesen ist.
+Die Transponierte der Matrix $w^{l+1}$ kann man sich intuitiv vorstellen, als das 'Rückwärtsrechnen' des gewichteten Fehlers, da $w^{l+1} \cdot (w^{l+1})^T = I$, wobei $I$ für die Einheitsmatrix steht.
+Dies ermöglicht die Änderung des Fehlers pro Neuron in der davor liegenden Schicht zu bestimmen.
+Abschliesend müssen noch die Gradienten
 \begin{equation}
 \begin{split}
 \frac{\partial \Lb}{\partial b} & = \delta \\
 \frac{\partial \Lb}{\partial w} & = a^{l-1}_{k} \delta^{l}_j = a_{\text{in}} \delta_{\text{out}}
 \end{split}
 \end{equation}
-berechnet werden. Das Resultat wird verwendet um mittels Gradientenabstieg die neuen inneren Parameter $w_\text{new}$ und $b_\text{new}$ zu bestimmen.
-Die Herleitung zeigt sehr schön, dass eine hohe Netztiefe und die rekursive Eigenschaft des Algorithmus viele Multiplikationen als Konsequenz hat. Dies hat zur Folge, dass durch numerische Effekte die Gradientenberechnung rauschbehaftet sein kann, weiter sind die vorderen Schichten viel stärker Betroffen, da mehr Multiplikationen nötig sind um den Gradienten zu bestimmen. Auf dieses Problem wird in den folgenden Kapiteln mit einem Gedankenexperiment eingegangen.
+berechnet werden.
+Das Resultat wird verwendet, um mittels Gradientenabstieg die neuen
+inneren Parameter $w_\text{new}$ und $b_\text{new}$ zu bestimmen.
+
+Die Herleitung zeigt sehr schön, dass eine hohe Netztiefe und die
+rekursive Eigenschaft des Algorithmus viele Multiplikationen als
+Konsequenz hat.
+Dies hat zur Folge, dass durch numerische Effekte die Gradientenberechnung rauschbehaftet sein kann, weiter sind die vorderen Schichten viel stärker Betroffen, da mehr Multiplikationen nötig sind um den Gradienten zu bestimmen.
+Auf dieses Problem wird in den folgenden Kapiteln mit einem Gedankenexperiment eingegangen.
+\index{Gedankenexperiment}%
+
