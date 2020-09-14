@@ -4,7 +4,7 @@
 Die Resultate dieser Arbeit sollen hauptsächlich zeigen, ob die
 Finite Differenzen Methode als Option zur Optimierung neuronaler
 Netzwerke geeignet ist.
-Es ist klar, dass implementationsbedingt die Trainingsgeschwindigkeit nicht dem Backpropagation-Algorithmus das Wasser reichen kann.
+Es ist klar, dass implementationsbedingt die Trainingsgeschwindigkeit dem Backpropagation-Algorithmus nicht das Wasser reichen kann.
 Viel wichtiger ist eine qualitative Aussage machen zu können, ob die Methode eine interessante Variante darstellt und ob das Gedankenexperiment funktioniert.
 
 Um dies an einem einfachen Beispiel zu verdeutlichen, wird versucht,
@@ -13,9 +13,9 @@ Ein XOR-Gate ist ein elektronisches Bauteil, welches eine
 {\em Entweder-Oder}-Logik abbildet.
 \index{XOR}%
 Im gewählten Fall hat das Bauteil zwei digitale Eingänge.
-Ist entweder der Erste oder der Zweite aktiv sein, so ist der Ausgang
+Ist entweder der Erste oder der Zweite aktiv, so ist der Ausgang
 ebenfalls aktiv.
-Ist keiner der beiden Ausänge oder beide Ausgänge aktiv sein,
+Ist keiner der beiden Ausänge oder beide Ausgänge aktiv,
 so ist der Ausgang inaktiv.
 Dies kann man der Logiktabelle in Abbildung \ref{ableitung:fig:xor-gate-logic} entnehmen.
 \index{Logiktabelle}%
@@ -86,13 +86,11 @@ Das gewählte Netzwerk, um diese Logik abzubilden, besteht aus drei
 Schichten und ist in Abbildung \ref{ableitung:fig:nn-result-net}
 ersichtlich.
 Die Mittelschicht (hidden layer) wird benötigt, da sich mit nur
-einer Schicht keine Funktion finden lässt, welche die zwei Inputs auf den Output abbilden kann. 
-In Abbildung \ref{ableitung:fig:visualisation-surface} ist ersichtlich, dass sich keine einfache Funktion im zweidimensionalen Raum finden lässt, welche das Kriterium erfüllt. Es wird eine Sattelfläche im dreidimensionalen Raum benötigt, wie in Abbildung \ref{ableitung:fig:visualisation-surface-2}, um die Anforderungen zu erfüllen. 
 \index{hidden layer}%
 \index{Mittelschicht}%
-Dies wird in Abbildung \ref{ableitung:fig:visualisation-surface}
-noch einmal verdeutlicht.
-
+einer Schicht keine Lösung finden lässt, welche die zwei Inputs auf den Output abbilden kann.
+In Abbildung \ref{ableitung:fig:visualisation-surface} wird das Ganze im zweidimensionalen Raum visualisiert.
+Um die Kriterien der Logiktabelle umsetzten zu können, wird eine Sattelfläche im dreidimensionalen Raum benötigt. Eine Lösung ist in Abbildung \ref{ableitung:fig:visualisation-surface-2} ersichtlich, welche diese Anforderungen erfüllt.
 \begin{figure}
 	\centering
 		\input{papers/ableitung/surface_seperation.tex}
@@ -112,7 +110,7 @@ Das Netzwerk wurde jeweils mit der Finiten Differenzen Methode und dem Backpropa
 Bei der FDM wurden verschiedene Anzahlen an Stützstellen (Support) gewählt und unterschiedliche Abstände $h$ verwendet.
 Die Resultate sind in den Abbildungen \ref{ableitung:fig:xor_h1},
 \ref{ableitung:fig:xor_h01}, \ref{ableitung:fig:xor_h1} zusammengestellt.
-Die vertikale-Achse in der Abbildung stellt den quadratischen Fehler zwischen $\hat{y}$ und $y$ dar, während die horizontale-Achse die Entwicklung über die Anzahl Iterationen aufzeigt.
+Die vertikale-Achse in den Abbildungen stellt den quadratischen Fehler zwischen $\hat{y}$ und $y$ dar, während die horizontale-Achse die Entwicklung über die Anzahl Iterationen aufzeigt.
 
 \begin{figure}
 	\begin{tikzpicture}

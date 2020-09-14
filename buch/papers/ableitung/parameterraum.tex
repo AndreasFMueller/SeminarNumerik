@@ -33,7 +33,7 @@ Die Funktion
 a^{l}_{j} = \sigma \biggl( \sum\limits_{k}w^{l}_{jk} \cdot a^{l-1}_{k}+b^{l}_{j} \biggr)
 \label{ableitung:eqn:simple_neuron_eqn}
 \end{equation}
-beschreibt somit für jedes Neuron $a^{l}_{j}$ aus Abbildung
+beschreibt für jedes Neuron $a^{l}_{j}$ aus Abbildung
 \ref{ableitung:fig:neuronal_network} den Zusammenhang zwischen den
 Gewichten und den vorhergehenden Neuronen $a^{l-1}_{k}$.
 \index{Neuron}%
@@ -49,7 +49,7 @@ Da die Neuronen mit den vorangegangenen Schichten gekoppelt sind, kann man die G
 \end{equation}
 schreiben. Dementsprechend resultiert daraus das Minimalproblem
 \begin{equation}
-	\min \{ \Lb(y, \sigma^{l}(W^{l}\sigma^{l-1}(W^{l-1}\cdots \sigma^{1}(W^{1}x+b^{1}) + b^{l-1} \cdots ) \} \text{,}
+	\min \{ \Lb(y, \sigma^{l}(W^{l}\sigma^{l-1}(W^{l-1}\cdots \sigma^{1}(W^{1}x+b^{1}) + b^{l-1} \cdots ) \} \text{,} % Klammern ev. ersetzten?
 \end{equation}
 wobei die Parameter $w$ und $b$ während dem Training bestimmt werden, während $x$ und $y$ durch den Trainings-Datensatz gegeben sind.
 Um die Nomenklatur zusammenzufassen, gelten folgende Bezeichnungen in einem neuronalen Netzwerk: 
@@ -57,10 +57,10 @@ Um die Nomenklatur zusammenzufassen, gelten folgende Bezeichnungen in einem neur
 	\item{$x$: Input ins neuronale Netzwerk}
 	\item{$y$: Erwarteter Output aus dem neuronalen Netzwerk gemäss dem Trainingsdatensatz}
 	\item{$\hat{y}$: Effektiver gerechneter Output aus den neuronalen Netzwerk}
-	\item{$\Lb$: Die Verlustfunktion (\textit{loss}) welche den Fehler zwischen dem gerechenten und dem tatsächlichen Output berechnet.}
+	\item{$\Lb$: Die Verlustfunktion (\em{loss}) welche den Fehler zwischen dem gerechenten und dem tatsächlichen Output berechnet.}
 	\item{$w_{jk}^{l}$: Das Gewicht des $k$-ten Neurons in der Schicht $(l-1)$ zum $j$-ten Neuron.}
-	\item{$b_{j}^{l}$: Das Offset-Gewicht (bias) für das $j$-te Neuron in der Schicht $l$.}
-	\item{$\sigma$: Die Aktivierungsfunktion zur Brechnung der Linearität.}
+	\item{$b_{j}^{l}$: Das Offset-Gewicht (\em{bias}) für das $j$-te Neuron in der Schicht $l$.}
+	\item{$\sigma$: Die Aktivierungsfunktion zur Brechung der Linearität.}
 \end{itemize}
 Das Trainieren oder Lernen eines neuronalen Netzwerks ist im Grunde
 nichts anderes als das Bestimmen des Minimums des Fehlers mit Hilfe
